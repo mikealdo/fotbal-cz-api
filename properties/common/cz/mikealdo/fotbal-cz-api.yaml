@@ -1,8 +1,6 @@
-city.finding.service.url: "http://api.openweathermap.org/data/2.5/weather"
-
 metrics.path:
-  country: pl
-  app: service-name
+  country: cz
+  app: fotbal-cz-api
 
 request.payload.logging.maxlength: 2000
 
@@ -10,7 +8,7 @@ server.port: 8095
 
 spring:
   datasource:
-    username: twitter-places-analyzer
+    username: fotbal-cz-api
 
   jackson.deserialization.fail-on-unknown-properties: false
   groovy.template.check-template-location: false
@@ -18,6 +16,6 @@ spring:
 stubrunner:
   use-microservice-definitions: true
   stubs:
-    repository.root: "http://dl.bintray.com/4finance/micro"
-    group: com.ofg
+    repository.root: "http://dl.bintray.com/mdavidek1/rango"
+    group: cz.mikealdo
     module: stub-runner-examples

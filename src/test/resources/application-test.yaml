@@ -1,15 +1,7 @@
-db:
-  url: "jdbc:postgresql://localhost/db_name?ApplicationName=microservice_name"
-  user: user
-  password: password
-  driver: org.postgresql.Driver
-
-city.finding.service.url: "http://localhost:#{@httpMockServer.port()}"
-
 graphite.host: localhost
 
 stubrunner.stubs:
-  repository.root: "http://dl.bintray.com/4finance/micro"
+  repository.root: "http://dl.bintray.com/mdavidek1/rango"
   group: com.ofg
   module: stub-runner-examples
 

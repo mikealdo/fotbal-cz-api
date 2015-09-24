@@ -1,0 +1,2 @@
+{graphite.host: 'http://localhost:8888', metrics.path.app: fotbal-cz-api, stubrunner.stubs.repository.root: 'http://dl.bintray.com/mdavidek1/rango',
+  stubrunner.use-microservice-definitions: true}
