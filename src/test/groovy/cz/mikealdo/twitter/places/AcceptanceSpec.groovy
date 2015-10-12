@@ -37,7 +37,7 @@ class AcceptanceSpec extends MicroserviceMvcWiremockSpec {
 
     static final String ROOT_PATH = '/api'
     static final Long PAIR_ID = 1
-    static final MediaType TWITTER_PLACES_ANALYZER_MICROSERVICE_V1 = new MediaType('application', 'vnd.cz.mikealdo.twitter-places-analyzer.v1+json')
+    static final MediaType TWITTER_PLACES_ANALYZER_MICROSERVICE_V1 = new MediaType('application', 'vnd.cz.mikealdo.fotbal-cz-api.v1+json')
 
     def "should find a place by verifying tweet's geolocation"() {
         given: 'a tweet with a place section filled in'

@@ -10,7 +10,7 @@ jar {
     from "commitHash.txt"
 }
 
-task stubsJar(type: Jar, dependsOn: ["generateWiremockClientStubs", "addHashFile"]) {
+task stubsJar(type: Jar, dependsOn: ["generateWireMockClientStubs", "addHashFile"]) {
     baseName = "${project.name}-stubs"
     from wiremockStubsOutputDirRoot
     from "commitHash.txt"
