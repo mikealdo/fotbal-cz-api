@@ -52,6 +52,7 @@ project.gradle.projectsEvaluated {
 
 repositories {
     mavenLocal()
+    mavenCentral()
     jcenter()
 }
 
