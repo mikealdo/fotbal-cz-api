@@ -36,7 +36,7 @@ public class MatchStatisticsParserTest {
 			}
 		};
 		html = IOUtils.toString(
-				this.getClass().getResourceAsStream("../../../html/match-statistics.html"),
+				this.getClass().getResource("/html/match-statistics.html"),
 				"UTF-8"
 		);
 	}

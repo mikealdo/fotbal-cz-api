@@ -26,7 +26,7 @@ public class MatchSummaryParserTest {
 	public void setUp() throws Exception {
 		parser = new MatchSummaryParser();
 		html = IOUtils.toString(
-				this.getClass().getResourceAsStream("../../../html/match-summary.html"),
+				this.getClass().getResource("/html/match-summary.html"),
 				"UTF-8"
 		);
 	}

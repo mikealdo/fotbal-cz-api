@@ -30,9 +30,6 @@ ext {
 group = mavenProjectGroupId
 version = project.hasProperty('project.version') ? project.getProperty('project.version') : buildNrLoc
 
-sourceSets.main.java.srcDirs = []
-sourceSets.main.groovy.srcDirs += ["src/main/java"]
-
 sourceCompatibility = '1.8'
 
 configurations {

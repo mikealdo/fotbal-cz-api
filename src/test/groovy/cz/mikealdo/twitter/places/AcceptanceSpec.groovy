@@ -1,37 +1,10 @@
 package cz.mikealdo.twitter.places
-
 import com.ofg.base.MicroserviceMvcWiremockSpec
-import org.hamcrest.CoreMatchers
-import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.beans.factory.annotation.Value
-import org.springframework.http.MediaType
 import org.springframework.test.context.ContextConfiguration
-import org.springframework.test.web.servlet.MvcResult
-
-import static com.github.tomakehurst.wiremock.client.WireMock.aResponse
-import static com.github.tomakehurst.wiremock.client.WireMock.getRequestedFor
-import static com.github.tomakehurst.wiremock.client.WireMock.matching
-import static com.github.tomakehurst.wiremock.client.WireMock.urlMatching
-import static com.jayway.awaitility.Awaitility.await
-import static com.ofg.infrastructure.base.dsl.Matchers.equalsReferenceJson
-import static com.ofg.infrastructure.base.dsl.WireMockHttpRequestMapper.wireMockGet
-import static com.ofg.infrastructure.correlationid.CorrelationIdHolder.CORRELATION_ID_HEADER
-import static cz.mikealdo.twitter.place.extractor.WeatherApiResponses.CITY_FOUND
-import static cz.mikealdo.twitter.tweets.Tweets.TWEET_WITH_COORDINATES
-import static cz.mikealdo.twitter.tweets.Tweets.TWEET_WITH_PLACE
-import static java.util.concurrent.TimeUnit.SECONDS
-import static org.hamcrest.core.IsNot.not
-import static org.hamcrest.text.IsEmptyString.isEmptyString
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.asyncDispatch
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.request
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
 @ContextConfiguration(classes = ColleratorClientStubConfiguration)
 class AcceptanceSpec extends MicroserviceMvcWiremockSpec {
-
+/*
     @Autowired ColleratorClientStub colleratorClientStub
     @Value('${acceptance-tests.timeout:8}') Integer acceptanceTestTimeout
 
@@ -126,5 +99,5 @@ class AcceptanceSpec extends MicroserviceMvcWiremockSpec {
         when: 'trying to retrieve place from the tweet by cross referencing tweet content with a city index'
         then: "user's location (place) will be the first matching city"
     }
-
+*/
 }
