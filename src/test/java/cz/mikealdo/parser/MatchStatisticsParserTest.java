@@ -7,10 +7,10 @@ import java.util.List;
 
 import org.apache.commons.io.IOUtils;
 import org.joda.time.DateTime;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.junit.Before;
 import org.junit.Test;
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
 
 import cz.mikealdo.football.domain.Arrival;
 import cz.mikealdo.fotbalcz.domain.CompetitionDetails;
@@ -30,7 +30,7 @@ public class MatchStatisticsParserTest {
 	public void setUp() throws Exception {
 		parser = new MatchStatisticsParser() {
 			@Override
-			protected MatchResult retrieveDetailedMatchResult(NodeList cells) {
+			protected MatchResult retrieveDetailedMatchResult(Element cells) {
 				// we don't want to load match result in test		
 				return null;
 			}
@@ -85,7 +85,7 @@ public class MatchStatisticsParserTest {
 
 	@Test
 	public void shouldFillMatchSummaryWithRelevantData() throws Exception {
-		Document document = parser.getDOMDocument(html);
+		Document document = parser.getDocumentFor(html);
 		PairingBasis pairingBasis = new PairingBasis();
 		pairingBasis.setPairingTeamName("SOKOL Sedlec-Prčice");
 		List<Arrival> arrivals = new LinkedList<>();

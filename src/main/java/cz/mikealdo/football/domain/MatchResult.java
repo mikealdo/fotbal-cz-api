@@ -26,7 +26,7 @@ public class MatchResult {
 		simpleResult = simpleResult.replaceAll(" ", "");
 		String[] goals = simpleResult.split(":");
 		if (goals.length != 2) {
-			throw new IllegalArgumentException("Result is not parseable");
+			throw new IllegalArgumentException("Match result string is not parseable");
 		}
 		this.homeGoals = Long.valueOf(goals[0]);
 		this.visitorGoals = Long.valueOf(goals[1]);

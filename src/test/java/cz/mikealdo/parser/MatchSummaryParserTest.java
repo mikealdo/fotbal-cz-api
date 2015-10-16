@@ -4,9 +4,9 @@ import static cz.mikealdo.football.domain.GoalType.*;
 import static org.junit.Assert.*;
 
 import org.apache.commons.io.IOUtils;
+import org.jsoup.nodes.Document;
 import org.junit.Before;
 import org.junit.Test;
-import org.w3c.dom.Document;
 
 import cz.mikealdo.football.domain.Goal;
 import cz.mikealdo.football.domain.GoalType;
@@ -33,7 +33,7 @@ public class MatchSummaryParserTest {
 
 	@Test
 	public void shouldFillMatchSummaryWithRelevantData() throws Exception {
-		Document document = parser.getDOMDocument(html);
+		Document document = parser.getDocumentFor(html);
 
 		MatchResult result = parser.createResultWithDetails(document);
 

@@ -1,21 +1,18 @@
 package cz.mikealdo.parser;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 
 import cz.mikealdo.fotbalcz.domain.FotbalCzTeam;
 import cz.mikealdo.football.domain.MatchResult;
 import cz.mikealdo.football.domain.RoundDate;
 import cz.mikealdo.fotbalcz.domain.CompetitionDetails;
 import cz.mikealdo.fotbalcz.domain.FotbalCzMatch;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 public class MatchStatisticsParser extends FotbalCzHTMLParser {
 
@@ -54,17 +51,17 @@ public class MatchStatisticsParser extends FotbalCzHTMLParser {
 
 	private List<RoundDate> retrieveRounds(Document output) {
 		List<RoundDate> rounds = new LinkedList<>();
-		Node competitionTable = getCompetitionTable(output);
-		NodeList rows = competitionTable.getChildNodes();
-		for (int i = 0; i < rows.getLength(); i++) {
-			Node row = rows.item(i);
-			Node cell = row.getFirstChild();
-			if (isCellWithRound(cell)) {
-				String roundText = cell.getFirstChild().getFirstChild().getFirstChild().getNodeValue();
-				Integer round = Integer.parseInt(roundText.split("\\.")[0]);
-				String date = cell.getFirstChild().getFirstChild().getChildNodes().item(1).getFirstChild().getNodeValue();
-				rounds.add(new RoundDate(round, parseDateTime(date)));
-			}
+        Element competitionTable = output.select("table.soutez-kola").first();
+        Elements rows = competitionTable.getElementsByTag("tr");
+        for (Element row : rows) {
+			Element cell = row.child(0);
+            if (cell.hasClass("kolo")) {
+                Elements h2 = cell.select("h2.nadpis");
+                String roundText = h2.text();
+                Integer round = Integer.parseInt(roundText.split("\\.")[0]);
+                String date = h2.select("span").text().trim();
+                rounds.add(new RoundDate(round, parseDateTime(date)));
+            }
 		}
 		return rounds;
 	}
@@ -97,72 +94,38 @@ public class MatchStatisticsParser extends FotbalCzHTMLParser {
 		return freeDraws;
 	}
 
-	private Node getCompetitionTable(Document output) {
-		NodeList allTables = output.getElementsByTagName("table");
-		for (int i = 0; i < allTables.getLength(); i++) {
-			Node table = allTables.item(i);
-			if (isTableCompetitionTable(table)) {
-				return table;
-			}
-		}
-		throw new IllegalArgumentException("Competition table is not in page");
-	}
-
-	private List<FotbalCzMatch> retrieveMatches(Document output, List<RoundDate> roundDates) {
-		NodeList allTables = output.getElementsByTagName("table");
-		List<FotbalCzMatch> matches = new LinkedList<>();
+    private List<FotbalCzMatch> retrieveMatches(Document output, List<RoundDate> roundDates) {
+        Elements tables = output.select("table.soutez-zapasy");
+        List<FotbalCzMatch> matches = new LinkedList<>();
 		int round = 0;
-		for (int i = 0; i < allTables.getLength(); i++) {
-			Node table = allTables.item(i);
-			if (isTableWithMatches(table)) {
-				NodeList rows = table.getChildNodes();
-				for (int j = 0; j < rows.getLength(); j++) {
-					Node row = rows.item(j);
-					FotbalCzMatch match = new FotbalCzMatch();
-					NodeList cells = row.getChildNodes();
-					match.setDate(parseDateTime(getNodeValue(cells.item(0))));
-					match.setHomeTeam(new FotbalCzTeam(Integer.parseInt(getNodeValue(cells.item(1))), getNodeValue(cells.item(2))));
-					match.setVisitorTeam(new FotbalCzTeam(Integer.parseInt(getNodeValue(cells.item(4))), getNodeValue(cells.item(5))));
-					String summaryState = getNodeValue(cells.item(9).getFirstChild());
-					if (summaryState.contains("zápis uzavřen")) {
-						String simpleResult = getNodeValue(cells.item(6));
-						match.setResult(new MatchResult(simpleResult));
-						match.updateResult(retrieveDetailedMatchResult(cells));
-					}
-					match.setRound(roundDates.get(round).getRound());
-					matches.add(match);
-				}
-				round++;
-			}
-		}
+        for (Element table : tables) {
+            Elements rows = table.getElementsByTag("tr");
+            for (Element row : rows) {
+                FotbalCzMatch match = new FotbalCzMatch();
+                Elements cells = row.children();
+                match.setDate(parseDateTime(cells.get(0).text()));
+                match.setHomeTeam(new FotbalCzTeam(Integer.parseInt(cells.get(1).text()), cells.get(2).text()));
+                match.setVisitorTeam(new FotbalCzTeam(Integer.parseInt(cells.get(4).text()), cells.get(5).text()));
+                if (cells.get(9).child(0).hasClass("uzavren")) {
+                    String simpleResult = cells.get(6).text();
+                    match.setResult(new MatchResult(simpleResult));
+                    match.updateResult(retrieveDetailedMatchResult(cells.get(9).child(0)));
+                }
+                match.setRound(roundDates.get(round).getRound());
+                matches.add(match);
+            }
+            round++;
+        }
 		return matches;
 	}
 
-	protected MatchResult retrieveDetailedMatchResult(NodeList cells) {
-		String linkToSummary = cells.item(9).getFirstChild().getAttributes().getNamedItem("href").getNodeValue().replace("../", "/");
+	protected MatchResult retrieveDetailedMatchResult(Element link) {
+		String linkToSummary = link.attr("abs:href");
 		return new MatchSummaryParser().createMatchResultFor(linkToSummary);
 	}
 
-	private Document getMatchesDOMDocument(final String competitionHash){
-		try {
-			return getDOMDocument(new URL("https://is.fotbal.cz/souteze/detail-souteze.aspx?req=" + competitionHash));
-		} catch (MalformedURLException e) {
-			throw new IllegalArgumentException("Competition hash is not valid, given HTML is not parseable.");
-		}
+	private Document getMatchesDOMDocument(final String competitionHash) {
+		return getDocument("https://is.fotbal.cz/souteze/detail-souteze.aspx?req=" + competitionHash);
 	}
 
-
-	private boolean isTableCompetitionTable(Node table) {
-		return table.getAttributes().getNamedItem("class").getNodeValue().equals("soutez-kola");
-	}
-
-	private boolean isTableWithMatches(Node table) {
-		return table.getAttributes().getNamedItem("class").getNodeValue().equals("soutez-zapasy");
-	}
-
-	private boolean isCellWithRound(Node cell) {
-		Node classAttribute = cell.getAttributes().getNamedItem("class");
-		return classAttribute != null && classAttribute.getNodeValue().equals("kolo");
-	}
-	
 }

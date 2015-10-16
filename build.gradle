@@ -72,7 +72,7 @@ dependencies {
     compile "org.aspectj:aspectjrt"
     compile 'org.codehaus.gpars:gpars:1.2.1'
     compile 'net.sf.ehcache:ehcache:2.10.0.0.26'
-    compile 'org.w3c.tidy:jtidy:1.0'
+    compile 'org.jsoup:jsoup:1.8.3'
     compile "com.ofg:micro-infra-spring-boot-starter:$microInfraSpringVersion"
 
     runtime 'cglib:cglib-nodep:3.1'
