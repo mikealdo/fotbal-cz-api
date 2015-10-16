@@ -17,6 +17,10 @@ before_script:
 script:
 - ./gradlew guiTest build --stacktrace -Dstubrunner.skip-local-repo=true
 
+cache:
+  directories:
+  - $HOME/.m2
+
 env:
 - TERM=dumb
 
