@@ -5,8 +5,10 @@ import com.wordnik.swagger.annotations.ApiOperation
 import cz.mikealdo.creator.LeaguesCreator
 import cz.mikealdo.fotbalcz.domain.FotbalCzLeague
 import cz.mikealdo.twitter.config.Versions
+import cz.mikealdo.twitter.place.extractor.PropagationWorker
 import groovy.transform.TypeChecked
 import groovy.util.logging.Slf4j
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -23,7 +25,10 @@ import static org.springframework.web.bind.annotation.RequestMethod.PUT
 @Api(value = "competitionHash", description = "Return results for given competition.")
 class ResultsController {
 
-    ResultsController() {
+    private PropagationWorker propagationWorker;
+
+    @Autowired ResultsController(PropagationWorker propagationWorker) {
+        this.propagationWorker = propagationWorker;
     }
 
     @RequestMapping(
