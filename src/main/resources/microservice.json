@@ -1,10 +1,5 @@
 {
     "cz": {
-        "dependencies": {
-            "pairing-machine": {
-                "path": "cz/mikealdo/pairing-machine"
-            }
-        },
         "this": "cz/mikealdo/fotbal-cz-api"
     }
 }

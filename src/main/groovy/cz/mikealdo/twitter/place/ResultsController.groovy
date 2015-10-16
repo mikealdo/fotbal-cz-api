@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController
 import javax.validation.constraints.NotNull
 import java.util.concurrent.Callable
 
+import static org.springframework.web.bind.annotation.RequestMethod.GET
 import static org.springframework.web.bind.annotation.RequestMethod.PUT
 
 @Slf4j
@@ -33,7 +34,7 @@ class ResultsController {
 
     @RequestMapping(
             value = '{competitionHash}',
-            method = PUT,
+            method = GET,
             consumes = Versions.FOTBAL_CZ_API_JSON_VERSION_1,
             produces = Versions.FOTBAL_CZ_API_JSON_VERSION_1)
     @ApiOperation(value = "Async collecting and propagating of tweets for a given pairId",

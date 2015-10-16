@@ -4,9 +4,9 @@ public class Goal {
 
 	private GoalType goalType = GoalType.GOAL;
 	private Integer playerId;
-	private Integer minute;
+	private String minute;
 
-	public Goal(GoalType goalType, Integer playerId, Integer minute) {
+	public Goal(GoalType goalType, Integer playerId, String minute) {
 		this.goalType = goalType;
 		this.playerId = playerId;
 		this.minute = minute;
@@ -20,7 +20,7 @@ public class Goal {
 		return playerId;
 	}
 
-	public Integer getMinute() {
+	public String getMinute() {
 		return minute;
 	}
 }

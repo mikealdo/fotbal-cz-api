@@ -17,11 +17,12 @@ import org.jsoup.select.Elements;
 import static org.apache.commons.lang3.StringUtils.isNoneBlank;
 import static org.apache.commons.lang3.StringUtils.isNotEmpty;
 import static org.springframework.util.StringUtils.isEmpty;
+import static org.springframework.util.StringUtils.substringMatch;
 
 public class MatchSummaryParser extends FotbalCzHTMLParser {
 
 	public Document getSummaryDOMDocument(final String summaryLink){
-		return getDocument("https://is.fotbal.cz/" + summaryLink);
+		return getDocument(summaryLink);
 	}
 
 	MatchResult createMatchResultFor(String linkToSummary) {
@@ -60,7 +61,7 @@ public class MatchSummaryParser extends FotbalCzHTMLParser {
 		for (Element row: rowsWithGoals) {
 			GoalType goalType = GoalType.getByCode((row.child(2).text()));
 			Integer fotbalCzId = parseInteger(row.child(3).text()).get();
-			Integer minute = parseInteger(row.child(4).text()).get();
+			String minute = row.child(4).text();
 			goals.add(new Goal(goalType, fotbalCzId, minute));
 		}
 		return goals;

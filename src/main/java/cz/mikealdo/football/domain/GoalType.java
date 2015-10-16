@@ -1,7 +1,7 @@
 package cz.mikealdo.football.domain;
 
 public enum GoalType {
-	GOAL("Branka"), PENALTY("Pokutový kop");
+	GOAL("Branka"), PENALTY("Pokutový kop"), OWN("Vlastní");
 
 	private String code;
 
