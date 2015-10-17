@@ -104,8 +104,8 @@ public class MatchSummaryParserTest {
 		assertEquals(Integer.valueOf(87), result.getVisitorLineUp().get(14).getFirstYellowCardInMinute());
 		assertIncomingPlayer("Rataj Jan", "97110189", PlayerPosition.UNDEFINED, 16, result.getVisitorLineUp().get(15));
 		assertIncomingPlayer("Trnobranský Jakub", "88091709", PlayerPosition.UNDEFINED, 17, result.getVisitorLineUp().get(16));
-		assertGoal("91052209", GOAL, 32, result.getHomeShooters().get(0));
-		assertGoal("76041187", GOAL, 39, result.getVisitorShooters().get(0));
+		assertGoal("91052209", GOAL, "32", result.getHomeShooters().get(0));
+		assertGoal("76041187", GOAL, "39", result.getVisitorShooters().get(0));
 	}
 
 	private void assertReferee(String name, String fotbalCzId, RefereePosition refereePosition, Referee squadMember) {
@@ -134,9 +134,9 @@ public class MatchSummaryParserTest {
 		assertFalse(squadMember.isInMainLineUp());
 	}
 
-	private void assertGoal(String fotbalCzId, GoalType goalType, int minute, Goal goal) {
+	private void assertGoal(String fotbalCzId, GoalType goalType, String minute, Goal goal) {
 		assertEquals(Integer.valueOf(fotbalCzId), goal.getPlayerId());
 		assertEquals(goalType, goal.getGoalType());
-		assertEquals(Integer.valueOf(minute), goal.getMinute());
+		assertEquals(minute, goal.getMinute());
 	}
 }

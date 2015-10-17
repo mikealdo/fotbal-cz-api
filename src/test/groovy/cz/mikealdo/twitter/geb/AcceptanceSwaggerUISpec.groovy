@@ -36,17 +36,17 @@ class AcceptanceSwaggerUISpec extends BaseBootGebSpec {
             showHealthMVCEndpoints.displayed
     }
 
-    def "Endpoint 'pairid' is visible"() {
+    def "Endpoint 'results' is visible"() {
         when:
             to SwaggerUIHomePage
         then:
             at SwaggerUIHomePage
         when:
-            waitFor { showPairIdEndpoints.displayed }
-            showPairIdEndpoints.click()
+            waitFor { showResultsEndpoints.displayed }
+            showResultsEndpoints.click()
         then:
-            waitFor { pairIdPutText.displayed }
-            pairIdPutText.text() == "/api/{pairId}"
+            waitFor { competitionHashPutText.displayed }
+            competitionHashPutText.text() == "/api/{competitionHash}"
 
     }
 
