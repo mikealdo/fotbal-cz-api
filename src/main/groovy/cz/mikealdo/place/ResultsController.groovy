@@ -1,11 +1,11 @@
-package cz.mikealdo.twitter.place
+package cz.mikealdo.place
 
 import com.wordnik.swagger.annotations.Api
 import com.wordnik.swagger.annotations.ApiOperation
 import cz.mikealdo.creator.LeaguesCreator
 import cz.mikealdo.fotbalcz.domain.FotbalCzLeague
-import cz.mikealdo.twitter.config.Versions
-import cz.mikealdo.twitter.place.extractor.PropagationWorker
+import cz.mikealdo.config.Versions
+import cz.mikealdo.place.extractor.PropagationWorker
 import groovy.transform.TypeChecked
 import groovy.util.logging.Slf4j
 import org.springframework.beans.factory.annotation.Autowired
@@ -17,7 +17,6 @@ import javax.validation.constraints.NotNull
 import java.util.concurrent.Callable
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET
-import static org.springframework.web.bind.annotation.RequestMethod.PUT
 
 @Slf4j
 @RestController

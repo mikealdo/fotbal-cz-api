@@ -1,5 +1,6 @@
-package cz.mikealdo.twitter.place.extractor
+package cz.mikealdo.place.extractor
 
+import cz.mikealdo.fotbalcz.domain.FotbalCzLeague
 import groovy.text.SimpleTemplateEngine
 import groovy.transform.PackageScope
 import groovy.transform.TypeChecked
@@ -8,9 +9,9 @@ import groovy.transform.TypeChecked
 @PackageScope
 class PlacesJsonBuilder {
 
-    String buildPlacesJson(long pairId, Map<String, Optional<Place>> places) {
+    String buildPlacesJson(long pairId, Map<String, Optional<FotbalCzLeague>> places) {
         return """[
-                       ${places.collect { String tweetId, Optional<Place> place ->
+                       ${places.collect { String tweetId, Optional<FotbalCzLeague> place ->
                             
                             return new SimpleTemplateEngine().createTemplate(JSON_RESPONSE_TEMPLATE)
                             .make([pairId: pairId,

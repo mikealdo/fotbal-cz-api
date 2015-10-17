@@ -1,7 +1,7 @@
 package com.ofg.base
 
 import com.ofg.infrastructure.base.MvcIntegrationSpec
-import cz.mikealdo.twitter.Application
+import cz.mikealdo.Application
 import org.springframework.boot.test.SpringApplicationContextLoader
 import org.springframework.test.context.ContextConfiguration
 

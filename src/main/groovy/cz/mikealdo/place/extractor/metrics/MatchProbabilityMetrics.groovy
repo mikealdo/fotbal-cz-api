@@ -1,18 +1,17 @@
-package cz.mikealdo.twitter.place.extractor.metrics
+package cz.mikealdo.place.extractor.metrics
 
 import com.codahale.metrics.Meter
 import com.codahale.metrics.MetricRegistry
-import cz.mikealdo.twitter.place.extractor.PlaceExtractor.PlaceResolutionProbability
 
 class MatchProbabilityMetrics {
 
-    private final Map<PlaceResolutionProbability, Meter> probabilityMeters = [:]
+    private final Map<String, Meter> probabilityMeters = [:]
 
     MatchProbabilityMetrics(MetricRegistry metricRegistry) {
         registerProbabilityMetrics(metricRegistry)
     }
 
-    void update(PlaceResolutionProbability probability) {
+    void update(String probability) {
         probabilityMeters[probability].mark()
     }
 

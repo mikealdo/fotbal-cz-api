@@ -1,6 +1,6 @@
 package cz.mikealdo.twitter.geb
 
-import cz.mikealdo.twitter.Application
+import cz.mikealdo.Application
 import geb.spock.GebSpec
 import org.springframework.boot.test.IntegrationTest
 import org.springframework.boot.test.SpringApplicationContextLoader

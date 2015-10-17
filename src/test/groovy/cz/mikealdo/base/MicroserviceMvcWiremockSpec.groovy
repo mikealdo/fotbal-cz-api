@@ -2,7 +2,7 @@ package com.ofg.base
 
 import com.ofg.infrastructure.base.MvcWiremockIntegrationSpec
 import com.ofg.infrastructure.web.correlationid.CorrelationIdFilter
-import cz.mikealdo.twitter.Application
+import cz.mikealdo.Application
 import org.springframework.boot.test.SpringApplicationContextLoader
 import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.web.servlet.setup.ConfigurableMockMvcBuilder

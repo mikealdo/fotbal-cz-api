@@ -2,7 +2,7 @@ package cz.mikealdo.twitter.places
 import com.ofg.base.MicroserviceMvcWiremockSpec
 import org.springframework.test.context.ContextConfiguration
 
-@ContextConfiguration(classes = ColleratorClientStubConfiguration)
+@ContextConfiguration//(classes = ColleratorClientStubConfiguration)
 class AcceptanceSpec extends MicroserviceMvcWiremockSpec {
 /*
     @Autowired ColleratorClientStub colleratorClientStub

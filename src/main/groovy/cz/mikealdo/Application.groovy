@@ -1,4 +1,4 @@
-package cz.mikealdo.twitter
+package cz.mikealdo
 
 import com.ofg.infrastructure.environment.EnvironmentSetupVerifier
 import groovy.transform.TypeChecked

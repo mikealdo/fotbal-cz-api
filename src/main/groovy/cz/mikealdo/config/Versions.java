@@ -1,4 +1,4 @@
-package cz.mikealdo.twitter.config;
+package cz.mikealdo.config;
 
 public final class Versions {
     private Versions() {
