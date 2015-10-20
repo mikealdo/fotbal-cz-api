@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController
 import javax.validation.constraints.NotNull
 import java.util.concurrent.Callable
 
+import static cz.mikealdo.config.Versions.*
 import static org.springframework.web.bind.annotation.RequestMethod.GET
 
 @Slf4j
@@ -34,8 +35,8 @@ class ResultsController {
     @RequestMapping(
             value = '{competitionHash}',
             method = GET,
-            consumes = Versions.FOTBAL_CZ_API_JSON_VERSION_1,
-            produces = Versions.FOTBAL_CZ_API_JSON_VERSION_1)
+            consumes = FOTBAL_CZ_API_JSON_VERSION_1,
+            produces = FOTBAL_CZ_API_JSON_VERSION_1)
     @ApiOperation(value = "Async collecting and propagating of tweets for a given pairId",
             notes = "This will asynchronously call tweet collecting, place extracting and their propagation to Collerators")
     Callable<FotbalCzLeague> getPlacesFromTweets(@PathVariable @NotNull String competitionHash) {

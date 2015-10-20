@@ -25,28 +25,8 @@ public class MatchStatisticsParser extends FotbalCzHTMLParser {
 		CompetitionDetails competitionDetails = new CompetitionDetails();
 		competitionDetails.setRoundDates(retrieveRounds(output));
 		competitionDetails.setMatches(retrieveMatches(output, competitionDetails.getRoundDates()));
-//		competitionDetails.setRoundDates(updateRoundDatesByTeamMatch(competitionDetails.getRoundDates(), competitionDetails.getMatches(), teamName));
 		competitionDetails.setTeams(retrieveTeams(competitionDetails.getMatches()));
-//		competitionDetails.setArrivals(pairingBasis.getArrivals());
 		return competitionDetails;
-	}
-
-	List<RoundDate> updateRoundDatesByTeamMatch(List<RoundDate> roundDates, List<FotbalCzMatch> matches, String teamName) {
-		for (FotbalCzMatch match : matches) {
-			if (isMatchForGivenTeamName(teamName, match)) {
-				for (RoundDate roundDate : roundDates) {
-					if (roundDate.getRound().equals(match.getRound())) {
-						roundDate.setDate(match.getDate());
-						break;
-					}
-				}
-			} 
-		}
-		return roundDates;
-	}
-
-	private boolean isMatchForGivenTeamName(String teamNameHash, FotbalCzMatch match) {
-		return match.getHomeTeam().getTeamNameToDisplay().equals(teamNameHash) || match.getVisitorTeam().getTeamNameToDisplay().equals(teamNameHash);
 	}
 
 	private List<RoundDate> retrieveRounds(Document output) {
