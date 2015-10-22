@@ -13,23 +13,18 @@ import cz.mikealdo.football.domain.Referee;
 import cz.mikealdo.fotbalcz.domain.builder.PlayerBuilder;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.stereotype.Component;
 
-import static org.apache.commons.lang3.StringUtils.isNoneBlank;
 import static org.apache.commons.lang3.StringUtils.isNotEmpty;
-import static org.springframework.util.StringUtils.isEmpty;
-import static org.springframework.util.StringUtils.substringMatch;
 
+@Component
 public class MatchSummaryParser extends FotbalCzHTMLParser {
 
-	public Document getSummaryDOMDocument(final String summaryLink){
-		return getDocument(summaryLink);
-	}
-
 	MatchResult createMatchResultFor(String linkToSummary) {
-		return createResultWithDetails(getSummaryDOMDocument(linkToSummary));
+        return createResultWithDetails(getDocument(linkToSummary));
 	}
 
-	MatchResult createResultWithDetails(Document summaryDOMDocument) {
+    MatchResult createResultWithDetails(Document summaryDOMDocument) {
 		MatchResult matchResult = new MatchResult(retrieveSimpleResult(summaryDOMDocument));
 		matchResult = updateMatchResultWithPenalties(matchResult, summaryDOMDocument);
 		matchResult.setSpectators(Long.valueOf(getSpanWithTextContent(summaryDOMDocument, "Diváků:").parent().ownText().trim()));

@@ -13,13 +13,28 @@ import cz.mikealdo.fotbalcz.domain.FotbalCzMatch;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MatchStatisticsParser extends FotbalCzHTMLParser {
 
-	public CompetitionDetails createCompetitionDetailsFrom(String competitionHash) {
+    public static final String COMPETITION_DETAIL_BASE_URL = "https://is.fotbal.cz/souteze/detail-souteze.aspx?req=";
+    private MatchSummaryParser summaryParser;
+
+    @Autowired
+    public MatchStatisticsParser(MatchSummaryParser summaryParser) {
+        this.summaryParser = summaryParser;
+    }
+
+    public CompetitionDetails createCompetitionDetailsFrom(String competitionHash) {
 		Document output = getMatchesDOMDocument(competitionHash);
 		return createCompetitionDetails(output);
 	}
+
+    public Document getMatchesDOMDocument(final String competitionHash) {
+        return getDocument(COMPETITION_DETAIL_BASE_URL + competitionHash);
+    }
 
 	CompetitionDetails createCompetitionDetails(Document output) {
 		CompetitionDetails competitionDetails = new CompetitionDetails();
@@ -101,11 +116,7 @@ public class MatchStatisticsParser extends FotbalCzHTMLParser {
 
 	protected MatchResult retrieveDetailedMatchResult(Element link) {
 		String linkToSummary = link.attr("abs:href");
-		return new MatchSummaryParser().createMatchResultFor(linkToSummary);
-	}
-
-	private Document getMatchesDOMDocument(final String competitionHash) {
-		return getDocument("https://is.fotbal.cz/souteze/detail-souteze.aspx?req=" + competitionHash);
+		return summaryParser.createMatchResultFor(linkToSummary);
 	}
 
 }

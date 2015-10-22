@@ -20,10 +20,6 @@ public class RoundDate {
 		return date;
 	}
 
-	public void setDate(DateTime date) {
-		this.date = date;
-	}
-
 	@Override
 	public String toString() {
 		return "RoundDate{" +

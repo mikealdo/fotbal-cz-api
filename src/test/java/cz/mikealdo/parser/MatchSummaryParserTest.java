@@ -19,12 +19,11 @@ import cz.mikealdo.football.domain.SquadMember;
 
 public class MatchSummaryParserTest {
 	
-	MatchSummaryParser parser;
-	private String html;
+	MatchSummaryParser parser = new MatchSummaryParser();
+    private String html = new HtmlProvider().getMatchSummaryHTML();
 
 	@Before
 	public void setUp() throws Exception {
-		parser = new MatchSummaryParser();
 		html = IOUtils.toString(
 				this.getClass().getResource("/html/match-summary.html"),
 				"UTF-8"

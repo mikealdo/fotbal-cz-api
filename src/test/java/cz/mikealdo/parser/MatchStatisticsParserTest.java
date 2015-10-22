@@ -1,6 +1,8 @@
 package cz.mikealdo.parser;
 
 import static junit.framework.Assert.*;
+import static org.mockito.Matchers.anyString;
+import static org.mockito.Mockito.when;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -19,27 +21,24 @@ import cz.mikealdo.fotbalcz.domain.FotbalCzTeam;
 import cz.mikealdo.football.domain.MatchResult;
 import cz.mikealdo.fotbalcz.domain.PairingBasis;
 import cz.mikealdo.football.domain.RoundDate;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
+@RunWith(MockitoJUnitRunner.class)
 public class MatchStatisticsParserTest {
 
-	MatchStatisticsParser parser;
+    @Mock
+    private MatchSummaryParser summaryParser;
+    @InjectMocks
+	private MatchStatisticsParser parser;
+    private String html = new HtmlProvider().getMatchStatisticsHTML();;
 
-	private String html;
-
-	@Before
+    @Before
 	public void setUp() throws Exception {
-		parser = new MatchStatisticsParser() {
-			@Override
-			protected MatchResult retrieveDetailedMatchResult(Element cells) {
-				// we don't want to load match result in test		
-				return null;
-			}
-		};
-		html = IOUtils.toString(
-				this.getClass().getResource("/html/match-statistics.html"),
-				"UTF-8"
-		);
-	}
+		when(summaryParser.createMatchResultFor(anyString())).thenReturn(null);
+    }
 
 	@Test
 	public void shouldAddFreeDrawToTeamList() throws Exception {

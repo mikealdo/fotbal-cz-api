@@ -8,17 +8,16 @@ import org.springframework.beans.factory.annotation.Autowired
 @Slf4j
 class PlacePropagatingWorker implements PropagationWorker {
     
-    private final PlacesJsonBuilder placesJsonBuilder
+    private final FotbalCzLeagueJsonBuilder leaguesJsonBuilder
 
     @Autowired
-    PlacePropagatingWorker(PlacesJsonBuilder placesJsonBuilder) {
-        this.placesJsonBuilder = placesJsonBuilder
+    PlacePropagatingWorker(FotbalCzLeagueJsonBuilder leaguesJsonBuilder) {
+        this.leaguesJsonBuilder = leaguesJsonBuilder
     }
 
     @Override
-    void collectAndPropagate(long pairId, List<FotbalCzLeague> tweets) {
-        Map<String, Optional<FotbalCzLeague>> extractedPlaces = new IdentityHashMap<>();
-        String jsonToPropagate = placesJsonBuilder.buildPlacesJson(pairId, extractedPlaces)
-        log.debug("Sent json [$jsonToPropagate] to collerator")
+    void collectAndPropagate(String competitionHash, FotbalCzLeague league) {
+        String jsonToPropagate = leaguesJsonBuilder.buildLeagueJson(competitionHash, league)
+        log.debug("Sent json [$jsonToPropagate] to fotbal-cz-persister")
     }
 }

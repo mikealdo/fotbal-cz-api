@@ -10,12 +10,12 @@ import org.springframework.context.annotation.Import
 class FotbalCzApiConfiguration {
 
     @Bean
-    PlacesJsonBuilder placesJsonBuilder() {
-        return new PlacesJsonBuilder()
+    FotbalCzLeagueJsonBuilder placesJsonBuilder() {
+        return new FotbalCzLeagueJsonBuilder()
     }
 
     @Bean
-    PropagationWorker propagationWorker(PlacesJsonBuilder placesJsonBuilder) {
+    PropagationWorker propagationWorker(FotbalCzLeagueJsonBuilder placesJsonBuilder) {
         return new PlacePropagatingWorker(placesJsonBuilder)
     }
 

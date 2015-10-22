@@ -1,29 +1,29 @@
 package cz.mikealdo.creator;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import cz.mikealdo.fotbalcz.domain.CompetitionDetails;
 import cz.mikealdo.fotbalcz.domain.FotbalCzMatch;
 import cz.mikealdo.parser.MatchStatisticsParser;
 import cz.mikealdo.fotbalcz.domain.FotbalCzLeague;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class LeaguesCreator {
 
-	MatchStatisticsParser parser = new MatchStatisticsParser();
-	
-	public FotbalCzLeague createLeague(String competitionHash) {
+	private MatchStatisticsParser parser;
+
+    @Autowired
+    public LeaguesCreator(MatchStatisticsParser parser) {
+        this.parser = parser;
+    }
+
+    public FotbalCzLeague createLeague(String competitionHash) {
 		CompetitionDetails competitionDetails = parser.createCompetitionDetailsFrom(competitionHash);
 		FotbalCzLeague league = new FotbalCzLeague(competitionDetails.getCompetitionName());
 		fillMatchesWithNeededInfo(competitionDetails);
 		league.setMatches(competitionDetails.getMatches());
 		league.setTeams(competitionDetails.getTeams());
 		return league;
-	}
-
-	public List<FotbalCzLeague> createLeagues(List<String> competitionHashes) {
-		return competitionHashes.stream().map(this::createLeague).collect(Collectors.toCollection(LinkedList::new));
 	}
 
 	private void fillMatchesWithNeededInfo(CompetitionDetails competitionDetails) {
