@@ -1,4 +1,4 @@
-package cz.mikealdo.twitter.geb
+package cz.mikealdo.geb
 
 import cz.mikealdo.Application
 import geb.spock.GebSpec

@@ -1,4 +1,4 @@
-package cz.mikealdo.twitter.geb.pages
+package cz.mikealdo.geb.pages
 
 import geb.Page
 

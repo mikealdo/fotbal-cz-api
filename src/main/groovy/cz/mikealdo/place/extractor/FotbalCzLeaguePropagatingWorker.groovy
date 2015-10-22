@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired
 
 @TypeChecked
 @Slf4j
-class PlacePropagatingWorker implements PropagationWorker {
+class FotbalCzLeaguePropagatingWorker implements PropagationWorker {
     
     private final FotbalCzLeagueJsonBuilder leaguesJsonBuilder
 
     @Autowired
-    PlacePropagatingWorker(FotbalCzLeagueJsonBuilder leaguesJsonBuilder) {
+    FotbalCzLeaguePropagatingWorker(FotbalCzLeagueJsonBuilder leaguesJsonBuilder) {
         this.leaguesJsonBuilder = leaguesJsonBuilder
     }
 

@@ -1,6 +1,6 @@
-package cz.mikealdo.twitter.geb
+package cz.mikealdo.geb
 
-import cz.mikealdo.twitter.geb.pages.SwaggerUIHomePage
+import cz.mikealdo.geb.pages.SwaggerUIHomePage
 import spock.lang.Stepwise
 
 @Stepwise

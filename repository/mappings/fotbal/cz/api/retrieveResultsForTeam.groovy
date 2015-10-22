@@ -8,8 +8,18 @@ GroovyDsl.make {
             header 'Content-Type': 'application/vnd.cz.mikealdo.fotbal-cz-api.v1+json'
         }
         body '''\
-    [{     
-    }]
+    [
+        {
+            "round": 1,
+            "matches": [
+                {}
+            ]
+        },
+        {
+            "round": 2,
+            "matches": ""
+        }
+    ]
 '''
     }
     response {

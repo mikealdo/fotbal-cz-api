@@ -16,7 +16,7 @@ class FotbalCzApiConfiguration {
 
     @Bean
     PropagationWorker propagationWorker(FotbalCzLeagueJsonBuilder placesJsonBuilder) {
-        return new PlacePropagatingWorker(placesJsonBuilder)
+        return new FotbalCzLeaguePropagatingWorker(placesJsonBuilder)
     }
 
 }
