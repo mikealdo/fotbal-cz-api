@@ -17,7 +17,7 @@ buildscript {
         classpath 'com.blogspot.toomuchcoding:gradle-test-profiler:0.3.1'
 
         if (project.hasProperty("coverage")) {
-            classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:1.0.2'
+            classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.3.1'
             classpath "org.sonarqube.gradle:gradle-sonarqube-plugin:1.0"
         }
     }
