@@ -12,7 +12,18 @@ public class FotbalCzMatch {
 	MatchResult result;
 	Integer round;
 
-	public DateTime getDate() {
+    public FotbalCzMatch() {
+    }
+
+    public FotbalCzMatch(DateTime date, FotbalCzTeam homeTeam, FotbalCzTeam visitorTeam, MatchResult result, Integer round) {
+        this.date = date;
+        this.homeTeam = homeTeam;
+        this.visitorTeam = visitorTeam;
+        this.result = result;
+        this.round = round;
+    }
+
+    public DateTime getDate() {
 		return date;
 	}
 

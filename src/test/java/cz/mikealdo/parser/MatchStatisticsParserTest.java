@@ -1,30 +1,26 @@
 package cz.mikealdo.parser;
 
-import static junit.framework.Assert.*;
-import static org.mockito.Matchers.anyString;
-import static org.mockito.Mockito.when;
-
-import java.util.LinkedList;
-import java.util.List;
-
-import org.apache.commons.io.IOUtils;
-import org.joda.time.DateTime;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.junit.Before;
-import org.junit.Test;
-
 import cz.mikealdo.football.domain.Arrival;
+import cz.mikealdo.football.domain.RoundDate;
 import cz.mikealdo.fotbalcz.domain.CompetitionDetails;
 import cz.mikealdo.fotbalcz.domain.FotbalCzMatch;
 import cz.mikealdo.fotbalcz.domain.FotbalCzTeam;
-import cz.mikealdo.football.domain.MatchResult;
 import cz.mikealdo.fotbalcz.domain.PairingBasis;
-import cz.mikealdo.football.domain.RoundDate;
+import org.joda.time.DateTime;
+import org.jsoup.nodes.Document;
+import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Matchers.anyString;
+import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class MatchStatisticsParserTest {

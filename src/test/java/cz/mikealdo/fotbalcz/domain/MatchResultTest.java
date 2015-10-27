@@ -1,10 +1,13 @@
 package cz.mikealdo.fotbalcz.domain;
 
-import static junit.framework.Assert.*;
 
 import org.junit.Test;
 
 import cz.mikealdo.football.domain.MatchResult;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class MatchResultTest {
 

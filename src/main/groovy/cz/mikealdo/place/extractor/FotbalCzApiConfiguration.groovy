@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Import
 class FotbalCzApiConfiguration {
 
     @Bean
-    FotbalCzLeagueJsonBuilder placesJsonBuilder() {
+    FotbalCzLeagueJsonBuilder fotbalCzLeagueJsonBuilder() {
         return new FotbalCzLeagueJsonBuilder()
     }
 

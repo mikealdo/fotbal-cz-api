@@ -1,36 +1,48 @@
 package cz.mikealdo.fotbalcz
+
+import org.hamcrest.CoreMatchers
 import com.ofg.base.MicroserviceMvcWiremockSpec
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.MediaType
 import org.springframework.test.context.ContextConfiguration
+import org.springframework.test.web.servlet.MvcResult
+
+import static java.util.concurrent.TimeUnit.SECONDS
+import static org.hamcrest.core.IsNot.not
+import static org.hamcrest.text.IsEmptyString.isEmptyString
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.asyncDispatch
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.request
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
 @ContextConfiguration//(classes = ColleratorClientStubConfiguration)
 class AcceptanceSpec extends MicroserviceMvcWiremockSpec {
 
 //    @Autowired ColleratorClientStub colleratorClientStub
     @Value('${acceptance-tests.timeout:8}') Integer acceptanceTestTimeout
-//
+
     static final String ROOT_PATH = '/api'
     static final String COMPETITION_HASH = '172c09d6-dd87-47df-a0b3-8efde6ac6842'
-    static final MediaType TWITTER_PLACES_ANALYZER_MICROSERVICE_V1 = new MediaType('application', 'vnd.cz.mikealdo.fotbal-cz-api.v1+json')
-//
-//    def "should find a place by verifying tweet's geolocation"() {
-//        given: 'a tweet with a place section filled in'
-//            String tweet = TWEET_WITH_PLACE
-//        when: "trying to retrieve place from the tweet"
-//            MvcResult mvcResult = mockMvc.perform(put("$ROOT_PATH/$PAIR_ID").
-//                    contentType(TWITTER_PLACES_ANALYZER_MICROSERVICE_V1).
-//                    content("[$tweet]")).
-//                    andExpect(request().asyncStarted()).
-//                    andReturn();
-//        and:
-//            mvcResult.getAsyncResult(SECONDS.toMillis(2))   //Wait for a result eagerly to not fail on print() which has wait(0)
-//        and:
-//            mockMvc.perform(asyncDispatch(mvcResult)).
-//                    andDo(print()).
-//                    andExpect(status().isOk()).
-//                    andExpect(header().string("correlationId", not(isEmptyString())))
-//        then: "user's location (place) will be extracted from that section"
+    static final MediaType FOTBAL_CZ_API_MICROSERVICE_V1 = new MediaType('application', 'vnd.cz.mikealdo.fotbal-cz-api.v1+json')
+
+    def "should find competition results" () {
+        given: 'a competition hash'
+            String competitionHash = '172c09d6-dd87-47df-a0b3-8efde6ac6842'
+        when: "trying to retrieve results from fotbal.cz"
+            MvcResult mvcResult = mockMvc.perform(put("$ROOT_PATH/$COMPETITION_HASH").
+                    contentType(FOTBAL_CZ_API_MICROSERVICE_V1)).
+                    andExpect(request().asyncStarted()).
+                    andReturn();
+        and:
+            mvcResult.getAsyncResult(SECONDS.toMillis(2))
+        and:
+            mockMvc.perform(asyncDispatch(mvcResult)).
+                    andDo(print()).
+                    andExpect(status().isOk()).
+                    andExpect(header().string("correlationId", not(isEmptyString())))
+        then: "user's location (place) will be extracted from that section"
 //            await().atMost(acceptanceTestTimeout, SECONDS).untilAtomic(colleratorClientStub.savedPairId, CoreMatchers.<Long>equalTo(PAIR_ID))
 //            await().atMost(acceptanceTestTimeout, SECONDS).untilAtomic(colleratorClientStub.savedPlaces, equalsReferenceJson('''
 //                                                                        [{
@@ -45,8 +57,8 @@ class AcceptanceSpec extends MicroserviceMvcWiremockSpec {
 //                                                                            "origin" : "twitter_place_section"
 //                                                                        }]
 //                                                                        '''))
-//    }
-//
+    }
+//N
 //    def "should find a place by verifying tweet's coordinates"() {
 //        given: 'a tweet with a coordinates section filled in'
 //            String tweet = TWEET_WITH_COORDINATES

@@ -5,6 +5,7 @@ import com.wordnik.swagger.annotations.ApiOperation
 import cz.mikealdo.creator.LeaguesCreator
 import cz.mikealdo.fotbalcz.domain.FotbalCzLeague
 import cz.mikealdo.parser.MatchStatisticsParser
+import cz.mikealdo.place.extractor.FotbalCzLeagueJsonBuilder
 import cz.mikealdo.place.extractor.PropagationWorker
 import groovy.transform.TypeChecked
 import groovy.util.logging.Slf4j
@@ -26,13 +27,15 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET
 @Api(value = "competitionHash", description = "Return results for given competition.")
 class ResultsController {
 
-    private PropagationWorker propagationWorker;
-    private MatchStatisticsParser parser;
+    private PropagationWorker propagationWorker
+    private MatchStatisticsParser parser
+    private FotbalCzLeagueJsonBuilder builder
 
     @Autowired
-    ResultsController(PropagationWorker propagationWorker, MatchStatisticsParser parser) {
+    ResultsController(PropagationWorker propagationWorker, MatchStatisticsParser parser, FotbalCzLeagueJsonBuilder builder) {
         this.propagationWorker = propagationWorker
         this.parser = parser
+        this.builder = builder
     }
 
     @RequestMapping(
@@ -45,8 +48,8 @@ class ResultsController {
     Callable<FotbalCzLeague> getPlacesFromTweets(@PathVariable @NotNull String competitionHash) {
         return {
             LeaguesCreator creator = new LeaguesCreator(parser);
-            creator.createLeague(competitionHash);
-
+            def league = creator.createLeague(competitionHash);
+            builder.buildLeagueJson(competitionHash, league)
         }
     }
 

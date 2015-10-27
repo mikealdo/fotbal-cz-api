@@ -155,4 +155,8 @@ public class MatchResult {
 	public void setVisitorShooters(List<Goal> visitorShooters) {
 		this.visitorShooters = visitorShooters;
 	}
+
+    public String prettyPrintSimpleResult() {
+        return homeGoals+":"+visitorGoals+((penaltyShootout)?"p":"")+((forfeited)?"k":"");
+    }
 }
