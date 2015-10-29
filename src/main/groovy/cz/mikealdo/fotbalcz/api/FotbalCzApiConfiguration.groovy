@@ -1,6 +1,6 @@
-package cz.mikealdo.place.extractor
+package cz.mikealdo.fotbalcz.api
 
-import cz.mikealdo.place.extractor.metrics.ExtractorMetricsConfiguration
+import cz.mikealdo.fotbalcz.api.metrics.ExtractorMetricsConfiguration
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Import

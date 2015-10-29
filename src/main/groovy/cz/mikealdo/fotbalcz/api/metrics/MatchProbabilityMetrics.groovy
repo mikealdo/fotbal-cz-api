@@ -1,4 +1,4 @@
-package cz.mikealdo.place.extractor.metrics
+package cz.mikealdo.fotbalcz.api.metrics
 
 import com.codahale.metrics.Meter
 import com.codahale.metrics.MetricRegistry

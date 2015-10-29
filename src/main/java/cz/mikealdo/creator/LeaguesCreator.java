@@ -1,5 +1,6 @@
 package cz.mikealdo.creator;
 
+import cz.mikealdo.fotbalcz.api.CompetitionSettings;
 import cz.mikealdo.fotbalcz.domain.CompetitionDetails;
 import cz.mikealdo.fotbalcz.domain.FotbalCzMatch;
 import cz.mikealdo.parser.MatchStatisticsParser;
@@ -17,7 +18,7 @@ public class LeaguesCreator {
         this.parser = parser;
     }
 
-    public FotbalCzLeague createLeague(String competitionHash) {
+    public FotbalCzLeague createLeague(String competitionHash, CompetitionSettings settings) {
 		CompetitionDetails competitionDetails = parser.createCompetitionDetailsFrom(competitionHash);
 		FotbalCzLeague league = new FotbalCzLeague(competitionDetails.getCompetitionName());
 		fillMatchesWithNeededInfo(competitionDetails);

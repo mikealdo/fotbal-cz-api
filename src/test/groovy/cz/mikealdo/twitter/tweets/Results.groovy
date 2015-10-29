@@ -2,7 +2,7 @@ package cz.mikealdo.twitter.tweets
 
 class Results {
 
-    public static String FULL_RESULT = '''
+    public static String FULL_RESULTS = '''
                 {
                     "competition_hash" : "hash",
                     "competition" :
@@ -33,14 +33,18 @@ class Results {
                 }
                 '''
 
-    public static String TWEET_WITHOUT_A_PLACE = '''
-    {
-        "created_at": "Sat Jul 26 09:38:57 +0000 2014",
-        "id": 492967299297845248,
-        "id_str": "492967299297845248",
-        "text": "Gonna see you at Warsaw",
-        "place": null
-    }
+    public static String ROUND_RESULTS = '''
+                {
+                    "matches":[
+                        {
+                            "homeTeam": "first",
+                            "visitorTeam": "second",
+                            "result": "2:1p",
+                            "round": 1,
+                            "date": "2015-05-15"
+                        }
+                    ]
+                }
 '''
 
     public static String TWEET_WITH_COORDINATES = '''

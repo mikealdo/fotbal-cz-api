@@ -14,7 +14,7 @@ class CachingConfiguration {
     @Bean
     CacheManager cacheManager() {
         CacheConfiguration cacheConfiguration = new CacheConfiguration()
-        cacheConfiguration.setName("cities")
+        cacheConfiguration.setName("results")
         cacheConfiguration.setMemoryStoreEvictionPolicy("LRU")
         cacheConfiguration.setMaxEntriesLocalHeap(1000)
         cacheConfiguration.setTimeToLiveSeconds(MINUTES.toSeconds(12))

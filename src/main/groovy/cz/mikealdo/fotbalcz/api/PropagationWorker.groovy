@@ -1,4 +1,4 @@
-package cz.mikealdo.place.extractor
+package cz.mikealdo.fotbalcz.api
 
 import cz.mikealdo.fotbalcz.domain.FotbalCzLeague
 

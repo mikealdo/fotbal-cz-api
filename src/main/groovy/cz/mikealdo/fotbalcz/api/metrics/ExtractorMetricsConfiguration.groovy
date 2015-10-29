@@ -1,4 +1,4 @@
-package cz.mikealdo.place.extractor.metrics
+package cz.mikealdo.fotbalcz.api.metrics
 import com.codahale.metrics.MetricRegistry
 import groovy.transform.TypeChecked
 import org.springframework.context.annotation.Bean

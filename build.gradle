@@ -31,6 +31,8 @@ group = mavenProjectGroupId
 version = project.hasProperty('project.version') ? project.getProperty('project.version') : buildNrLoc
 
 sourceCompatibility = '1.8'
+sourceSets.main.java.srcDirs = []
+sourceSets.main.groovy.srcDirs += ["src/main/java"]
 
 configurations {
     all {

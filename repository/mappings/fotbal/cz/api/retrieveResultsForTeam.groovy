@@ -8,18 +8,34 @@ GroovyDsl.make {
             header 'Content-Type': 'application/vnd.cz.mikealdo.fotbal-cz-api.v1+json'
         }
         body '''\
-    [
-        {
-            "round": 1,
-            "matches": [
-                {}
-            ]
-        },
-        {
-            "round": 2,
-            "matches": ""
-        }
-    ]
+                {
+                    "competition_hash" : "hash",
+                    "competition" :
+                        {
+                            "name": "I.B trida",
+                            "description": "description",
+                            "teams": [
+                                    {
+                                        "pairId": 1,
+                                        "name": "first"
+                                    },
+
+                                    {
+                                        "pairId": 2,
+                                        "name": "second"
+                                    }
+                                ],
+                            "matches":[
+                                {
+                                    "homeTeam": "first",
+                                    "visitorTeam": "second",
+                                    "result": "2:1p",
+                                    "round": 1,
+                                    "date": "2015-05-15"
+                                }
+                            ]
+                        }
+                }
 '''
     }
     response {

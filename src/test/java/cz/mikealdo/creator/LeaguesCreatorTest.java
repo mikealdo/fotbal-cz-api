@@ -1,6 +1,7 @@
 package cz.mikealdo.creator;
 
 import cz.mikealdo.football.domain.RoundDate;
+import cz.mikealdo.fotbalcz.api.CompetitionSettings;
 import cz.mikealdo.fotbalcz.domain.CompetitionDetails;
 import cz.mikealdo.fotbalcz.domain.FotbalCzLeague;
 import cz.mikealdo.fotbalcz.domain.FotbalCzMatch;
@@ -66,7 +67,7 @@ public class LeaguesCreatorTest {
 
     @Test
     public void shouldCreateLeagueWithPopulatedFields() throws Exception {
-        FotbalCzLeague league = creator.createLeague("hash");
+        FotbalCzLeague league = creator.createLeague("hash", new CompetitionSettings());
 
         assertEquals(league.getTeams().size(), 2);
         assertEquals(league.getMatches().size(), 2);
