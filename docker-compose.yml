@@ -1,4 +1,4 @@
-bootmicroservice:
+fotbal-cz-api:
   build: build/docker
   links:
     - zookeeper:zk

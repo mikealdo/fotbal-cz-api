@@ -1,4 +1,4 @@
-package cz.mikealdo.twitter.tweets
+package cz.mikealdo.resultsstorage.tweets
 
 class Results {
 

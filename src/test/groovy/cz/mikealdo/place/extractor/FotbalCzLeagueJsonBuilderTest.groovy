@@ -6,7 +6,7 @@ import cz.mikealdo.fotbalcz.api.FotbalCzLeagueJsonBuilder
 import cz.mikealdo.fotbalcz.domain.FotbalCzLeague
 import cz.mikealdo.fotbalcz.domain.FotbalCzMatch
 import cz.mikealdo.fotbalcz.domain.FotbalCzTeam
-import cz.mikealdo.twitter.tweets.Results
+import cz.mikealdo.resultsstorage.tweets.Results
 import org.joda.time.DateTime
 import spock.lang.Specification
 import static com.ofg.infrastructure.base.dsl.Matchers.equalsReferenceJson

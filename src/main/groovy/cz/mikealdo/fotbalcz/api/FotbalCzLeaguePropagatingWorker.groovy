@@ -18,6 +18,6 @@ class FotbalCzLeaguePropagatingWorker implements PropagationWorker {
     @Override
     void collectAndPropagate(String competitionHash, FotbalCzLeague league) {
         String jsonToPropagate = leaguesJsonBuilder.buildLeagueJson(competitionHash, league)
-        log.debug("Sent json [$jsonToPropagate] to fotbal-cz-persister")
+        log.debug("Sent json [$jsonToPropagate] to results-storage")
     }
 }
