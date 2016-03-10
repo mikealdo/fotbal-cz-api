@@ -1,7 +1,8 @@
 package cz.mikealdo.fotbalcz.api
 
-import cz.mikealdo.fotbalcz.domain.FotbalCzLeague
+import cz.mikealdo.football.domain.League
+
 
 interface PropagationWorker {
-    void collectAndPropagate(String competitionHash, FotbalCzLeague league)
+    void collectAndPropagate(String competitionHash, String json)
 }

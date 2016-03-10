@@ -1,8 +1,7 @@
 package cz.mikealdo.fotbalcz.api
 
-import cz.mikealdo.fotbalcz.domain.FotbalCzLeague
+import cz.mikealdo.football.domain.League
 import groovy.text.SimpleTemplateEngine
-import groovy.transform.PackageScope
 import groovy.transform.TypeChecked
 import org.joda.time.format.DateTimeFormat
 import org.joda.time.format.DateTimeFormatter
@@ -14,22 +13,23 @@ public class FotbalCzLeagueJsonBuilder {
 
     private static final DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern("yyyy-MM-dd");
 
-    String buildLeagueJson(String competitionHash, FotbalCzLeague league, CompetitionSettings settings) {
+    String buildLeagueJson(String competitionHash, League league, CompetitionSettings settings) {
         def templateToUse = JSON_LEAGUE_FULL_TEMPLATE
         if (settings.round.isPresent()) {
-            templateToUse = "{"+JSON_LEAGUE_MATCHES_FOR_ROUND_TEMPLATE+"}"
+            templateToUse = "{" + JSON_LEAGUE_MATCHES_FOR_ROUND_TEMPLATE + "}"
         }
         return new SimpleTemplateEngine().createTemplate(templateToUse)
-                .make([competitionHash: competitionHash,
-                       league : league,
-                       dateTimeFormatter : dateTimeFormatter,
-                       settings: settings])
+                .make([competitionHash  : competitionHash,
+                       league           : league,
+                       dateTimeFormatter: dateTimeFormatter,
+                       settings         : settings])
                 .toString()
     }
 
-    String buildLeagueJson(String competitionHash, FotbalCzLeague league) {
-       return buildLeagueJson(competitionHash, league, new CompetitionSettings())
+    String buildLeagueJson(String competitionHash, League league) {
+        return buildLeagueJson(competitionHash, league, new CompetitionSettings())
     }
+
     private static final String JSON_LEAGUE_MATCHES_FOR_ROUND_TEMPLATE = '''
                             "matches": [
                                     <% league.matches.eachWithIndex { match, index -> %>

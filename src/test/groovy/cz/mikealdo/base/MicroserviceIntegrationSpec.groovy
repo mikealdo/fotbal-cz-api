@@ -1,4 +1,4 @@
-package com.ofg.base
+package cz.mikealdo.base
 
 import com.ofg.infrastructure.base.IntegrationSpec
 import cz.mikealdo.Application

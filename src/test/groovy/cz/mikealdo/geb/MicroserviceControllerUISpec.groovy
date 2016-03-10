@@ -5,7 +5,7 @@ import groovy.json.JsonSlurper
 import spock.lang.Stepwise
 
 @Stepwise
-class MicroserviceControllerUISpec extends BaseBootGebSpec {
+abstract class MicroserviceControllerUISpec extends BaseBootGebUISpec {
 
     def "Microservice controller is visible on Swagger Page"() {
         when:
@@ -35,10 +35,11 @@ class MicroserviceControllerUISpec extends BaseBootGebSpec {
             microserviceGetResponseCode.displayed
             microserviceGetResponseCode.text() == '200'
         and:
-            def inputFile = getClass().getResource("/microservice.json")
-            def inputJSON = new JsonSlurper().parseText(inputFile.text)
+            def inputJSON = inputJson()
             def outputJSON = new JsonSlurper().parseText(microserviceGetResponseBody.text())
             inputJSON == outputJSON
     }
+
+    abstract protected def inputJson()
 
 }

@@ -4,7 +4,7 @@ import cz.mikealdo.geb.pages.SwaggerUIHomePage
 import spock.lang.Stepwise
 
 @Stepwise
-class AcceptanceSwaggerUISpec extends BaseBootGebSpec {
+class AcceptanceSwaggerUISpec extends BaseBootGebUISpec {
 
     def "SwaggerUI home page should be visible"() {
         when:

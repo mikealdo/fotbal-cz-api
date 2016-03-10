@@ -1,5 +1,6 @@
 package cz.mikealdo.fotbalcz.api
-import cz.mikealdo.fotbalcz.domain.FotbalCzLeague
+
+import cz.mikealdo.fotbalcz.results.ResultsStorageClient
 import groovy.transform.TypeChecked
 import groovy.util.logging.Slf4j
 import org.springframework.beans.factory.annotation.Autowired
@@ -8,16 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired
 @Slf4j
 class FotbalCzLeaguePropagatingWorker implements PropagationWorker {
     
-    private final FotbalCzLeagueJsonBuilder leaguesJsonBuilder
+    private final ResultsStorageClient client
 
     @Autowired
-    FotbalCzLeaguePropagatingWorker(FotbalCzLeagueJsonBuilder leaguesJsonBuilder) {
-        this.leaguesJsonBuilder = leaguesJsonBuilder
+    FotbalCzLeaguePropagatingWorker(ResultsStorageClient client) {
+        this.client = client
     }
 
     @Override
-    void collectAndPropagate(String competitionHash, FotbalCzLeague league) {
-        String jsonToPropagate = leaguesJsonBuilder.buildLeagueJson(competitionHash, league)
-        log.debug("Sent json [$jsonToPropagate] to results-storage")
+    void collectAndPropagate(String competitionHash, String json) {
+        client.saveResultsToStorage(competitionHash, json)
+        log.debug("Sent json [$json] to results-storage")
     }
 }
