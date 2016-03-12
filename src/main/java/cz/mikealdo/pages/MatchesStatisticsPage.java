@@ -4,7 +4,6 @@ import cz.mikealdo.football.domain.*;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Comparator;
 import java.util.LinkedList;
@@ -30,10 +29,11 @@ public class MatchesStatisticsPage extends FotbalCzHTMLPage {
         return getDocument(COMPETITION_DETAIL_BASE_URL + competitionHash);
     }
 
-	CompetitionDetails createCompetitionDetails(Document output) {
+	public CompetitionDetails createCompetitionDetails(Document input) {
 		CompetitionDetails competitionDetails = new CompetitionDetails();
-		competitionDetails.setRoundDates(retrieveRounds(output));
-		competitionDetails.setMatches(retrieveMatches(output, competitionDetails.getRoundDates()));
+        competitionDetails.setCompetitionName("Name"); // TODO retrieve competition name from right place
+		competitionDetails.setRoundDates(retrieveRounds(input));
+		competitionDetails.setMatches(retrieveMatches(input, competitionDetails.getRoundDates()));
 		competitionDetails.setTeams(retrieveTeams(competitionDetails.getMatches()));
 		return competitionDetails;
 	}

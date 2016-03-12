@@ -53,20 +53,8 @@ public class FotbalCzLeagueJsonBuilder {
                         {
                             "name": "${league.name}",
                             "description": "${league.description}"
-                            <% if (league.teams != null) { %>
-                                ,"teams": [
-                                    <% league.teams.eachWithIndex { team, index -> %>
-                                        {
-                                            "pairId": ${team.pairingId},
-                                            "name": "${team.teamNameToDisplay}"
-                                        }
-                                        <% if (index < league.teams.size-1) {%>,<%}%>
-                                    <% } %>
-                                ]
-                            <% } %>
-                            <% if (league.matches != null) { %>
-                                ,'''+JSON_LEAGUE_MATCHES_FOR_ROUND_TEMPLATE+'''
-                            <% } %>
+
+
                         }
                 }
                 '''

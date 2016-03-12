@@ -14,7 +14,7 @@ import java.util.Optional;
 
 public abstract class FotbalCzHTMLPage {
 	
-	protected Document getDocumentFor(String html) {
+    public Document getDocumentFor(String html) {
 		return Jsoup.parse(html);
 	}
 

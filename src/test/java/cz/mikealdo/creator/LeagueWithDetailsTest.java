@@ -5,7 +5,12 @@ import cz.mikealdo.football.domain.Match;
 import cz.mikealdo.football.domain.RoundDate;
 import cz.mikealdo.football.domain.Team;
 import cz.mikealdo.football.domain.CompetitionDetails;
+import cz.mikealdo.pages.CompetitionPageStub;
+import cz.mikealdo.pages.HtmlProvider;
+import cz.mikealdo.pages.MatchSummaryPage;
+import cz.mikealdo.pages.MatchesStatisticsPage;
 import org.joda.time.DateTime;
+import org.jsoup.nodes.Document;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
@@ -19,6 +24,17 @@ import static org.mockito.Matchers.eq;
 
 @RunWith(MockitoJUnitRunner.class)
 public class LeagueWithDetailsTest {
+
+    @Test
+    public void shouldCreateLeagueWithRealData() throws Exception {
+        CompetitionPageStub competitionPageStub = new CompetitionPageStub();
+        CompetitionDetails competitionDetails = competitionPageStub.createCompetitionDetailsFrom("hash");
+
+        League league = new LeagueWithDetails(new League("LEAGUE")).enhanceByDetails(competitionDetails);
+
+        assertEquals(league.getTeams().size(), 14);
+        assertEquals(league.getMatches().size(), 183);
+    }
 
     @Test
     public void shouldCreateLeagueWithPopulatedFields() throws Exception {

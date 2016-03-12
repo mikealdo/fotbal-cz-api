@@ -3,6 +3,9 @@ package cz.mikealdo.creator;
 import cz.mikealdo.football.domain.League;
 import cz.mikealdo.football.domain.Match;
 import cz.mikealdo.football.domain.CompetitionDetails;
+import cz.mikealdo.football.domain.RoundDate;
+
+import java.util.List;
 
 public class LeagueWithDetails {
 
@@ -20,17 +23,11 @@ public class LeagueWithDetails {
 	}
 
 	private void fillMatchesWithNeededInfo(CompetitionDetails competitionDetails) {
-		int countOfTeams = competitionDetails.getTeams().size();
-		int countOfMatchesInRound = countOfTeams / 2;
-		int round = 0;
-		int matchCount = 0;
-		for (Match match : competitionDetails.getMatches()) {
-			match.setDate(competitionDetails.getRoundDates().get(round).getDate());
-			match.setRound(competitionDetails.getRoundDates().get(round).getRound());
-			matchCount++;
-			if (matchCount % countOfMatchesInRound == 0) {
-				round++;
-			}
+        List<RoundDate> roundDates = competitionDetails.getRoundDates();
+        for (Match match : competitionDetails.getMatches()) {
+            if (match.getDate() == null) {
+                match.setDate(roundDates.get(match.getRound()).getDate());
+            }
 		}
 	}
 }
