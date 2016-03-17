@@ -1,13 +1,12 @@
 package cz.mikealdo.pages;
 
 import cz.mikealdo.football.domain.*;
+import org.joda.time.DateTime;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -38,8 +37,8 @@ public class MatchesStatisticsPage extends FotbalCzHTMLPage {
 		return competitionDetails;
 	}
 
-	private List<RoundDate> retrieveRounds(Document output) {
-		List<RoundDate> rounds = new LinkedList<>();
+	private Map<Integer, DateTime> retrieveRounds(Document output) {
+        Map<Integer, DateTime> rounds = new LinkedHashMap<>();
         Element competitionTable = output.select("table.soutez-kola").first();
         Elements rows = competitionTable.getElementsByTag("tr");
         for (Element row : rows) {
@@ -49,7 +48,7 @@ public class MatchesStatisticsPage extends FotbalCzHTMLPage {
                 String roundText = h2.text();
                 Integer round = Integer.parseInt(roundText.split("\\.")[0]);
                 String date = h2.select("span").text().trim();
-                rounds.add(new RoundDate(round, parseDateTime(date)));
+                rounds.put(round, parseDateTime(date));
             }
 		}
 		return rounds;
@@ -83,10 +82,10 @@ public class MatchesStatisticsPage extends FotbalCzHTMLPage {
 		return freeDraws;
 	}
 
-    private List<Match> retrieveMatches(Document output, List<RoundDate> roundDates) {
+    private List<Match> retrieveMatches(Document output, Map<Integer, DateTime> roundDates) {
         Elements tables = output.select("table.soutez-zapasy");
         List<Match> matches = new LinkedList<>();
-		int round = 0;
+		int round = 1;
         for (Element table : tables) {
             Elements rows = table.getElementsByTag("tr");
             for (Element row : rows) {
@@ -100,7 +99,7 @@ public class MatchesStatisticsPage extends FotbalCzHTMLPage {
                     match.setResult(new MatchResult(simpleResult));
                     match.updateResult(retrieveDetailedMatchResult(cells.get(9).child(0)));
                 }
-                match.setRound(roundDates.get(round).getRound());
+                match.setRound(round);
                 matches.add(match);
             }
             round++;

@@ -2,15 +2,13 @@ package cz.mikealdo.fotbalcz
 
 import com.wordnik.swagger.annotations.Api
 import com.wordnik.swagger.annotations.ApiOperation
-import cz.mikealdo.creator.LeagueWithDetails
+import cz.mikealdo.detailedleague.LeagueWithDetails
+import cz.mikealdo.football.domain.CompetitionDetails
 import cz.mikealdo.football.domain.League
 import cz.mikealdo.fotbalcz.api.CompetitionSettings
 import cz.mikealdo.fotbalcz.api.FotbalCzLeagueJsonBuilder
 import cz.mikealdo.fotbalcz.api.PropagationWorker
-import cz.mikealdo.football.domain.CompetitionDetails
 import cz.mikealdo.pages.CompetitionPage
-import cz.mikealdo.pages.MatchesStatisticsPage
-import cz.mikealdo.pages.MatchSummaryPage
 import groovy.transform.TypeChecked
 import groovy.util.logging.Slf4j
 import org.springframework.beans.factory.annotation.Autowired

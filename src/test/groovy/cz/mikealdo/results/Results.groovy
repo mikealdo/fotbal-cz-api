@@ -27,6 +27,12 @@ class Results {
                                     "result": "2:1p",
                                     "round": 1,
                                     "date": "2015-05-15"
+                                },
+                                {
+                                    "homeTeam": "second",
+                                    "visitorTeam": "first",
+                                    "round": 2,
+                                    "date": "2015-05-15"
                                 }
                             ]
                         }
@@ -42,36 +48,15 @@ class Results {
                             "result": "2:1p",
                             "round": 1,
                             "date": "2015-05-15"
+                        },
+                        {
+                            "homeTeam": "second",
+                            "visitorTeam": "first",
+                            "round": 2,
+                            "date": "2015-05-15"
                         }
                     ]
                 }
-'''
-
-    public static String TWEET_WITH_COORDINATES = '''
-    {
-        "created_at": "Sat Jul 26 09:15:10 +0000 2014",
-        "id": 492961315070439424,
-        "id_str": "492961315070439424",
-        "geo": null,
-        "coordinates":
-        {
-            "coordinates":
-                [
-                    -75.14310264,
-                    40.05701649
-                ],
-            "type":"Point"
-        }
-    }
-'''
-
-    public static String TWEET_WITHOUT_COORDINATES = '''
-    {
-        "created_at": "Sat Jul 26 09:15:10 +0000 2014",
-        "id": 492961315070439424,
-        "id_str": "492961315070439424",
-        "geo": null
-    }
 '''
 
 }

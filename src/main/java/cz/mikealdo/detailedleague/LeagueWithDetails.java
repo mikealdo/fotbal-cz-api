@@ -1,11 +1,10 @@
-package cz.mikealdo.creator;
+package cz.mikealdo.detailedleague;
 
 import cz.mikealdo.football.domain.League;
-import cz.mikealdo.football.domain.Match;
 import cz.mikealdo.football.domain.CompetitionDetails;
-import cz.mikealdo.football.domain.RoundDate;
+import org.joda.time.DateTime;
 
-import java.util.List;
+import java.util.Map;
 
 public class LeagueWithDetails {
 
@@ -23,11 +22,9 @@ public class LeagueWithDetails {
 	}
 
 	private void fillMatchesWithNeededInfo(CompetitionDetails competitionDetails) {
-        List<RoundDate> roundDates = competitionDetails.getRoundDates();
-        for (Match match : competitionDetails.getMatches()) {
-            if (match.getDate() == null) {
-                match.setDate(roundDates.get(match.getRound()).getDate());
-            }
-		}
+        Map<Integer, DateTime> roundDates = competitionDetails.getRoundDates();
+        competitionDetails.getMatches().stream().filter(match -> match.getDate() == null).forEach(match -> {
+            match.setDate(roundDates.get(match.getRound()));
+        });
 	}
 }

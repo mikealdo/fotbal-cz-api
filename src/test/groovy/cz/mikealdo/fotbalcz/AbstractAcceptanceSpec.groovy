@@ -1,8 +1,8 @@
 package cz.mikealdo.fotbalcz
 
 import cz.mikealdo.base.MicroserviceMvcWiremockSpec
-import cz.mikealdo.pages.CompetitionPage
 import cz.mikealdo.pages.CompetitionPageStub
+import cz.mikealdo.results.Results
 import org.hamcrest.CoreMatchers
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
@@ -40,11 +40,7 @@ abstract class AbstractAcceptanceSpec extends MicroserviceMvcWiremockSpec {
                     .andReturn()
         then:
             await().atMost(acceptanceTestTimeout, SECONDS).untilAtomic(resultsStorageClientStub.savedResultHash, CoreMatchers.<String>equalTo(COMPETITION_HASH))
-            await().atMost(acceptanceTestTimeout, SECONDS).untilAtomic(resultsStorageClientStub.savedJson, equalsReferenceJson('''
-                                                                        [{
-                                                                            JSON_HERE
-                                                                        }]
-                                                                        '''))
+            await().atMost(acceptanceTestTimeout, SECONDS).untilAtomic(resultsStorageClientStub.savedJson, equalsReferenceJson(this.getClass().getResource("/json/complete-results.json").text))
 
     }
 

@@ -1,22 +1,19 @@
-package cz.mikealdo.creator;
+package cz.mikealdo.detailedleague;
 
 import cz.mikealdo.football.domain.League;
 import cz.mikealdo.football.domain.Match;
-import cz.mikealdo.football.domain.RoundDate;
 import cz.mikealdo.football.domain.Team;
 import cz.mikealdo.football.domain.CompetitionDetails;
 import cz.mikealdo.pages.CompetitionPageStub;
-import cz.mikealdo.pages.HtmlProvider;
-import cz.mikealdo.pages.MatchSummaryPage;
-import cz.mikealdo.pages.MatchesStatisticsPage;
 import org.joda.time.DateTime;
-import org.jsoup.nodes.Document;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
@@ -58,14 +55,13 @@ public class LeagueWithDetailsTest {
         teams.add(team2);
         competitionDetails.setTeams(teams);
         List<Match> matches = new LinkedList<>();
-        matches.add(new Match());
-        matches.add(new Match());
+        matches.add(new Match(1, 2, 3));
+        matches.add(new Match(2, 3, 2));
         competitionDetails.setMatches(matches);
-        List<RoundDate> roundDates = new LinkedList<>();
-        RoundDate roundDate = new RoundDate(1, DateTime.parse("20150322"));
-        roundDates.add(roundDate);
-        RoundDate roundDate2 = new RoundDate(2, DateTime.parse("20150323"));
-        roundDates.add(roundDate2);
+
+        Map<Integer, DateTime> roundDates = new HashMap<>();
+        roundDates.put(1, DateTime.parse("20150322"));
+        roundDates.put(2, DateTime.parse("20150323"));
         competitionDetails.setRoundDates(roundDates);
         return competitionDetails;
     }

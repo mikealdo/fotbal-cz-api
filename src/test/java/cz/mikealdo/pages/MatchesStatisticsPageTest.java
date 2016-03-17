@@ -12,6 +12,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -96,21 +97,21 @@ public class MatchesStatisticsPageTest {
 		assertTeam("Spartak TOS Žebrák", 12, teams.get(11));
 		assertTeam("TJ Daleké Dušníky", 13, teams.get(12));
 		assertTeam("VOLNO - VOLNÝ LOS", 14, teams.get(13));
-		List<RoundDate> roundDates = competitionDetails.getRoundDates();
+        Map<Integer, DateTime> roundDates = competitionDetails.getRoundDates();
 		assertEquals(26, roundDates.size());
-		assertRound(1, "2015-08-22T17:00", roundDates.get(0));
-		assertRound(2, "2015-08-29T17:00", roundDates.get(1));
-		assertRound(3, "2015-09-05T17:00", roundDates.get(2));
-		assertRound(4, "2015-09-12T17:00", roundDates.get(3));
-		assertRound(5, "2015-09-19T16:30", roundDates.get(4));
-		assertRound(6, "2015-09-26T16:30", roundDates.get(5));
-		assertRound(7, "2015-10-03T16:00", roundDates.get(6));
-		assertRound(8, "2015-10-10T16:00", roundDates.get(7));
-		assertRound(9, "2015-10-17T15:30", roundDates.get(8));
-		assertRound(10, "2015-10-24T14:30", roundDates.get(9));
-		assertRound(11, "2015-10-31T14:00", roundDates.get(10));
-		assertRound(12, "2015-11-07T14:00", roundDates.get(11));
-		assertRound(13, "2015-11-14T13:30", roundDates.get(12));
+		assertRound(1, "2015-08-22T17:00", roundDates);
+		assertRound(2, "2015-08-29T17:00", roundDates);
+		assertRound(3, "2015-09-05T17:00", roundDates);
+		assertRound(4, "2015-09-12T17:00", roundDates);
+		assertRound(5, "2015-09-19T16:30", roundDates);
+		assertRound(6, "2015-09-26T16:30", roundDates);
+		assertRound(7, "2015-10-03T16:00", roundDates);
+		assertRound(8, "2015-10-10T16:00", roundDates);
+		assertRound(9, "2015-10-17T15:30", roundDates);
+		assertRound(10, "2015-10-24T14:30", roundDates);
+		assertRound(11, "2015-10-31T14:00", roundDates);
+		assertRound(12, "2015-11-07T14:00", roundDates);
+		assertRound(13, "2015-11-14T13:30", roundDates);
 		List<Match> matches = competitionDetails.getMatches();
 		assertEquals(183, matches.size());
         assertTrue(matches.contains(new Match(1, 3, 12)));
@@ -224,9 +225,8 @@ public class MatchesStatisticsPageTest {
 		assertEquals(DateTime.parse(date), match.getDate());
 	}
 
-	private void assertRound(Integer expectedRound, String expectedDate, RoundDate roundDate) {
-		assertEquals(expectedRound, roundDate.getRound());
-		assertEquals(DateTime.parse(expectedDate), roundDate.getDate());
+	private void assertRound(Integer expectedRound, String expectedDate, Map<Integer, DateTime> roundDates) {
+		assertEquals(DateTime.parse(expectedDate), roundDates.get(expectedRound));
 	}
 
 	private void assertTeam(String expectedName, Integer expectedPairingId, Team Team) {

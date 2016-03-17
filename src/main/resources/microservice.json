@@ -1,5 +1,11 @@
 {
     "cz": {
+        "dependencies": {
+          "results-storage": {
+            "path": "cz/mikealdo/results-storage",
+            "stubs": "cz.mikealdo:results-storage:stubs"
+          }
+        },
         "this": "cz/mikealdo/fotbal-cz-api"
     }
 }

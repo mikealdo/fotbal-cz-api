@@ -106,6 +106,7 @@ dependencies {
     testCompile "com.jayway.restassured:rest-assured:$restAssuredVersion"
     testCompile "com.jayway.restassured:spring-mock-mvc:$restAssuredVersion"
     testCompile "io.codearte.accurest:accurest-core:$accurestVersion"
+    testCompile "cz.mikealdo:football-domain:1.0-SNAPSHOT"
 }
 
 wrapper {
