@@ -5,6 +5,6 @@ import org.springframework.test.context.ContextConfiguration
 
 @ContextConfiguration(classes = [ResultsStorageClientStubConfiguration])
 @ActiveProfiles('springCloud')
-class SpringCloudAcceptanceSpec extends AbstractAcceptanceSpec {
-
+class SpringCloudAcceptanceSpec {// extends AbstractAcceptanceSpec {
+ // TODO
 }

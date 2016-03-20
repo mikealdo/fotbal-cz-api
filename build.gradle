@@ -65,6 +65,9 @@ repositories {
     mavenLocal()
     mavenCentral()
     jcenter()
+    maven {
+        url 'http://dl.bintray.com/mdavidek1/rango'
+    }
 }
 
 dependencies {
@@ -85,7 +88,7 @@ dependencies {
     compile 'net.sf.ehcache:ehcache:2.10.1'
     compile 'org.jsoup:jsoup:1.8.3'
     compile "com.ofg:micro-infra-spring-boot-starter:$microInfraSpringVersion"
-    compile "cz.mikealdo:football-domain:1.0-SNAPSHOT"
+    compile "cz.mikealdo:football-domain:1.0"
 
     runtime 'cglib:cglib-nodep:3.2.0'
     runtime 'org.objenesis:objenesis:2.2'
