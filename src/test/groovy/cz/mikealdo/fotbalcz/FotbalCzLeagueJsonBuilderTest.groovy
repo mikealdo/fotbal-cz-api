@@ -1,11 +1,7 @@
 package cz.mikealdo.fotbalcz
 
 import cz.mikealdo.detailedleague.LeagueWithDetails
-import cz.mikealdo.football.domain.CompetitionDetails
-import cz.mikealdo.football.domain.League
-import cz.mikealdo.football.domain.Match
-import cz.mikealdo.football.domain.MatchResult
-import cz.mikealdo.football.domain.Team
+import cz.mikealdo.football.domain.*
 import cz.mikealdo.fotbalcz.api.CompetitionSettings
 import cz.mikealdo.fotbalcz.api.FotbalCzLeagueJsonBuilder
 import cz.mikealdo.pages.CompetitionPageStub
@@ -55,15 +51,15 @@ class FotbalCzLeagueJsonBuilderTest extends Specification {
     private League createLeague() {
         League league = new League("I.B trida")
         league.setDescription("description")
-        List<Team> teams = new LinkedList<>()
-        def firstTeam = new Team(1, "first")
+        List<PairedTeam> teams = new LinkedList<>()
+        def firstTeam = new PairedTeam(1, "first")
         teams.add(firstTeam)
-        def secondTeam = new Team(2, "second")
+        def secondTeam = new PairedTeam(2, "second")
         teams.add(secondTeam)
         league.setTeams(teams)
         List<Match> matches = new LinkedList<>()
         matches.add(new Match(DateTime.parse("2015-05-15"), firstTeam, secondTeam, new MatchResult("2:1", "(PK:5:4)"), 1))
-        matches.add(new Match(DateTime.parse("2015-05-15"), secondTeam, firstTeam, null, 2))
+        matches.add(new Match(DateTime.parse("2015-05-15"), secondTeam, firstTeam, new MatchResult("not parseable"), 2)) // TODO constructor for match without result
         league.setMatches(matches)
         return league
     }

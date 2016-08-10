@@ -1,7 +1,8 @@
-package cz.mikealdo.fotbalcz
+package cz.mikealdo.fotbalcz.generatejson
 
 import cz.mikealdo.base.MicroserviceMvcWiremockSpec
-import cz.mikealdo.pages.CompetitionPageStub
+import cz.mikealdo.fotbalcz.ResultsStorageClientStub
+import cz.mikealdo.pages.CompetitionPage
 import org.hamcrest.CoreMatchers
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
@@ -9,7 +10,6 @@ import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.MvcResult
 
 import static com.jayway.awaitility.Awaitility.await
-import static com.ofg.infrastructure.base.dsl.Matchers.equalsReferenceJson
 import static java.util.concurrent.TimeUnit.SECONDS
 import static org.hamcrest.core.IsNot.not
 import static org.hamcrest.text.IsEmptyString.isEmptyString
@@ -18,30 +18,41 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
-abstract class AbstractAcceptanceSpec extends MicroserviceMvcWiremockSpec {
+/***
+ * Neccessary to update ResultsStorageClientStubConfiguration with real CompetitionPage
+ */
+class RetrieveJsonForGivenTeamsSpec extends MicroserviceMvcWiremockSpec {
 
     static final String ROOT_PATH = '/api'
-    static final String COMPETITION_HASH = '172c09d6-dd87-47df-a0b3-8efde6ac6842'
     static final MediaType FOTBAL_CZ_API_MICROSERVICE_V1 = new MediaType('application', 'vnd.cz.mikealdo.fotbal-cz-api.v1+json')
+    final List<String> hashes = new ArrayList<String>()
 
-    @Autowired ResultsStorageClientStub resultsStorageClientStub
-    @Autowired CompetitionPageStub competitionPage
+    @Autowired
+    ResultsStorageClientStub resultsStorageClientStub
+    @Autowired
+    CompetitionPage competitionPage
     @Value('${acceptance-tests.timeout:10}')
     Integer acceptanceTestTimeout
 
-    def "should find competition results" () {
-        given: 'a competition hash'
-        when: "trying to retrieve results from fotbal.cz"
-            MvcResult mvcResult = mockMvc.perform(get("$ROOT_PATH/$COMPETITION_HASH")
+    def "should find competition results"() {
+        given:
+        hashes.add('172c09d6-dd87-47df-a0b3-8efde6ac6842')
+        when:
+        for (String hash : hashes) {
+            MvcResult mvcResult = mockMvc.perform(get("$ROOT_PATH/$hash")
                     .contentType(FOTBAL_CZ_API_MICROSERVICE_V1))
                     .andDo(print())
                     .andExpect(status().isOk())
                     .andExpect(header().string("correlationId", not(isEmptyString())))
                     .andReturn()
-        then:
-            await().atMost(acceptanceTestTimeout, SECONDS).untilAtomic(resultsStorageClientStub.savedResultHash, CoreMatchers.<String>equalTo(COMPETITION_HASH))
-            await().atMost(acceptanceTestTimeout, SECONDS).untilAtomic(resultsStorageClientStub.savedJson, equalsReferenceJson(this.getClass().getResource("/json/complete-results.json").text))
 
+            await().atMost(10, SECONDS).untilAtomic(resultsStorageClientStub.savedJson, CoreMatchers.<String> notNullValue())
+
+            def file = new File('result-jsons/' + hash + '.json')
+            file.write(resultsStorageClientStub.savedJson.get())
+        }
+        then:
+        println "Success"
     }
 
 }

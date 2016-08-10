@@ -5,4 +5,4 @@ stubrunner.stubs:
   group: com.ofg
   module: stub-runner-examples
 
-acceptance-tests.timeout: 5
+acceptance-tests.timeout: 10

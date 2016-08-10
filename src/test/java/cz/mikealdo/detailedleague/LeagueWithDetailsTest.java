@@ -1,9 +1,9 @@
 package cz.mikealdo.detailedleague;
 
+import cz.mikealdo.football.domain.CompetitionDetails;
 import cz.mikealdo.football.domain.League;
 import cz.mikealdo.football.domain.Match;
-import cz.mikealdo.football.domain.Team;
-import cz.mikealdo.football.domain.CompetitionDetails;
+import cz.mikealdo.football.domain.PairedTeam;
 import cz.mikealdo.pages.CompetitionPageStub;
 import org.joda.time.DateTime;
 import org.junit.Test;
@@ -15,9 +15,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Matchers.eq;
 
 @RunWith(MockitoJUnitRunner.class)
 public class LeagueWithDetailsTest {
@@ -48,15 +46,15 @@ public class LeagueWithDetailsTest {
     private CompetitionDetails createCompetitionDetails() {
         CompetitionDetails competitionDetails = new CompetitionDetails();
         competitionDetails.setCompetitionName("Name");
-        List<Team> teams = new LinkedList<>();
-        Team team1 = new Team(0, "First team");
+        List<PairedTeam> teams = new LinkedList<>();
+        PairedTeam team1 = new PairedTeam(0, "First team");
         teams.add(team1);
-        Team team2 = new Team(1, "Second team");
+        PairedTeam team2 = new PairedTeam(1, "Second team");
         teams.add(team2);
         competitionDetails.setTeams(teams);
         List<Match> matches = new LinkedList<>();
-        matches.add(new Match(1, 2, 3));
-        matches.add(new Match(2, 3, 2));
+        matches.add(new Match(null, new PairedTeam(2, null), new PairedTeam(3, null), null, 1));
+        matches.add(new Match(null, new PairedTeam(3, null), new PairedTeam(2, null), null, 2));
         competitionDetails.setMatches(matches);
 
         Map<Integer, DateTime> roundDates = new HashMap<>();

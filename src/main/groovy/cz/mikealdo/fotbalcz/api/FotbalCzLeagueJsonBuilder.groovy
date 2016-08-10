@@ -35,9 +35,15 @@ public class FotbalCzLeagueJsonBuilder {
                             "matches": [
                                     <% league.matches.eachWithIndex { match, index -> %>
                                         {
-                                            "homeTeam": "${match.homeTeam.teamNameToDisplay}",
-                                            "visitorTeam": "${match.visitorTeam.teamNameToDisplay}",
-                                            <% if (match.result != null) { %> "result": "${match.result.prettyPrintSimpleResult()}", <% } %>
+                                            "homeTeam": {
+                                                "pairingId": "${match.homeTeam.pairingId}",
+                                                "pairingTeamName": "${match.homeTeam.pairingTeamName}"
+                                            },
+                                            "visitorTeam": {
+                                                "pairingId": "${match.visitorTeam.pairingId}",
+                                                "pairingTeamName": "${match.visitorTeam.pairingTeamName}"
+                                            },
+                                            <% if (match.result.isPresent() && match.result.get().isResultEntered()) { %> "result": "${match.result.get().prettyPrintSimpleResult()}", <% } %>
                                             "round": ${match.round},
                                             "date": "${match.date.toString(dateTimeFormatter)}"
                                         }
@@ -49,26 +55,23 @@ public class FotbalCzLeagueJsonBuilder {
 
     private static final String JSON_LEAGUE_FULL_TEMPLATE = '''
                 {
-                    "competition_hash" : "${competitionHash}",
-                    "competition" :
-                        {
-                            "name": "${league.name}",
-                            "description": "${league.description}"
-                            <% if (league.teams != null) { %>
-                                ,"teams": [
-                                    <% league.teams.eachWithIndex { team, index -> %>
-                                        {
-                                            "pairId": ${team.pairingId},
-                                            "name": "${team.teamNameToDisplay}"
-                                        }
-                                        <% if (index < league.teams.size-1) {%>,<%}%>
-                                    <% } %>
-                                ]
+                    "competitionHash" : "${competitionHash}",
+                    "competitionName": "${league.name}",
+                    "competitionDescription": "${league.description}"
+                    <% if (league.teams != null) { %>
+                        ,"teams": [
+                            <% league.teams.eachWithIndex { team, index -> %>
+                                {
+                                    "pairingId": ${team.pairingId},
+                                    "pairingTeamName": "${team.pairingTeamName}"
+                                }
+                                <% if (index < league.teams.size - 1) {%>,<%}%>
                             <% } %>
-                            <% if (league.matches != null) { %>
-                                ,'''+ JSON_LEAGUE_MATCHES_FOR_ROUND_TEMPLATE+'''
-                            <% } %>
-                        }
+                        ]
+                    <% } %>
+                    <% if (league.matches != null) { %>
+                        ,''' + JSON_LEAGUE_MATCHES_FOR_ROUND_TEMPLATE + '''
+                    <% } %>
                 }
                 '''
 

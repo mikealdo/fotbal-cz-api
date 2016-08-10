@@ -8,19 +8,24 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.Optional;
 
 public abstract class FotbalCzHTMLPage {
-	
+
+    Logger logger = LoggerFactory.getLogger(FotbalCzHTMLPage.class);
+
     public Document getDocumentFor(String html) {
 		return Jsoup.parse(html);
 	}
 
 	protected Document getDocument(String url) {
 		try {
-			return Jsoup.connect(url).get();
+            logger.info("Retrieving URL: " + url);
+            return Jsoup.connect(url).get();
 		} catch (IOException e) {
 			throw new IllegalArgumentException("Competition hash is not valid, given HTML is not parseable");
 		}

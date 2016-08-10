@@ -9,32 +9,29 @@ GroovyDsl.make {
         }
         body '''\
                 {
-                    "competition_hash" : "hash",
-                    "competition" :
-                        {
-                            "name": "I.B trida",
-                            "description": "description",
-                            "teams": [
-                                    {
-                                        "pairId": 1,
-                                        "name": "first"
-                                    },
+                    "competitionHash" : "hash",
+                    "competitionName": "I.B trida",
+                    "competitionDescription": "description",
+                    "teams": [
+                            {
+                                "pairId": 1,
+                                "name": "first"
+                            },
 
-                                    {
-                                        "pairId": 2,
-                                        "name": "second"
-                                    }
-                                ],
-                            "matches":[
-                                {
-                                    "homeTeam": "first",
-                                    "visitorTeam": "second",
-                                    "result": "2:1p",
-                                    "round": 1,
-                                    "date": "2015-05-15"
-                                }
-                            ]
+                            {
+                                "pairId": 2,
+                                "name": "second"
+                            }
+                        ],
+                    "matches":[
+                        {
+                            "homeTeam": "first",
+                            "visitorTeam": "second",
+                            "result": "2:1p",
+                            "round": 1,
+                            "date": "2015-05-15"
                         }
+                    ]
                 }
 '''
     }

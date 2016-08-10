@@ -4,38 +4,47 @@ class Results {
 
     public static String FULL_RESULTS = '''
                 {
-                    "competition_hash" : "hash",
-                    "competition" :
-                        {
-                            "name": "I.B trida",
-                            "description": "description",
-                            "teams": [
-                                    {
-                                        "pairId": 1,
-                                        "name": "first"                                                    
-                                    },
+                    "competitionHash" : "hash",
+                    "competitionName": "I.B trida",
+                    "competitionDescription": "description",
+                    "teams": [
+                            {
+                                "pairingId": 1,
+                                "pairingTeamName": "first"
+                            },
 
-                                    {
-                                        "pairId": 2,
-                                        "name": "second"
-                                    }
-                                ],
-                            "matches":[
-                                {
-                                    "homeTeam": "first",
-                                    "visitorTeam": "second",
-                                    "result": "2:1p",
-                                    "round": 1,
-                                    "date": "2015-05-15"
-                                },
-                                {
-                                    "homeTeam": "second",
-                                    "visitorTeam": "first",
-                                    "round": 2,
-                                    "date": "2015-05-15"
-                                }
-                            ]
+                            {
+                                "pairingId": 2,
+                                "pairingTeamName": "second"
+                            }
+                        ],
+                    "matches":[
+                        {
+                            "homeTeam": {
+                                "pairingId": "1",
+                                "pairingTeamName": "first"
+                            },
+                            "visitorTeam": {
+                                "pairingId": "2",
+                                "pairingTeamName": "second"
+                            },
+                            "result": "2:1p",
+                            "round": 1,
+                            "date": "2015-05-15"
+                        },
+                        {
+                            "homeTeam": {
+                                "pairingId": "2",
+                                "pairingTeamName": "second"
+                            },
+                            "visitorTeam": {
+                                "pairingId": "1",
+                                "pairingTeamName": "first"
+                            },
+                            "round": 2,
+                            "date": "2015-05-15"
                         }
+                    ]
                 }
                 '''
 
@@ -43,15 +52,27 @@ class Results {
                 {
                     "matches":[
                         {
-                            "homeTeam": "first",
-                            "visitorTeam": "second",
+                            "homeTeam": {
+                                "pairingId": "1",
+                                "pairingTeamName": "first"
+                            },
+                            "visitorTeam": {
+                                "pairingId": "2",
+                                "pairingTeamName": "second"
+                            },
                             "result": "2:1p",
                             "round": 1,
                             "date": "2015-05-15"
                         },
                         {
-                            "homeTeam": "second",
-                            "visitorTeam": "first",
+                            "homeTeam": {
+                                "pairingId": "2",
+                                "pairingTeamName": "second"
+                            },
+                            "visitorTeam": {
+                                "pairingId": "1",
+                                "pairingTeamName": "first"
+                            },
                             "round": 2,
                             "date": "2015-05-15"
                         }

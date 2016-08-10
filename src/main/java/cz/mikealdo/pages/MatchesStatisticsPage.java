@@ -1,18 +1,26 @@
 package cz.mikealdo.pages;
 
-import cz.mikealdo.football.domain.*;
+import cz.mikealdo.football.domain.CompetitionDetails;
+import cz.mikealdo.football.domain.Match;
+import cz.mikealdo.football.domain.MatchResult;
+import cz.mikealdo.football.domain.PairedTeam;
 import org.joda.time.DateTime;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class MatchesStatisticsPage extends FotbalCzHTMLPage {
 
     public static final String COMPETITION_DETAIL_BASE_URL = "https://is.fotbal.cz/souteze/detail-souteze.aspx?req=";
+    Logger logger = LoggerFactory.getLogger(MatchesStatisticsPage.class);
     private MatchSummaryPage summaryPage;
 
     public MatchesStatisticsPage(MatchSummaryPage summaryPage) {
@@ -30,8 +38,9 @@ public class MatchesStatisticsPage extends FotbalCzHTMLPage {
 
 	public CompetitionDetails createCompetitionDetails(Document input) {
 		CompetitionDetails competitionDetails = new CompetitionDetails();
-        competitionDetails.setCompetitionName("Name"); // TODO retrieve competition name from right place
-		competitionDetails.setRoundDates(retrieveRounds(input));
+        competitionDetails.setCompetitionName(input.getElementsByClass("nadpis-hlavni").get(0).textNodes().get(0).text().trim());
+        competitionDetails.setCompetitionDescription(input.getElementsByClass("nadpis-hlavni").get(0).child(0).textNodes().get(0).text().trim());
+        competitionDetails.setRoundDates(retrieveRounds(input));
 		competitionDetails.setMatches(retrieveMatches(input, competitionDetails.getRoundDates()));
 		competitionDetails.setTeams(retrieveTeams(competitionDetails.getMatches()));
 		return competitionDetails;
@@ -54,29 +63,30 @@ public class MatchesStatisticsPage extends FotbalCzHTMLPage {
 		return rounds;
 	}
 
-	List<Team> retrieveTeams(List<Match> matches) {
-		List<Team> teams = new LinkedList<>();
-		for (Match match : matches) {
+    List<PairedTeam> retrieveTeams(List<Match> matches) {
+        List<PairedTeam> teams = new LinkedList<>();
+        for (Match match : matches) {
 			if (!teams.contains(match.getHomeTeam())) {
 				teams.add(match.getHomeTeam());
 			}
 			if (!teams.contains(match.getVisitorTeam())) {
 				teams.add(match.getVisitorTeam());
 			}
-		}
-		List<Team> sortedTeams = teams.stream().sorted(Comparator.comparingInt(Team::getPairingId)).collect(Collectors.toList());
-		sortedTeams.addAll(findFreeDraws(sortedTeams));
-		return sortedTeams.stream().sorted(Comparator.comparingInt(Team::getPairingId)).collect(Collectors.toList());
-	}
+        }
+        logger.info("Teams parsed.");
+        List<PairedTeam> sortedTeams = teams.stream().sorted(Comparator.comparingInt(PairedTeam::getPairingId)).collect(Collectors.toList());
+        sortedTeams.addAll(findFreeDraws(sortedTeams));
+        return sortedTeams.stream().sorted(Comparator.comparingInt(PairedTeam::getPairingId)).collect(Collectors.toList());
+    }
 
-	private List<Team> findFreeDraws(List<Team> sortedTeams) {
-		List<Team> freeDraws = new LinkedList<>();
-		int lastPairingId = 0;
-		for (Team team : sortedTeams) {
-			int currentPairingId = team.getPairingId();
+    private List<PairedTeam> findFreeDraws(List<PairedTeam> sortedTeams) {
+        List<PairedTeam> freeDraws = new LinkedList<>();
+        int lastPairingId = 0;
+        for (PairedTeam team : sortedTeams) {
+            int currentPairingId = team.getPairingId();
 			if (currentPairingId > lastPairingId+1) {
-				freeDraws.add(new Team(currentPairingId-1, "volný los"));
-			}
+                freeDraws.add(new PairedTeam(currentPairingId - 1, "volný los"));
+            }
 			lastPairingId = currentPairingId;
 		}
 		return freeDraws;
@@ -89,21 +99,37 @@ public class MatchesStatisticsPage extends FotbalCzHTMLPage {
         for (Element table : tables) {
             Elements rows = table.getElementsByTag("tr");
             for (Element row : rows) {
+                if (row.getElementsByTag("th").size() > 0) {
+                    continue;
+                }
                 Match match = new Match();
                 Elements cells = row.children();
                 match.setDate(parseDateTime(cells.get(0).text()));
-                match.setHomeTeam(new Team(Integer.parseInt(cells.get(1).text()), cells.get(2).text()));
-                match.setVisitorTeam(new Team(Integer.parseInt(cells.get(4).text()), cells.get(5).text()));
-                if (cells.get(9).child(0).hasClass("uzavren")) {
-                    String simpleResult = cells.get(6).text();
-                    match.setResult(new MatchResult(simpleResult));
-                    match.updateResult(retrieveDetailedMatchResult(cells.get(9).child(0)));
+                match.setHomeTeam(new PairedTeam(resolvePairingId(cells.get(1).text()), resolveTeamName(cells.get(1))));
+                match.setVisitorTeam(new PairedTeam(resolvePairingId(cells.get(2).text()), resolveTeamName(cells.get(2))));
+                if (cells.get(6).child(0).hasClass("uzavren")) {
+                    String simpleResultText = cells.get(3).text();
+                    MatchResult simpleResult = new MatchResult(simpleResultText);
+                    if (simpleResult.isResultEntered()) {
+                        Optional<MatchResult> detailedMatchResult = retrieveDetailedMatchResult(cells.get(6).child(0));
+                        if (detailedMatchResult.isPresent()) {
+                            MatchResult matchResult = detailedMatchResult.get();
+                            if (matchResult.isResultEntered()) {
+                                match.updateResult(matchResult);
+                            } else {
+                                match.updateResult(simpleResult);
+                            }
+                        }
+                    }
                 }
                 match.setRound(round);
+                logger.info(match.toString());
                 matches.add(match);
             }
             round++;
         }
+        logger.info("Matches parsed.");
+
         Stream<Match> sorted = matches.stream().sorted((o1, o2) -> {
             int firstPairingId = o1.getHomeTeam().getPairingId();
             int secondPairingId = o2.getHomeTeam().getPairingId();
@@ -116,8 +142,22 @@ public class MatchesStatisticsPage extends FotbalCzHTMLPage {
         return sorted.collect(Collectors.toList());
 	}
 
-	protected MatchResult retrieveDetailedMatchResult(Element link) {
-		String linkToSummary = link.attr("abs:href");
-		return summaryPage.createMatchResultFor(linkToSummary);
-	}
+    private String resolveTeamName(Element element) {
+        return element.text().replaceAll(" \\(.*\\)$", "");
+    }
+
+    private int resolvePairingId(String text) {
+        Pattern pattern = Pattern.compile(".*\\((.*)\\)$");
+        Matcher m = pattern.matcher(text);
+        if (m.matches()) {
+            return Integer.parseInt(m.group(1));
+        }
+        return 0;
+    }
+
+    protected Optional<MatchResult> retrieveDetailedMatchResult(Element link) {
+        String linkToSummary = link.attr("abs:href");
+        MatchResult matchResultFor = summaryPage.createMatchResultFor(linkToSummary);
+        return Optional.ofNullable(matchResultFor);
+    }
 }
