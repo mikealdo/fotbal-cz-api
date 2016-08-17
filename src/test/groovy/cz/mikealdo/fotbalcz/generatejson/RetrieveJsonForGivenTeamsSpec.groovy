@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.MvcResult
+import spock.lang.Ignore
 
 import static com.jayway.awaitility.Awaitility.await
 import static java.util.concurrent.TimeUnit.SECONDS
@@ -34,6 +35,7 @@ class RetrieveJsonForGivenTeamsSpec extends MicroserviceMvcWiremockSpec {
     @Value('${acceptance-tests.timeout:10}')
     Integer acceptanceTestTimeout
 
+    @Ignore
     def "should find competition results"() {
         given:
         hashes.add('172c09d6-dd87-47df-a0b3-8efde6ac6842')
