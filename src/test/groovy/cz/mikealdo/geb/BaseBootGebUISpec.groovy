@@ -3,6 +3,10 @@ package cz.mikealdo.geb
 import com.ofg.stub.server.AvailablePortScanner
 import cz.mikealdo.Application
 import geb.spock.GebSpec
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
 import org.springframework.boot.test.SpringApplicationContextLoader
 import org.springframework.test.annotation.DirtiesContext
 import org.springframework.test.context.ContextConfiguration
@@ -11,6 +15,7 @@ import org.springframework.test.context.web.WebAppConfiguration
 @ContextConfiguration(loader = SpringApplicationContextLoader.class, classes = Application)
 @WebAppConfiguration
 @DirtiesContext
+@EnableAutoConfiguration(exclude = [HibernateJpaAutoConfiguration.class])
 abstract class BaseBootGebUISpec extends GebSpec {
 
     def setupSpec() {

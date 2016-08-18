@@ -1,5 +1,6 @@
 package cz.mikealdo.geb
 
+import cz.mikealdo.geb.pages.SwaggerUIHomePage
 import spock.lang.Stepwise
 import spock.lang.Unroll
 
@@ -17,13 +18,12 @@ abstract class SwaggerHealthEndpointUISpec extends BaseBootGebUISpec {
             showHealthMVCEndpoints.click()
         then:
             waitFor { healthEndpointsTable.displayed }
-            waitFor { healthEndpointTraceText.displayed }
     }
 
     def "Check visibility of operations and their paths for 'health-mvc-endpoint' #httpOperation"() {
-
         expect:
-            getTextfromHealthOperation(httpOperation) == path
+            waitFor { $("#health-mvc-endpoint_endpoint_list li.$httpOperation span.path a")*.displayed }
+            getTextfromHealthOperation(httpOperation).contains path
 
         where:
             httpOperation || path
@@ -34,13 +34,10 @@ abstract class SwaggerHealthEndpointUISpec extends BaseBootGebUISpec {
             "post"        || "/health"
             "patch"       || "/health"
             "put"         || "/health"
-            "trace"       || "/health"
-
     }
 
     String getTextfromHealthOperation(String http_operation) {
-        waitFor { $("#resource_health-mvc-endpoint li.$http_operation span.path a").displayed }
-        return $("#resource_health-mvc-endpoint li.$http_operation span.path a").text()
+        return $("#health-mvc-endpoint_endpoint_list li.$http_operation span.path a")*.text()
     }
 
 }

@@ -15,13 +15,14 @@ abstract class MicroserviceControllerUISpec extends BaseBootGebUISpec {
             waitFor { metricsMvcEndpointText.displayed }
     }
 
-    def "'Try it put' button is visible for GET operation"() {
+    def "'Try it out' button is visible for GET operation"() {
         when:
+            to SwaggerUIHomePage
             showMicroservice.click()
         then:
-            microserviceJsonText.displayed
+            microserviceDescriptorText.displayed
         when:
-            microserviceJsonText.click()
+            microserviceDescriptorText.click()
         then:
             waitFor { microserviceGetTryButton.displayed }
             microserviceGetTryButton.displayed
@@ -29,6 +30,12 @@ abstract class MicroserviceControllerUISpec extends BaseBootGebUISpec {
 
     def "Try it out and Check respond body and code"() {
         when:
+            to SwaggerUIHomePage
+            waitFor { showMicroservice.displayed }
+            showMicroservice.click()
+            waitFor { microserviceDescriptorText.displayed }
+            microserviceDescriptorText.click()
+            waitFor { microserviceGetTryButton.displayed }
             microserviceGetTryButton.click()
         then:
             waitFor { microserviceGetResponseCode.displayed }

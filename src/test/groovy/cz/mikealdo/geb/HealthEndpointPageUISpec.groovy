@@ -22,8 +22,7 @@ abstract class HealthEndpointPageUISpec extends BaseBootGebUISpec {
             def json = new JsonSlurper().parseText(text)
             json.status == "UP"
             json.diskSpace.status == "UP"
-            json.db.status == "UP"
-            json.hystrix.status == "UP"        
+            json.hystrix.status == "UP"
     }
 
 }

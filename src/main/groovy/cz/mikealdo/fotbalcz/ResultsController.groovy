@@ -1,7 +1,7 @@
 package cz.mikealdo.fotbalcz
 
-import com.wordnik.swagger.annotations.Api
-import com.wordnik.swagger.annotations.ApiOperation
+import io.swagger.annotations.Api
+import io.swagger.annotations.ApiOperation
 import cz.mikealdo.detailedleague.LeagueWithDetails
 import cz.mikealdo.football.domain.CompetitionDetails
 import cz.mikealdo.football.domain.League
@@ -48,7 +48,7 @@ class ResultsController {
             produces = FOTBAL_CZ_API_JSON_VERSION_1)
     @ApiOperation(value = "Sync operation to retrieve all results for given competition",
             notes = "This will asynchronously call results-storage to persist current state to not contact fotbal.cz each time.")
-    Callable<League> retrieveResultsForCompetitions(@PathVariable @NotNull String competitionHash, @RequestParam(required = false) Integer round) {
+    Callable<String> retrieveResultsForCompetitions(@PathVariable @NotNull String competitionHash, @RequestParam(required = false) Integer round) {
         return {
             def settings = new CompetitionSettings(round)
             CompetitionDetails competitionDetails = competitionPage.createCompetitionDetailsFrom(competitionHash)

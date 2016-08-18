@@ -6,7 +6,6 @@ import org.springframework.boot.test.IntegrationTest
 import spock.lang.Ignore
 
 @IntegrationTest("spring.profiles.active:dev")
-@Ignore("Still there are some issues with ids of page components")
 class MicroserviceJsonMicroserviceControllerUISpec extends MicroserviceControllerUISpec {
 
     @Override

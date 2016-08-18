@@ -1,5 +1,11 @@
 {
-    "cz": {
-        "this": "cz/mikealdo/fotbal-cz-api"
+    "pl": {
+        "dependencies": {
+            "collerator": {
+                "path": "com/ofg/twitter-places-collerator",
+                "stubs": "com.ofg:twitter-places-collerator:stubs"
+            }
+        },
+        "this": "cz/mikealdo/twitter-places-analyzer"
     }
 }

@@ -13,6 +13,12 @@ sourceSets {
         compileClasspath = sourceSets.main.output + sourceSets.test.output + configurations.smokeTestCompile
         runtimeClasspath = output + compileClasspath + configurations.smokeTestRuntime
     }
+    //Delete when idea 15 comes: https://youtrack.jetbrains.com/issue/IDEA-138076
+    if(System.properties.'idea.active') {
+        main {
+            resources.srcDir file('src/test-smoke/resources')
+        }
+    }
 }
 
 ext {
@@ -57,10 +63,6 @@ if (project.hasProperty("coverage")) {
     apply plugin: 'org.sonarqube'
     apply plugin: 'com.github.kt3k.coveralls'
 
-    jacoco {
-        toolVersion = '0.7.4.201502262128'
-    }
-
     jacocoTestReport {
         reports {
             xml.enabled = true // coveralls plugin depends on xml format report
@@ -75,10 +77,6 @@ if (project.hasProperty("coverage")) {
         maxPriority3Violations = 10
         reportFormat = 'xml'
         ignoreFailures = true
-    }
-
-    dependencies {
-        codenarc 'org.codenarc:CodeNarc:0.21'
     }
 
     test {
@@ -107,10 +105,9 @@ testprofiler {
 
 accurest {
     baseClassForTests = accurestBaseClass
-    basePackageForTests = 'accurest'
     contractsDslDir = contractsDir
-    generatedTestSourcesDir = file("${project.buildDir}/generated-sources/accurest-server-side-tests")
     stubsOutputDir = wiremockStubsOutputDir
+    targetFramework = 'Spock'
 }
 
 test.dependsOn { generateAccurest } //See: https://github.com/Codearte/accurest/issues/36

@@ -1,6 +1,6 @@
-import io.codearte.accurest.dsl.GroovyDsl
+package accurest.cz.mikealdo.fotbalCzApi
 
-GroovyDsl.make {
+io.codearte.accurest.dsl.Accurest.make {
     request {
         method 'GET'
         url '/api/172c09d6-dd87-47df-a0b3-8efde6ac6842'

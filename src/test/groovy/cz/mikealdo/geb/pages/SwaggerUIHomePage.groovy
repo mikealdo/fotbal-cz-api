@@ -3,7 +3,7 @@ package cz.mikealdo.geb.pages
 import geb.Page
 
 class SwaggerUIHomePage extends Page {
-    static url = "/swagger"
+    static url = "/swagger-ui.html"
     static at = { title == "Swagger UI" }
 
     static content = {
@@ -11,21 +11,20 @@ class SwaggerUIHomePage extends Page {
         metricsMvcEndpointText { $("li", id: "resource_microservice-configuration-controller") }
         showMicroservice { $("a", id: "endpointListTogger_microservice-configuration-controller") }
         showHealthMVCEndpoints { $("a", id: "endpointListTogger_health-mvc-endpoint") }
-        healthEndpointsTable(wait: true) { $("ul#health-mvc-endpoint_endpoint_list") }
-        healthEndpointTraceText { $("#resource_health-mvc-endpoint li.trace span.path a") }
-        microserviceJsonText { $("a", text: "/microservice.json") }
+        healthEndpointsTable(wait: true) { $("#health-mvc-endpoint_endpoint_list") }
+        healthEndpointTraceText { $("health-mvc-endpoint_endpoint_list") }
+        microserviceJsonText { $("a", text: "/microserviceDescriptor") }
+        microserviceDescriptorText { $("a", text: "/microserviceDescriptor") }
         microserviceGetTryButton {
-            $("ul#microservice-configuration-controller_endpoint_list .submit[value='Try it out!']")
+            $("#microservice-configuration-controller_getMicroserviceConfigurationUsingGET_content > form > div.sandbox_header > input")
         }
         microserviceGetResponseBody {
-            $("li#microservice-configuration-controller_getMicroserviceConfiguration pre.json")
+            $("#microservice-configuration-controller_getMicroserviceConfigurationUsingGET_content > div.response > div.block.response_body.json > pre > code")
         }
         microserviceGetResponseCode {
-            $("li#microservice-configuration-controller_getMicroserviceConfiguration div.response_code pre")
+            $("#microservice-configuration-controller_getMicroserviceConfigurationUsingGET_content > div.response > div.block.response_code > pre")
         }
-        showResultsEndpoints { $("a#endpointListTogger_competitionhash") }
-        competitionHashPutText { $("ul#competitionhash_endpoint_list span.path a") }
+        showResultsEndpoints  { $("a", id: "endpointListTogger_results-controller") }
+        competitionHashPutText { $("a", text: "/api/{competitionHash}") }
     }
-
-
 }
