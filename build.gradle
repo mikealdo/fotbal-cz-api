@@ -67,7 +67,7 @@ dependencies {
     compile "com.ofg:activity-tracker:$microInfraSpringVersion"
     compile "com.ofg:activity-tracker-boot-starter:$microInfraSpringVersion"
     compile 'org.jsoup:jsoup:1.8.3'
-    compile "cz.mikealdo:football-domain:1.0"
+    compile "cz.mikealdo:football-domain:1.1"
 
     runtime 'cglib:cglib-nodep:3.2.3'
     runtime 'org.objenesis:objenesis:2.4'
