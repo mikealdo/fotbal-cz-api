@@ -55,7 +55,7 @@ class ResultsController {
             def league = new LeagueWithDetails(new League(competitionDetails.getCompetitionName())).enhanceByDetails(competitionDetails);
 
             def json = builder.buildLeagueJson(competitionHash, league, settings)
-            propagationWorker.collectAndPropagate(competitionHash, json)
+//            propagationWorker.collectAndPropagate(competitionHash, json) // TODO call results-storage
             return json
         }
     }
