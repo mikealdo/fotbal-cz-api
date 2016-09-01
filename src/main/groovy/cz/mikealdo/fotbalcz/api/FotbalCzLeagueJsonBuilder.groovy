@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component
 @Component
 public class FotbalCzLeagueJsonBuilder {
 
-    private static final DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern("yyyy-MM-dd");
+    private static final DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm");
 
     String buildLeagueJson(String competitionHash, League league, CompetitionSettings settings) {
         def templateToUse = JSON_LEAGUE_FULL_TEMPLATE

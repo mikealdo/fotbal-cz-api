@@ -67,7 +67,7 @@ dependencies {
     compile "com.ofg:activity-tracker:$microInfraSpringVersion"
     compile "com.ofg:activity-tracker-boot-starter:$microInfraSpringVersion"
     compile 'org.jsoup:jsoup:1.8.3'
-    compile "cz.mikealdo:football-domain:1.1"
+    compile "cz.mikealdo:football-domain:1.2"
 
     runtime 'cglib:cglib-nodep:3.2.3'
     runtime 'org.objenesis:objenesis:2.4'
@@ -87,7 +87,8 @@ dependencies {
     testCompile "com.jayway.restassured:rest-assured:$restAssuredVersion"
     testCompile "com.jayway.restassured:spring-mock-mvc:$restAssuredVersion"
     testCompile "io.codearte.accurest:accurest-core:$accurestVersion"
-    testCompile "cz.mikealdo:football-domain:1.0"
+    testCompile "cz.mikealdo:football-domain:1.1"
+    testCompile 'junit:junit:4.12'
 
     // for easier contract devlopment - ide auto-completion support
     testCompileOnly "io.codearte.accurest:accurest-core:$accurestVersion"

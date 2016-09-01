@@ -219,8 +219,8 @@ public class MatchesStatisticsPageTest {
 	private void assertMatch(Match match, Integer homePairingId, Integer visitorPairingId, Integer round, String date, Long homeGoals, Long visitorGoals) {
 		assertCommonMatchDetails(match, homePairingId, visitorPairingId, round, date);
         Optional<MatchResult> result = match.getResult();
-        assertEquals(homeGoals, result.get().getHomeGoals());
-        assertEquals(visitorGoals, result.get().getVisitorGoals());
+        assertEquals(homeGoals, Long.valueOf(result.get().getHomeGoals()));
+        assertEquals(visitorGoals, Long.valueOf(result.get().getVisitorGoals()));
     }
 
 	private void assertCommonMatchDetails(Match match, Integer homePairingId, Integer visitorPairingId, Integer round, String date) {

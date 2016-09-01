@@ -28,10 +28,11 @@ class Results {
                                 "pairingId": "2",
                                 "pairingTeamName": "second"
                             },
-                            "result": "2:1p",
+                            "result": "3:1p",
                             "round": 1,
-                            "date": "2015-05-15"
-                        },
+                            "date": "2015-05-15 00:00"
+                        }
+                        ,
                         {
                             "homeTeam": {
                                 "pairingId": "2",
@@ -42,7 +43,7 @@ class Results {
                                 "pairingTeamName": "first"
                             },
                             "round": 2,
-                            "date": "2015-05-15"
+                            "date": "2015-05-15 00:00"
                         }
                     ]
                 }
@@ -60,10 +61,11 @@ class Results {
                                 "pairingId": "2",
                                 "pairingTeamName": "second"
                             },
-                            "result": "2:1p",
+                            "result": "3:1p",
                             "round": 1,
-                            "date": "2015-05-15"
-                        },
+                            "date": "2015-05-15 00:00"
+                        }
+                        ,
                         {
                             "homeTeam": {
                                 "pairingId": "2",
@@ -74,7 +76,7 @@ class Results {
                                 "pairingTeamName": "first"
                             },
                             "round": 2,
-                            "date": "2015-05-15"
+                            "date": "2015-05-15 00:00"
                         }
                     ]
                 }

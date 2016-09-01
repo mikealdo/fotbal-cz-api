@@ -32,29 +32,34 @@ class RetrieveJsonForGivenTeamsSpec extends MicroserviceMvcWiremockSpec {
     ResultsStorageClientStub resultsStorageClientStub
     @Autowired
     CompetitionPage competitionPage
-    @Value('${acceptance-tests.timeout:10}')
+    @Value('${acceptance-tests.timeout:50}')
     Integer acceptanceTestTimeout
 
-    @Ignore
     def "should find competition results"() {
         given:
-        hashes.add('172c09d6-dd87-47df-a0b3-8efde6ac6842')
+            hashes.add('3da83071-b450-4852-b349-201990550e50') // A
+            hashes.add('383c2264-5b8c-4bc6-ad28-5b9d19e3a140') // B
+            hashes.add('30756af4-4430-465a-b16f-a86ad324fc08') // dorost
+            hashes.add('9af3d9a6-3b34-4bdf-aaa8-cab40427a304') // starsi
+            hashes.add('c51b6839-c026-4d21-bc03-a06d07353de8') // mladsi
+            hashes.add('298cc6b2-e256-4d8c-aa79-b2f959b32c90') // pripravka
         when:
-        for (String hash : hashes) {
-            MvcResult mvcResult = mockMvc.perform(get("$ROOT_PATH/$hash")
-                    .contentType(FOTBAL_CZ_API_MICROSERVICE_V1))
-                    .andDo(print())
-                    .andExpect(status().isOk())
-                    .andExpect(header().string("correlationId", not(isEmptyString())))
-                    .andReturn()
+            for (String hash : hashes) {
+                mockMvc.perform(get("$ROOT_PATH/$hash")
+                        .contentType(FOTBAL_CZ_API_MICROSERVICE_V1))
+                        .andDo(print())
+                        .andExpect(status().isOk())
+                        .andExpect(header().string("correlationId", not(isEmptyString())))
+                        .andReturn()
 
-            await().atMost(10, SECONDS).untilAtomic(resultsStorageClientStub.savedJson, CoreMatchers.<String> notNullValue())
+                await().atMost(25, SECONDS).untilAtomic(resultsStorageClientStub.savedJson, CoreMatchers.<String> notNullValue())
 
-            def file = new File('result-jsons/' + hash + '.json')
-            file.write(resultsStorageClientStub.savedJson.get())
-        }
+                def file = new File('result-jsons/' + hash + '.json')
+                file.write(resultsStorageClientStub.savedJson.get())
+                resultsStorageClientStub.savedJson.set(null);
+            }
         then:
-        println "Success"
+            println "Success"
     }
 
 }

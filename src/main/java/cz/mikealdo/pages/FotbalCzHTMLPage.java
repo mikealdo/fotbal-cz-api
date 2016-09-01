@@ -1,6 +1,8 @@
 package cz.mikealdo.pages;
 
+import com.google.common.base.Splitter;
 import org.apache.commons.lang.StringUtils;
+import org.apache.zookeeper.Op;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
@@ -40,7 +42,20 @@ public abstract class FotbalCzHTMLPage {
 		if (StringUtils.isBlank(nodeValue)) {
 			return Optional.empty();
 		}
-		return Optional.of(Integer.parseInt(nodeValue));
+		if (nodeValue.contains("+")) {
+            Splitter splitter = Splitter.on("+");
+            Iterable<String> strings = splitter.split(nodeValue);
+            int minute = 0;
+            for (String string : strings) {
+                minute += Integer.parseInt(string);
+            }
+            return Optional.of(minute);
+        }
+        try {
+            return Optional.of(Integer.parseInt(nodeValue));
+        } catch (NumberFormatException ex) {
+            return Optional.empty();
+        }
 	}
 
 	Element getSpanByClass(Document document, String cssClassName)

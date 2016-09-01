@@ -28,13 +28,13 @@ public class MatchSummaryPageTest {
 
 		MatchResult result = page.createResultWithDetails(document);
 
-		assertEquals(Long.valueOf(1), result.getHomeGoals());
-		assertEquals(Long.valueOf(1), result.getVisitorGoals());
+		assertEquals(1L, result.getHomeGoals());
+		assertEquals(1L, result.getVisitorGoals());
 		assertFalse(result.isForfeited());
 		assertTrue(result.isResultEntered());
 		assertTrue(result.isPenaltyShootout());
-		assertEquals(Long.valueOf(4), result.getHomeGoalsInPenaltyShootout());
-		assertEquals(Long.valueOf(5), result.getVisitorGoalsInPenaltyShootout());
+		assertEquals(4L, result.getHomeGoalsInPenaltyShootout());
+		assertEquals(5L, result.getVisitorGoalsInPenaltyShootout());
 		assertEquals(Long.valueOf(250), result.getSpectators());
 		assertEquals(3, result.getReferees().size());
 		assertReferee("ROTH Patrik", "74010731", RefereePosition.R, result.getReferees().get(0));
@@ -61,9 +61,9 @@ public class MatchSummaryPageTest {
 		assertEquals(Integer.valueOf(70), result.getHomeLineUp().get(10).getRedCardInMinute());
 		assertIncomingPlayer("Dvořák Jan", "92110572", PlayerPosition.DEFENDER, 2, result.getHomeLineUp().get(11));
 		assertEquals(Integer.valueOf(74), result.getHomeLineUp().get(11).getFirstSubstitutionMinute());
-		assertEquals(Integer.valueOf(84), result.getHomeLineUp().get(11).getSecondSubstitutionMinute());
+		assertEquals(Integer.valueOf(93), result.getHomeLineUp().get(11).getSecondSubstitutionMinute());
 		assertIncomingPlayer("Čížek Jan", "93070032", PlayerPosition.MIDFIELDER, 3, result.getHomeLineUp().get(12));
-		assertEquals(Integer.valueOf(84), result.getHomeLineUp().get(12).getFirstSubstitutionMinute());
+		assertEquals(Integer.valueOf(93), result.getHomeLineUp().get(12).getFirstSubstitutionMinute());
 		assertIncomingPlayer("Brotánek Tomáš", "90120785", PlayerPosition.DEFENDER, 8, result.getHomeLineUp().get(13));
 		assertIncomingPlayer("Valenta Miroslav", "97110987", PlayerPosition.MIDFIELDER, 9, result.getHomeLineUp().get(14));
 		assertIncomingPlayer("Havel Martin", "81050211", PlayerPosition.FORWARD, 10, result.getHomeLineUp().get(15));
