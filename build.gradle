@@ -1,7 +1,9 @@
 apply plugin: 'groovy'
 apply plugin: 'spring-boot'
+apply plugin: 'maven'
 apply plugin: 'maven-publish'
 apply plugin: "com.gorylenko.gradle-git-properties"
+apply plugin: 'com.jfrog.bintray'
 
 buildscript {
     repositories {
@@ -18,6 +20,7 @@ buildscript {
         classpath "io.codearte.accurest:accurest-gradle-plugin:$accurestVersion"
         classpath 'com.blogspot.toomuchcoding:gradle-test-profiler:0.3.1'
         classpath 'gradle.plugin.com.gorylenko.gradle-git-properties:gradle-git-properties:1.4.16'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
 
         if (project.hasProperty("coverage")) {
             classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:1.0.2'
@@ -27,7 +30,13 @@ buildscript {
 }
 
 ext {
-    buildNrLoc = project.hasProperty('buildNr') ? "${buildNr}" : "CD-000"
+    buildNrLoc = project.hasProperty('buildNr') ? "${buildNr}" : "CD-" + getDate()
+}
+
+def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMddHHmmss')
+    return formattedDate
 }
 
 group = mavenProjectGroupId
@@ -35,8 +44,6 @@ version = project.hasProperty('currentVersion') ? project.getProperty('currentVe
 
 sourceSets.main.java.srcDirs = []
 sourceSets.main.groovy.srcDirs += ["src/main/java"]
-
-sourceCompatibility = '1.8'
 
 repositories {
     mavenLocal()
@@ -119,6 +126,42 @@ task addHashFile << {
 git.commit.id=${gitCommitId}
 git.commit.time=${gitCommitTime}
 """
+}
+
+publishing {
+    publications {
+        MyPublication(MavenPublication) {
+            from components.java
+            groupId 'cz.mikealdo'
+            artifactId 'fotbal-cz-api'
+            version project.version
+        }
+    }
+}
+
+bintray {
+    user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
+    key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
+    publications = ['MyPublication']
+    pkg {
+        repo = 'rango'
+        name = 'fotbal-cz-api'
+        userOrg = 'mdavidek1'
+        desc = 'Fotbal CZ api stubs and microservice'
+        publish = true
+        issueTrackerUrl = 'https://github.com/mikealdo/fotbal-cz-api/issues'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/mikealdo/fotbal-cz-api'
+        labels = ['continous-delivery', 'rango']
+        publicDownloadNumbers = true
+        configurations = ['archives']
+        version {
+            name = project.version
+            desc = 'Fotbal CZ Api'
+            released  = new Date()
+            vcsTag = project.version
+        }
+    }
 }
 
 apply from: 'gradle/cli.gradle'
