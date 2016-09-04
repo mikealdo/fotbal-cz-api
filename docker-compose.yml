@@ -1,18 +1,18 @@
-fotbal-cz-api:
-  build: build/docker
-  links:
-    - zookeeper:zk
-    - graphite:gr
-
-  environment:
-    spring.profiles.active: prod
-    APP_ENV: dev
-
-  command: --service.resolver.url=zk:2181 \
-           --graphite.host=gr
-
-  ports:
-    - 8095:8095
+#fotbal-cz-api:
+#  build: build/docker
+#  links:
+#    - zookeeper:zk
+#    - graphite:gr
+#
+#  environment:
+#    spring.profiles.active: prod
+#    APP_ENV: dev
+#
+#  command: --service.resolver.url=zk:2181 \
+#           --graphite.host=gr
+#
+#  ports:
+#    - 8095:8095
 
 zookeeper:
   image: jplock/zookeeper
