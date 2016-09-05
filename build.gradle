@@ -165,7 +165,7 @@ bintray {
 }
 
 task replaceInBintrayDescriptor() {
-    replaceToken("${version}", project.version)
+    replaceToken("\\{version\\}", project.version)
 }
 
 def replaceToken(fromString, toString) {

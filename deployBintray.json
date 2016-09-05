@@ -17,20 +17,20 @@
     "public_stats": true,
   },
   "version": {
-    "name": "${version}",
+    "name": "{version}",
     "desc": "Fotbal CZ Api",
     "released": "2015-01-04",
-    "vcs_tag": "${version}",
+    "vcs_tag": "{version}",
     "gpgSign": false
   },
   "files": [
     {
-      "includePattern": "build/libs/(${version}\\.jar)",
+      "includePattern": "build/libs/({version}\\.jar)",
       "excludePattern": ".*/do-not-deploy/.*",
-      "uploadPattern": "${version}/$2"
+      "uploadPattern": "{version}/$2"
     },
     {
-      "includePattern": "build/libs/(${version}-stubs\\.jar)",
+      "includePattern": "build/libs/({version}-stubs\\.jar)",
       "uploadPattern": "stubs/$1"
     }
   ],
