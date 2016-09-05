@@ -25,13 +25,13 @@
   },
   "files": [
     {
-      "includePattern": "build/libs/({version}\\.jar)",
+      "includePattern": "build/libs/(fotbal-cz-api-{version}.jar)",
       "excludePattern": ".*/do-not-deploy/.*",
-      "uploadPattern": "{version}/$2"
+      "uploadPattern": "fotbal-cz-api-{version}/$1"
     },
     {
-      "includePattern": "build/libs/({version}-stubs\\.jar)",
-      "uploadPattern": "stubs/$1"
+      "includePattern": "build/libs/(fotbal-cz-api-{version}-stubs.jar)",
+      "uploadPattern": "fotbal-cz-api-{version}/$1"
     }
   ],
   "publish": true
