@@ -164,6 +164,16 @@ bintray {
     }
 }
 
+task replaceInBintrayDescriptor() {
+    replaceToken("${version}", project.version)
+}
+
+def replaceToken(fromString, toString) {
+    def descriptorFileName = "deployBintray.json"
+    def updatedContent = new File(descriptorFileName).getText('UTF-8').replaceAll(fromString, toString)
+    new File(descriptorFileName).write(updatedContent, 'UTF-8')
+}
+
 apply from: 'gradle/cli.gradle'
 apply from: 'gradle/test.gradle'
 apply from: 'gradle/misc.gradle'

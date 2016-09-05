@@ -2,32 +2,29 @@ language: groovy
 sudo: false
 jdk:
 - oraclejdk8
-
 addons:
-  firefox: "46.0.1"
-
+  firefox: 46.0.1
 before_install:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
 install:
 - true
-
 before_script:
- - "echo $JAVA_OPTS"
- - "export JAVA_OPTS=-Xmx512m"
-
+- echo $JAVA_OPTS
+- export JAVA_OPTS=-Xmx512m
 script:
-- ./gradlew clean guiTest build --stacktrace -Dstubrunner.skip-local-repo=true --info
-
+- "./gradlew clean guiTest build --stacktrace -Dstubrunner.skip-local-repo=true --info"
 cache:
   directories:
-  - $HOME/.m2
-  - $HOME/.gradle
-
+  - "$HOME/.m2"
+  - "$HOME/.gradle"
 env:
 - TERM=dumb
-
 after_success:
-- ./gradlew test jacocoTestReport coveralls -Pcoverage
-
+- "./gradlew test jacocoTestReport coveralls -Pcoverage"
+deploy:
+  provider: bintray
+  file: "deployBintray.json"
+  user: "mdavidek1"
+  key:
+    secure: nXRQRVzyh/UHMBM8QE0SkTHUdIiO8/ttVN8Wjj++h/dusgM8hD2MtGOJOPqp2vXt4U6iasUF40wGIr1bxLjLdxrtYj/tR8DkKjtUB1471l4lZfFVrzeWZarO5ZQOno8PRqE+Oavz2Ct03OXy9FwY33yZJBmKMQ4S0+j/XivB5CtBvnZJLXSnWbVFlC6S8p+FYoadAHLll7XNfoSfSXRBKuvLNMGH+miHsXqpgav+6oS6T3u1bQZqP7168AA03LIEREfWYZxYt3iQlBqx/r/eHHtqWHo/ugsGplIhM/ids6aADTrIqYE6ykY+zNTJBC6JXW9Z1FGWOOB+pdoa7w9i695D3z4qjI9N0xc5ZDxf2SHF0FX6QoKfhXDb+vnPBOOmbq8p3gJ1CYIp1wuQ0Yf8RNH5F3ropjeagu/t5n47ZxxAkG4jlLg6OmZb2fFStiz58gpYRHoTkoAYtCqzDTTZUnS+KG0QQp3PFgK+ORdp2KjIcqWgB0EnQfTaQgwXzAJNbKiCpLeiOHw78APtOJ3oNsQTl0LGVW8y600AxOeqJWUkWOFNjNpNQQTj014NM02u/Q4Y0pQJ4X2n2/ORPspGBAZEnPMwDn7DZ1TRlBfT5TNGFwwYus36hVnfRCl9Y/bME0XfIwvQaHRmz7+AEs+0Un8LqIJSFUleEqqpcfrtWzI=
