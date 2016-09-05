@@ -1,92 +1,80 @@
 
                 {
                     "competitionHash" : "298cc6b2-e256-4d8c-aa79-b2f959b32c90",
-                    "competitionName": "Fair Credit I.B třída skupina E",
-                    "competitionDescription": "ročník 2015, A3E, Muži, číslo 2015210A3E"
+                    "competitionName": "Okresní soutěž starší přípravka 5+1 skupina A",
+                    "competitionDescription": "ročník 2016, G2A, Přípravka - starší, číslo 2016211G2A"
                     
                         ,"teams": [
                             
                                 {
                                     "pairingId": 1,
-                                    "pairingTeamName": "AFK Loděnice"
+                                    "pairingTeamName": "Ostředek"
                                 }
                                 ,
                             
                                 {
                                     "pairingId": 2,
-                                    "pairingTeamName": "FK Dobříč"
+                                    "pairingTeamName": "Olbramovice"
                                 }
                                 ,
                             
                                 {
                                     "pairingId": 3,
-                                    "pairingTeamName": "FK Komárov"
+                                    "pairingTeamName": "Krhanice"
                                 }
                                 ,
                             
                                 {
                                     "pairingId": 4,
-                                    "pairingTeamName": "TJ Tochovice"
+                                    "pairingTeamName": "Sedlec-Prčice"
                                 }
                                 ,
                             
                                 {
                                     "pairingId": 5,
-                                    "pairingTeamName": "TATRAN SEDLČANY B"
+                                    "pairingTeamName": "Pecerady"
                                 }
                                 ,
                             
                                 {
                                     "pairingId": 6,
-                                    "pairingTeamName": "SK Nový Knín"
+                                    "pairingTeamName": "Pyšely"
                                 }
                                 ,
                             
                                 {
                                     "pairingId": 7,
-                                    "pairingTeamName": "Petrovice"
+                                    "pairingTeamName": "Nespeky"
                                 }
                                 ,
                             
                                 {
                                     "pairingId": 8,
-                                    "pairingTeamName": "SK SPARTAK Příbram B"
+                                    "pairingTeamName": "Soběhrdy"
                                 }
                                 ,
                             
                                 {
                                     "pairingId": 9,
-                                    "pairingTeamName": "SK Březnice"
+                                    "pairingTeamName": "Benešov C"
                                 }
                                 ,
                             
                                 {
                                     "pairingId": 10,
-                                    "pairingTeamName": "SOKOL Sedlec-Prčice"
+                                    "pairingTeamName": "Křečovice"
                                 }
                                 ,
                             
                                 {
                                     "pairingId": 11,
-                                    "pairingTeamName": "UNION CERHOVICE"
+                                    "pairingTeamName": "Teplýšovice"
                                 }
                                 ,
                             
                                 {
                                     "pairingId": 12,
-                                    "pairingTeamName": "Spartak TOS Žebrák"
-                                }
-                                ,
-                            
-                                {
-                                    "pairingId": 13,
-                                    "pairingTeamName": "TJ Daleké Dušníky"
-                                }
-                                ,
-                            
-                                {
-                                    "pairingId": 14,
-                                    "pairingTeamName": "VOLNO - VOLNÝ LOS"
+                                    "pairingTeamName": "Netvořice"
                                 }
                                 
                             
@@ -99,2745 +87,990 @@
                                         {
                                             "homeTeam": {
                                                 "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
+                                                "pairingTeamName": "Ostředek"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
+                                                "pairingId": "12",
+                                                "pairingTeamName": "Netvořice"
                                             },
                                             
                                             "round": 1,
-                                            "date": "2015-08-22 17:00"
+                                            "date": "2016-09-09 18:00"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
+                                                "pairingTeamName": "Olbramovice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
+                                                "pairingId": "11",
+                                                "pairingTeamName": "Teplýšovice"
                                             },
                                             
                                             "round": 1,
-                                            "date": "2015-08-22 17:00"
+                                            "date": "2016-09-07 17:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
+                                                "pairingTeamName": "Krhanice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
+                                                "pairingId": "10",
+                                                "pairingTeamName": "Křečovice"
                                             },
                                             
                                             "round": 1,
-                                            "date": "2015-08-22 10:15"
+                                            "date": "2016-09-07 17:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
+                                                "pairingTeamName": "Sedlec-Prčice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
+                                                "pairingId": "9",
+                                                "pairingTeamName": "Benešov C"
                                             },
                                             
                                             "round": 1,
-                                            "date": "2015-10-28 14:30"
+                                            "date": "2016-09-07 18:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
+                                                "pairingTeamName": "Pecerady"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
+                                                "pairingId": "8",
+                                                "pairingTeamName": "Soběhrdy"
                                             },
                                             
                                             "round": 1,
-                                            "date": "2015-08-23 17:00"
+                                            "date": "2016-09-07 17:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
+                                                "pairingTeamName": "Pyšely"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
+                                                "pairingId": "7",
+                                                "pairingTeamName": "Nespeky"
                                             },
                                             
                                             "round": 1,
-                                            "date": "2015-08-22 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            
-                                            "round": 1,
-                                            "date": "2015-08-23 17:00"
+                                            "date": "2016-09-07 17:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
+                                                "pairingTeamName": "Ostředek"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
+                                                "pairingTeamName": "Olbramovice"
+                                            },
+                                             "result": "4:5", 
+                                            "round": 2,
+                                            "date": "2016-09-04 09:30"
+                                        }
+                                        ,
+                                    
+                                        {
+                                            "homeTeam": {
+                                                "pairingId": "8",
+                                                "pairingTeamName": "Soběhrdy"
+                                            },
+                                            "visitorTeam": {
+                                                "pairingId": "6",
+                                                "pairingTeamName": "Pyšely"
+                                            },
+                                             "result": "12:3", 
+                                            "round": 2,
+                                            "date": "2016-09-03 09:30"
+                                        }
+                                        ,
+                                    
+                                        {
+                                            "homeTeam": {
+                                                "pairingId": "9",
+                                                "pairingTeamName": "Benešov C"
+                                            },
+                                            "visitorTeam": {
+                                                "pairingId": "5",
+                                                "pairingTeamName": "Pecerady"
                                             },
                                             
                                             "round": 2,
-                                            "date": "2015-08-29 17:00"
+                                            "date": "2016-09-01 18:00"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
+                                                "pairingId": "10",
+                                                "pairingTeamName": "Křečovice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
+                                                "pairingId": "4",
+                                                "pairingTeamName": "Sedlec-Prčice"
                                             },
-                                            
+                                             "result": "0:13", 
                                             "round": 2,
-                                            "date": "2015-08-30 17:00"
+                                            "date": "2016-09-04 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
+                                                "pairingId": "11",
+                                                "pairingTeamName": "Teplýšovice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
+                                                "pairingId": "3",
+                                                "pairingTeamName": "Krhanice"
                                             },
-                                            
+                                             "result": "11:2", 
                                             "round": 2,
-                                            "date": "2015-08-30 17:00"
+                                            "date": "2016-09-04 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
+                                                "pairingId": "12",
+                                                "pairingTeamName": "Netvořice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
+                                                "pairingId": "7",
+                                                "pairingTeamName": "Nespeky"
                                             },
-                                            
+                                             "result": "7:11", 
                                             "round": 2,
-                                            "date": "2015-08-30 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            
-                                            "round": 2,
-                                            "date": "2015-08-29 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            
-                                            "round": 2,
-                                            "date": "2015-08-30 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            
-                                            "round": 2,
-                                            "date": "2015-08-30 17:00"
+                                            "date": "2016-09-03 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
+                                                "pairingTeamName": "Olbramovice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
+                                                "pairingId": "12",
+                                                "pairingTeamName": "Netvořice"
                                             },
                                             
                                             "round": 3,
-                                            "date": "2015-09-05 17:00"
+                                            "date": "2016-09-10 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
+                                                "pairingTeamName": "Krhanice"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
+                                                "pairingTeamName": "Ostředek"
                                             },
                                             
                                             "round": 3,
-                                            "date": "2015-09-05 10:15"
+                                            "date": "2016-09-11 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
+                                                "pairingTeamName": "Sedlec-Prčice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
+                                                "pairingId": "11",
+                                                "pairingTeamName": "Teplýšovice"
                                             },
                                             
                                             "round": 3,
-                                            "date": "2015-09-05 17:00"
+                                            "date": "2016-09-10 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
+                                                "pairingTeamName": "Pecerady"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
+                                                "pairingId": "10",
+                                                "pairingTeamName": "Křečovice"
                                             },
                                             
                                             "round": 3,
-                                            "date": "2015-09-06 17:00"
+                                            "date": "2016-09-10 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
+                                                "pairingTeamName": "Pyšely"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
+                                                "pairingId": "9",
+                                                "pairingTeamName": "Benešov C"
                                             },
                                             
                                             "round": 3,
-                                            "date": "2015-09-05 17:00"
+                                            "date": "2016-09-10 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
+                                                "pairingTeamName": "Nespeky"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
+                                                "pairingId": "8",
+                                                "pairingTeamName": "Soběhrdy"
                                             },
                                             
                                             "round": 3,
-                                            "date": "2015-09-06 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            
-                                            "round": 3,
-                                            "date": "2015-09-06 17:00"
+                                            "date": "2016-09-10 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
+                                                "pairingTeamName": "Ostředek"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
+                                                "pairingTeamName": "Sedlec-Prčice"
                                             },
                                             
                                             "round": 4,
-                                            "date": "2015-09-12 17:00"
+                                            "date": "2016-09-18 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
+                                                "pairingTeamName": "Olbramovice"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
+                                                "pairingTeamName": "Krhanice"
                                             },
                                             
                                             "round": 4,
-                                            "date": "2015-09-12 17:00"
+                                            "date": "2016-09-17 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
+                                                "pairingId": "9",
+                                                "pairingTeamName": "Benešov C"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
+                                                "pairingId": "7",
+                                                "pairingTeamName": "Nespeky"
                                             },
                                             
                                             "round": 4,
-                                            "date": "2015-09-13 17:00"
+                                            "date": "2016-09-17 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
+                                                "pairingId": "10",
+                                                "pairingTeamName": "Křečovice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
+                                                "pairingId": "6",
+                                                "pairingTeamName": "Pyšely"
                                             },
                                             
                                             "round": 4,
-                                            "date": "2015-09-13 17:00"
+                                            "date": "2016-09-18 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
+                                                "pairingId": "11",
+                                                "pairingTeamName": "Teplýšovice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
+                                                "pairingId": "5",
+                                                "pairingTeamName": "Pecerady"
                                             },
                                             
                                             "round": 4,
-                                            "date": "2015-09-12 17:00"
+                                            "date": "2016-09-18 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
+                                                "pairingId": "12",
+                                                "pairingTeamName": "Netvořice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
+                                                "pairingId": "8",
+                                                "pairingTeamName": "Soběhrdy"
                                             },
                                             
                                             "round": 4,
-                                            "date": "2015-09-13 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            
-                                            "round": 4,
-                                            "date": "2015-09-13 17:00"
+                                            "date": "2016-09-17 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
+                                                "pairingTeamName": "Krhanice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
+                                                "pairingId": "12",
+                                                "pairingTeamName": "Netvořice"
                                             },
                                             
                                             "round": 5,
-                                            "date": "2015-09-19 10:15"
+                                            "date": "2016-09-25 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
+                                                "pairingTeamName": "Sedlec-Prčice"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
+                                                "pairingTeamName": "Olbramovice"
                                             },
                                             
                                             "round": 5,
-                                            "date": "2015-09-19 16:30"
+                                            "date": "2016-09-24 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
+                                                "pairingTeamName": "Pecerady"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
+                                                "pairingTeamName": "Ostředek"
                                             },
                                             
                                             "round": 5,
-                                            "date": "2015-09-20 16:30"
+                                            "date": "2016-09-24 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
+                                                "pairingTeamName": "Pyšely"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
+                                                "pairingId": "11",
+                                                "pairingTeamName": "Teplýšovice"
                                             },
                                             
                                             "round": 5,
-                                            "date": "2015-09-19 16:30"
+                                            "date": "2016-09-24 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
+                                                "pairingTeamName": "Nespeky"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
+                                                "pairingId": "10",
+                                                "pairingTeamName": "Křečovice"
                                             },
                                             
                                             "round": 5,
-                                            "date": "2015-09-20 16:30"
+                                            "date": "2016-09-24 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
+                                                "pairingTeamName": "Soběhrdy"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
+                                                "pairingId": "9",
+                                                "pairingTeamName": "Benešov C"
                                             },
                                             
                                             "round": 5,
-                                            "date": "2015-09-20 16:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            
-                                            "round": 5,
-                                            "date": "2015-09-19 16:30"
+                                            "date": "2016-09-24 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
+                                                "pairingTeamName": "Ostředek"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
+                                                "pairingTeamName": "Pyšely"
                                             },
                                             
                                             "round": 6,
-                                            "date": "2015-09-26 16:30"
+                                            "date": "2016-10-02 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
+                                                "pairingTeamName": "Olbramovice"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
+                                                "pairingTeamName": "Pecerady"
                                             },
                                             
                                             "round": 6,
-                                            "date": "2015-09-26 16:30"
+                                            "date": "2016-10-01 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
+                                                "pairingTeamName": "Krhanice"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
+                                                "pairingTeamName": "Sedlec-Prčice"
                                             },
                                             
                                             "round": 6,
-                                            "date": "2015-09-26 10:15"
+                                            "date": "2016-10-02 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
+                                                "pairingId": "10",
+                                                "pairingTeamName": "Křečovice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
+                                                "pairingId": "8",
+                                                "pairingTeamName": "Soběhrdy"
                                             },
                                             
                                             "round": 6,
-                                            "date": "2015-09-27 16:30"
+                                            "date": "2016-10-02 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
+                                                "pairingId": "11",
+                                                "pairingTeamName": "Teplýšovice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
+                                                "pairingId": "7",
+                                                "pairingTeamName": "Nespeky"
                                             },
                                             
                                             "round": 6,
-                                            "date": "2015-09-26 16:30"
+                                            "date": "2016-10-02 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
+                                                "pairingId": "12",
+                                                "pairingTeamName": "Netvořice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
+                                                "pairingId": "9",
+                                                "pairingTeamName": "Benešov C"
                                             },
                                             
                                             "round": 6,
-                                            "date": "2015-09-27 16:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            
-                                            "round": 6,
-                                            "date": "2015-09-27 16:30"
+                                            "date": "2016-10-01 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
+                                                "pairingTeamName": "Sedlec-Prčice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
+                                                "pairingId": "12",
+                                                "pairingTeamName": "Netvořice"
                                             },
                                             
                                             "round": 7,
-                                            "date": "2015-10-03 16:00"
+                                            "date": "2016-10-08 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
+                                                "pairingTeamName": "Pecerady"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
+                                                "pairingTeamName": "Krhanice"
                                             },
                                             
                                             "round": 7,
-                                            "date": "2015-10-04 16:00"
+                                            "date": "2016-10-08 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
+                                                "pairingTeamName": "Pyšely"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
+                                                "pairingTeamName": "Olbramovice"
                                             },
                                             
                                             "round": 7,
-                                            "date": "2015-10-03 16:00"
+                                            "date": "2016-10-08 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
+                                                "pairingTeamName": "Nespeky"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
+                                                "pairingTeamName": "Ostředek"
                                             },
                                             
                                             "round": 7,
-                                            "date": "2015-10-04 16:00"
+                                            "date": "2016-10-08 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
+                                                "pairingTeamName": "Soběhrdy"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
+                                                "pairingId": "11",
+                                                "pairingTeamName": "Teplýšovice"
                                             },
                                             
                                             "round": 7,
-                                            "date": "2015-10-04 16:00"
+                                            "date": "2016-10-08 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
+                                                "pairingTeamName": "Benešov C"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
+                                                "pairingId": "10",
+                                                "pairingTeamName": "Křečovice"
                                             },
                                             
                                             "round": 7,
-                                            "date": "2015-10-03 16:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            
-                                            "round": 7,
-                                            "date": "2015-10-04 16:00"
+                                            "date": "2016-10-08 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
+                                                "pairingTeamName": "Ostředek"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
+                                                "pairingTeamName": "Soběhrdy"
                                             },
                                             
                                             "round": 8,
-                                            "date": "2015-10-10 16:00"
+                                            "date": "2016-10-16 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
+                                                "pairingTeamName": "Olbramovice"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
+                                                "pairingTeamName": "Nespeky"
                                             },
                                             
                                             "round": 8,
-                                            "date": "2015-10-10 16:00"
+                                            "date": "2016-10-15 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
+                                                "pairingTeamName": "Krhanice"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
+                                                "pairingTeamName": "Pyšely"
                                             },
                                             
                                             "round": 8,
-                                            "date": "2015-10-10 10:15"
+                                            "date": "2016-10-16 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
+                                                "pairingTeamName": "Sedlec-Prčice"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
+                                                "pairingTeamName": "Pecerady"
                                             },
                                             
                                             "round": 8,
-                                            "date": "2015-10-10 16:00"
+                                            "date": "2016-10-15 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
+                                                "pairingId": "11",
+                                                "pairingTeamName": "Teplýšovice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
+                                                "pairingId": "9",
+                                                "pairingTeamName": "Benešov C"
                                             },
                                             
                                             "round": 8,
-                                            "date": "2015-10-10 16:00"
+                                            "date": "2016-10-16 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
+                                                "pairingId": "12",
+                                                "pairingTeamName": "Netvořice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
+                                                "pairingId": "10",
+                                                "pairingTeamName": "Křečovice"
                                             },
                                             
                                             "round": 8,
-                                            "date": "2015-10-11 16:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            
-                                            "round": 8,
-                                            "date": "2015-10-11 16:00"
+                                            "date": "2016-10-15 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
+                                                "pairingTeamName": "Pecerady"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
+                                                "pairingId": "12",
+                                                "pairingTeamName": "Netvořice"
                                             },
                                             
                                             "round": 9,
-                                            "date": "2015-10-18 15:30"
+                                            "date": "2016-10-22 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
+                                                "pairingTeamName": "Pyšely"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
+                                                "pairingTeamName": "Sedlec-Prčice"
                                             },
                                             
                                             "round": 9,
-                                            "date": "2015-10-17 15:30"
+                                            "date": "2016-10-22 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
+                                                "pairingTeamName": "Nespeky"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
+                                                "pairingTeamName": "Krhanice"
                                             },
                                             
                                             "round": 9,
-                                            "date": "2015-10-18 15:30"
+                                            "date": "2016-10-22 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
+                                                "pairingTeamName": "Soběhrdy"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
+                                                "pairingTeamName": "Olbramovice"
                                             },
                                             
                                             "round": 9,
-                                            "date": "2015-10-18 15:30"
+                                            "date": "2016-10-22 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
+                                                "pairingTeamName": "Benešov C"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
+                                                "pairingTeamName": "Ostředek"
                                             },
                                             
                                             "round": 9,
-                                            "date": "2015-10-17 15:30"
+                                            "date": "2016-10-22 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
+                                                "pairingTeamName": "Křečovice"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
+                                                "pairingId": "11",
+                                                "pairingTeamName": "Teplýšovice"
                                             },
                                             
                                             "round": 9,
-                                            "date": "2015-10-18 15:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            
-                                            "round": 9,
-                                            "date": "2015-10-18 15:30"
+                                            "date": "2016-10-23 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
+                                                "pairingTeamName": "Ostředek"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
+                                                "pairingTeamName": "Křečovice"
                                             },
                                             
                                             "round": 10,
-                                            "date": "2015-10-24 14:30"
+                                            "date": "2016-10-30 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
+                                                "pairingTeamName": "Olbramovice"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
+                                                "pairingTeamName": "Benešov C"
                                             },
                                             
                                             "round": 10,
-                                            "date": "2015-10-24 14:30"
+                                            "date": "2016-10-29 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
+                                                "pairingTeamName": "Krhanice"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
+                                                "pairingTeamName": "Soběhrdy"
                                             },
                                             
                                             "round": 10,
-                                            "date": "2015-10-24 10:15"
+                                            "date": "2016-10-30 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
+                                                "pairingTeamName": "Sedlec-Prčice"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
+                                                "pairingTeamName": "Nespeky"
                                             },
                                             
                                             "round": 10,
-                                            "date": "2015-10-24 14:30"
+                                            "date": "2016-10-29 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
+                                                "pairingTeamName": "Pecerady"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
+                                                "pairingTeamName": "Pyšely"
                                             },
                                             
                                             "round": 10,
-                                            "date": "2015-10-25 14:30"
+                                            "date": "2016-10-29 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
+                                                "pairingId": "12",
+                                                "pairingTeamName": "Netvořice"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
+                                                "pairingTeamName": "Teplýšovice"
                                             },
                                             
                                             "round": 10,
-                                            "date": "2015-10-25 14:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            
-                                            "round": 10,
-                                            "date": "2015-10-25 14:30"
+                                            "date": "2016-10-29 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
+                                                "pairingTeamName": "Pyšely"
                                             },
                                             "visitorTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
+                                                "pairingId": "12",
+                                                "pairingTeamName": "Netvořice"
                                             },
                                             
                                             "round": 11,
-                                            "date": "2015-10-31 14:00"
+                                            "date": "2016-11-05 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
+                                                "pairingTeamName": "Nespeky"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
+                                                "pairingTeamName": "Pecerady"
                                             },
                                             
                                             "round": 11,
-                                            "date": "2015-11-01 14:00"
+                                            "date": "2016-11-05 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
+                                                "pairingTeamName": "Soběhrdy"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
+                                                "pairingTeamName": "Sedlec-Prčice"
                                             },
                                             
                                             "round": 11,
-                                            "date": "2015-11-01 14:00"
+                                            "date": "2016-11-05 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
+                                                "pairingTeamName": "Benešov C"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
+                                                "pairingTeamName": "Krhanice"
                                             },
                                             
                                             "round": 11,
-                                            "date": "2015-10-31 14:00"
+                                            "date": "2016-11-05 10:15"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
+                                                "pairingTeamName": "Křečovice"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
+                                                "pairingTeamName": "Olbramovice"
                                             },
                                             
                                             "round": 11,
-                                            "date": "2015-11-01 14:00"
+                                            "date": "2016-11-06 09:30"
                                         }
                                         ,
                                     
                                         {
                                             "homeTeam": {
                                                 "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
+                                                "pairingTeamName": "Teplýšovice"
                                             },
                                             "visitorTeam": {
                                                 "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
+                                                "pairingTeamName": "Ostředek"
                                             },
                                             
                                             "round": 11,
-                                            "date": "2015-11-01 10:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            
-                                            "round": 11,
-                                            "date": "2015-10-31 14:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            
-                                            "round": 12,
-                                            "date": "2015-11-07 14:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            
-                                            "round": 12,
-                                            "date": "2015-11-07 14:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            
-                                            "round": 12,
-                                            "date": "2015-11-07 10:15"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            
-                                            "round": 12,
-                                            "date": "2015-11-07 14:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            
-                                            "round": 12,
-                                            "date": "2015-11-08 14:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            
-                                            "round": 12,
-                                            "date": "2015-11-07 14:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            
-                                            "round": 12,
-                                            "date": "2015-11-08 14:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            
-                                            "round": 13,
-                                            "date": "2015-11-15 13:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
-                                            },
-                                            
-                                            "round": 13,
-                                            "date": "2015-11-15 13:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
-                                            },
-                                            
-                                            "round": 13,
-                                            "date": "2015-11-14 13:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            
-                                            "round": 13,
-                                            "date": "2015-11-14 13:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            
-                                            "round": 13,
-                                            "date": "2015-11-15 13:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
-                                            },
-                                            
-                                            "round": 13,
-                                            "date": "2015-11-14 13:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            
-                                            "round": 13,
-                                            "date": "2015-11-21 13:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            
-                                            "round": 13,
-                                            "date": "2015-11-21 13:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            
-                                            "round": 14,
-                                            "date": "2016-03-27 15:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
-                                            },
-                                            
-                                            "round": 14,
-                                            "date": "2016-03-26 15:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
-                                            },
-                                            
-                                            "round": 14,
-                                            "date": "2016-03-27 15:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            
-                                            "round": 14,
-                                            "date": "2016-03-27 15:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            
-                                            "round": 14,
-                                            "date": "2016-03-27 15:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
-                                            },
-                                            
-                                            "round": 14,
-                                            "date": "2016-03-27 15:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            
-                                            "round": 14,
-                                            "date": "2016-03-26 15:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            
-                                            "round": 15,
-                                            "date": "2016-04-02 16:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            
-                                            "round": 15,
-                                            "date": "2016-04-02 10:15"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            
-                                            "round": 15,
-                                            "date": "2016-04-02 16:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            
-                                            "round": 15,
-                                            "date": "2016-04-03 16:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            
-                                            "round": 15,
-                                            "date": "2016-04-02 16:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            
-                                            "round": 15,
-                                            "date": "2016-04-03 16:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            
-                                            "round": 15,
-                                            "date": "2016-04-02 16:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            
-                                            "round": 16,
-                                            "date": "2016-04-09 16:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            
-                                            "round": 16,
-                                            "date": "2016-04-09 16:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            
-                                            "round": 16,
-                                            "date": "2016-04-10 16:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
-                                            },
-                                            
-                                            "round": 16,
-                                            "date": "2016-04-10 16:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
-                                            },
-                                            
-                                            "round": 16,
-                                            "date": "2016-04-10 16:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            
-                                            "round": 16,
-                                            "date": "2016-04-10 16:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
-                                            },
-                                            
-                                            "round": 16,
-                                            "date": "2016-04-09 16:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
-                                            },
-                                            
-                                            "round": 17,
-                                            "date": "2016-04-16 10:15"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            
-                                            "round": 17,
-                                            "date": "2016-04-16 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            
-                                            "round": 17,
-                                            "date": "2016-04-17 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            
-                                            "round": 17,
-                                            "date": "2016-04-16 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            
-                                            "round": 17,
-                                            "date": "2016-04-17 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            
-                                            "round": 17,
-                                            "date": "2016-04-17 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            
-                                            "round": 17,
-                                            "date": "2016-04-16 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
-                                            },
-                                            
-                                            "round": 18,
-                                            "date": "2016-04-23 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            
-                                            "round": 18,
-                                            "date": "2016-04-23 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            
-                                            "round": 18,
-                                            "date": "2016-04-24 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            
-                                            "round": 18,
-                                            "date": "2016-04-24 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            
-                                            "round": 18,
-                                            "date": "2016-04-24 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
-                                            },
-                                            
-                                            "round": 18,
-                                            "date": "2016-04-24 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            
-                                            "round": 18,
-                                            "date": "2016-04-23 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            
-                                            "round": 19,
-                                            "date": "2016-04-30 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
-                                            },
-                                            
-                                            "round": 19,
-                                            "date": "2016-05-01 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            
-                                            "round": 19,
-                                            "date": "2016-04-30 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            
-                                            "round": 19,
-                                            "date": "2016-05-01 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            
-                                            "round": 19,
-                                            "date": "2016-05-01 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            
-                                            "round": 19,
-                                            "date": "2016-04-30 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            
-                                            "round": 19,
-                                            "date": "2016-05-01 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            
-                                            "round": 20,
-                                            "date": "2016-05-07 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
-                                            },
-                                            
-                                            "round": 20,
-                                            "date": "2016-05-07 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
-                                            },
-                                            
-                                            "round": 20,
-                                            "date": "2016-05-07 10:15"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            
-                                            "round": 20,
-                                            "date": "2016-05-08 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            
-                                            "round": 20,
-                                            "date": "2016-05-08 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            
-                                            "round": 20,
-                                            "date": "2016-05-08 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            
-                                            "round": 20,
-                                            "date": "2016-05-07 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            
-                                            "round": 21,
-                                            "date": "2016-05-15 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            
-                                            "round": 21,
-                                            "date": "2016-05-14 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
-                                            },
-                                            
-                                            "round": 21,
-                                            "date": "2016-05-15 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            
-                                            "round": 21,
-                                            "date": "2016-05-18 18:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            
-                                            "round": 21,
-                                            "date": "2016-05-14 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            
-                                            "round": 21,
-                                            "date": "2016-05-15 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            
-                                            "round": 21,
-                                            "date": "2016-05-15 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            
-                                            "round": 22,
-                                            "date": "2016-05-21 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            
-                                            "round": 22,
-                                            "date": "2016-05-21 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            
-                                            "round": 22,
-                                            "date": "2016-05-21 10:15"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
-                                            },
-                                            
-                                            "round": 22,
-                                            "date": "2016-05-21 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            
-                                            "round": 22,
-                                            "date": "2016-05-22 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            
-                                            "round": 22,
-                                            "date": "2016-05-22 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
-                                            },
-                                            
-                                            "round": 22,
-                                            "date": "2016-05-21 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
-                                            },
-                                            
-                                            "round": 23,
-                                            "date": "2016-05-27 17:30"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            
-                                            "round": 23,
-                                            "date": "2016-05-29 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            
-                                            "round": 23,
-                                            "date": "2016-05-29 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
-                                            },
-                                            
-                                            "round": 23,
-                                            "date": "2016-05-28 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            
-                                            "round": 23,
-                                            "date": "2016-05-29 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            
-                                            "round": 23,
-                                            "date": "2016-05-29 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            
-                                            "round": 23,
-                                            "date": "2016-05-29 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            
-                                            "round": 24,
-                                            "date": "2016-06-04 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            
-                                            "round": 24,
-                                            "date": "2016-06-04 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            
-                                            "round": 24,
-                                            "date": "2016-06-04 10:15"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            
-                                            "round": 24,
-                                            "date": "2016-06-04 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            
-                                            "round": 24,
-                                            "date": "2016-06-05 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            
-                                            "round": 24,
-                                            "date": "2016-06-05 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
-                                            },
-                                            
-                                            "round": 24,
-                                            "date": "2016-06-04 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
-                                            },
-                                            
-                                            "round": 25,
-                                            "date": "2016-06-11 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
-                                            },
-                                            
-                                            "round": 25,
-                                            "date": "2016-06-12 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            
-                                            "round": 25,
-                                            "date": "2016-06-11 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            
-                                            "round": 25,
-                                            "date": "2016-06-12 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
-                                            },
-                                            
-                                            "round": 25,
-                                            "date": "2016-06-12 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            
-                                            "round": 25,
-                                            "date": "2016-06-12 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            
-                                            "round": 25,
-                                            "date": "2016-06-12 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "1",
-                                                "pairingTeamName": "AFK Loděnice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "13",
-                                                "pairingTeamName": "TJ Daleké Dušníky"
-                                            },
-                                            
-                                            "round": 26,
-                                            "date": "2016-06-18 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "2",
-                                                "pairingTeamName": "FK Dobříč"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "12",
-                                                "pairingTeamName": "Spartak TOS Žebrák"
-                                            },
-                                            
-                                            "round": 26,
-                                            "date": "2016-06-18 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "3",
-                                                "pairingTeamName": "FK Komárov"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "11",
-                                                "pairingTeamName": "UNION CERHOVICE"
-                                            },
-                                            
-                                            "round": 26,
-                                            "date": "2016-06-18 10:15"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "4",
-                                                "pairingTeamName": "TJ Tochovice"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "10",
-                                                "pairingTeamName": "SOKOL Sedlec-Prčice"
-                                            },
-                                            
-                                            "round": 26,
-                                            "date": "2016-06-18 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "5",
-                                                "pairingTeamName": "TATRAN SEDLČANY B"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "9",
-                                                "pairingTeamName": "SK Březnice"
-                                            },
-                                            
-                                            "round": 26,
-                                            "date": "2016-06-19 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "6",
-                                                "pairingTeamName": "SK Nový Knín"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "8",
-                                                "pairingTeamName": "SK SPARTAK Příbram B"
-                                            },
-                                            
-                                            "round": 26,
-                                            "date": "2016-06-18 17:00"
-                                        }
-                                        ,
-                                    
-                                        {
-                                            "homeTeam": {
-                                                "pairingId": "14",
-                                                "pairingTeamName": "VOLNO - VOLNÝ LOS"
-                                            },
-                                            "visitorTeam": {
-                                                "pairingId": "7",
-                                                "pairingTeamName": "Petrovice"
-                                            },
-                                            
-                                            "round": 26,
-                                            "date": "2016-06-18 17:00"
+                                            "date": "2016-11-06 10:15"
                                         }
                                         
                                     
