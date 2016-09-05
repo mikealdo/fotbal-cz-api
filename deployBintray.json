@@ -17,20 +17,20 @@
     "public_stats": true
   },
   "version": {
-    "name": "CD-20160905214036",
+    "name": "{version}",
     "desc": "Fotbal CZ Api",
     "released": "2015-01-04",
-    "vcs_tag": "CD-20160905214036",
+    "vcs_tag": "{version}",
     "gpgSign": false
   },
   "files": [
     {
-      "includePattern": "build/libs/(fotbal-cz-api-CD-20160905214036\.jar)",
-      "uploadPattern": "fotbal-cz-api-CD-20160905214036/$1"
+      "includePattern": "build/libs/(fotbal-cz-api-{version}\.jar)",
+      "uploadPattern": "fotbal-cz-api-{version}/$1"
     },
     {
-      "includePattern": "build/libs/(fotbal-cz-api-CD-20160905214036-stubs\.jar)",
-      "uploadPattern": "fotbal-cz-api-CD-20160905214036/$1"
+      "includePattern": "build/libs/(fotbal-cz-api-{version}-stubs\.jar)",
+      "uploadPattern": "fotbal-cz-api-{version}/$1"
     }
   ],
   "publish": true
