@@ -19,12 +19,24 @@ cache:
   - "$HOME/.m2"
   - "$HOME/.gradle"
 env:
-- TERM=dumb
+  matrix:
+  - TERM=dumb
+  global:
+  - secure: z/kV0A7kULBzBsWJ2epJjSm5VvTzysWVAew2u4DFtVqSBCaYnbNL0EWR9O+mmm5toQiXGY0mpneYH5q+ucXkJmosZiivwLavASIZZmgm8IHKJ4NWw8lOrsMgv+6tHHQdDjG0dLb8zf6n3Chz4UHoBW9cWW/1kWOJQbFVnEqIemBkVxS/Wkmx8W3BnflkEDCmVGKD1l7Y92wzZn34YWDTkimYb/USo6PBTlBOPFjVQ8rZRCD3PvXBYEkxrzsg4SurDp2uQCpj15SbPeyx42P4x95dQvq9nlJQ8K/fRbNX1oRyULq085J23IAlq0BCYbCnxrCav2CGeTSx2Q9pz1VTvtcW+lfCfLkMfESz3oPVAkHgz1+ahYKjU4YT2Kkv95Ixpr8AnRBVYNbTLSm9durr0X20H2UJP3/QnSdOtVxLkUfdZcBX1eFw1yHN3Ma/fJML1BTZvT4QjzR0Mlep7uWLSGDvNm7TFZ52Z6ivO2k7w9OVZLX5GWISP714bfsfM3iUVre63/yR6QfpR3Fy1ja4rEN4wwtxc3+8s8RuD99+c7jw6/SJ7bb46zsbUJg6eseLTs6B6i08zjBmU023ZqVQSK3jbuVQmicT6jaAfB/fQXyCYTTlwm2ZR+F4qCpHMs6aW2pp02UPSBnKExdF1kG2mxwJkFt6Jz9W5wOiOqXomGQ=
+  - secure: rQ2ScyRtL6BFNGDtH8Ik5tBQKzp8kecV+d8bF1pIYBmcVsi1OFmIRbE9HF1ILlV6QWaSQvE1xjfxSe7ksTnH2ew/zh/gVSgYjkvJPplY5JJ6oj+YAl6TbsIhE3rFJI1R6TNZ8TvqE2ikZO2sot9qjOjdMwo+9zdAxpb/fN7QNiOtEtguY5lk+q1Scp8bpxuqJPv822ta3JLo7/JH+zRZG3hDM5vGetpkscAqlTaDgL0iiAI6metxEd9eF8XgTgLNfgdEPTfyKWw5B6sFHM5AD1P1RJalwpgmLbo/l2/6eTGsffAWygBk+Ugd/LXP9/xAN3dwmfMyMKBgOWN8swznm7iMuUVsXSI2JtFbQjkcR3Vis+hbarU5j/ORzcEWNQXf2tH9wWx6sh1y7BO2543sgPAu5Be6gQ1TbFVrRfjlXt3lEMerm4DrPXvljmtTTPs+yauHJUOjTFebcPlewv/CbU2hjj/NxBlGOGMTAmWgqRzHnH2CJYzBuPLoqIKyP3DbV9nnBlVH2wYlfFA++USwNWSBjf3QiQFZ6Qthm1/N/TVR0EhaEdvnSWGcvWCH95yYfV3X5rPUAQwcSPiO49Z2tfc52hOrA93InIdkJ6XMgFxwtbAtpVATHkD/aRQsfPwqVGBlPLvqXHrz/3IDnZ7Y8x6rdAOug8jxQUqcGj5ThBs=
+  - secure: YiC0WszEWt1hWrFYeLn4cuDNoFUbejO+FPJCrq7aZhdAvvrIvafK6R6zyHV5SlVovWIDBNyjAYj7SJiE4zh7gTLtoucuj02jEFEARpQfbG1XrIm3cdlozJyt2yWMzSVGy69qzaoCbJhbvCY3yOP2DKo+c6cm9WPc9kphGm+daXh0i/8k2vj2p60UbETaZZk/ZN1EIVwrorqtkuNdKtKhMacz4VSbjtmQfgsG4wHKZOc1IxUrsI2h2tXG7aBCVkvaczoITtEZbpRIfoedl2VLD9WLxRFaVH1JQGz3Jy74R/IfDwzfgmd4ByLsOjwkOEzq0KTeK9Juo+3FN3m5mJXjPdfNDhFDF0eYpDUEwUc9wa8zidqHqOo3yhVfNnGjy/aUknlgdVMg0RQatexCZ+e2lgOU4EohsfGxqJtXjEQSvCgtPYoj8nlI5OjFFNQ/zj7/lmC60gFIAZkBqLVweB4AstiB9xgo8/YNHSxXYWYduwy/lgQdzfjst1Zz8KgtiQ4WMWrECZFnteM7f+kiRsvx/BeRIdMlkUeRHTdh1I4Fq57uzUN8J0wGDE0IY1IdWIWcRnKqWRZYaBrTh1V5gxJ0BaHurSKm642rYNizfmNzyHnuFuoqz6EcCYnL1KR+YWhMsEOJd9aUJEV87ggmc0A8m5m61Ju7i3F9rnhqPYG0Cdo=
 after_success:
-- "./gradlew test jacocoTestReport coveralls -Pcoverage"
+  - "./gradlew test jacocoTestReport coveralls -Pcoverage"
+  - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+  - export REPO=mikealdo/api-test
+  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
+  - docker build -f build/docker/Dockerfile -t $REPO:$COMMIT .
+  - docker tag $REPO:$COMMIT $REPO:$TAG
+  - docker tag $REPO:$COMMIT $REPO:travis-$TRAVIS_BUILD_NUMBER
+  - docker push $REPO
 deploy:
   provider: bintray
-  file: "deployBintray.json"
-  user: "mdavidek1"
+  file: deployBintray.json
+  user: mdavidek1
   key:
     secure: nXRQRVzyh/UHMBM8QE0SkTHUdIiO8/ttVN8Wjj++h/dusgM8hD2MtGOJOPqp2vXt4U6iasUF40wGIr1bxLjLdxrtYj/tR8DkKjtUB1471l4lZfFVrzeWZarO5ZQOno8PRqE+Oavz2Ct03OXy9FwY33yZJBmKMQ4S0+j/XivB5CtBvnZJLXSnWbVFlC6S8p+FYoadAHLll7XNfoSfSXRBKuvLNMGH+miHsXqpgav+6oS6T3u1bQZqP7168AA03LIEREfWYZxYt3iQlBqx/r/eHHtqWHo/ugsGplIhM/ids6aADTrIqYE6ykY+zNTJBC6JXW9Z1FGWOOB+pdoa7w9i695D3z4qjI9N0xc5ZDxf2SHF0FX6QoKfhXDb+vnPBOOmbq8p3gJ1CYIp1wuQ0Yf8RNH5F3ropjeagu/t5n47ZxxAkG4jlLg6OmZb2fFStiz58gpYRHoTkoAYtCqzDTTZUnS+KG0QQp3PFgK+ORdp2KjIcqWgB0EnQfTaQgwXzAJNbKiCpLeiOHw78APtOJ3oNsQTl0LGVW8y600AxOeqJWUkWOFNjNpNQQTj014NM02u/Q4Y0pQJ4X2n2/ORPspGBAZEnPMwDn7DZ1TRlBfT5TNGFwwYus36hVnfRCl9Y/bME0XfIwvQaHRmz7+AEs+0Un8LqIJSFUleEqqpcfrtWzI=
