@@ -19,7 +19,7 @@
   "version": {
     "name": "{version}",
     "desc": "Fotbal CZ Api",
-    "released": "2015-01-04",
+    "released": "{date}",
     "vcs_tag": "{version}",
     "gpgSign": false
   },
