@@ -2,6 +2,8 @@ language: groovy
 sudo: false
 jdk:
 - oraclejdk8
+services:
+  - docker
 addons:
   firefox: 46.0.1
 before_install:
@@ -28,6 +30,7 @@ env:
   - COMMIT=${TRAVIS_COMMIT::8}
 after_success:
 #  - "./gradlew test jacocoTestReport coveralls -Pcoverage"
+  - echo $DOCKER_EMAIL
   - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
   - export REPO=mikealdo/api-test
   - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
