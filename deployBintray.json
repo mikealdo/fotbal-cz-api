@@ -26,10 +26,12 @@
   "files": [
     {
       "includePattern": "build/libs/(fotbal-cz-api-{version}\.jar)",
+      "excludePattern": "original",
       "uploadPattern": "cz/mikealdo/fotbal-cz-api/fotbal-cz-api-{version}/$1"
     },
     {
       "includePattern": "build/libs/(fotbal-cz-api-{version}-stubs\.jar)",
+      "excludePattern": "original",
       "uploadPattern": "cz/mikealdo/fotbal-cz-api/fotbal-cz-api-{version}/$1"
     }
   ],
