@@ -166,6 +166,7 @@ bintray {
 
 task replaceInBintrayDescriptor() {
     replaceToken("\\{version\\}", project.version)
+    replaceToken("\\{date\\}", new Date())
 }
 
 def replaceToken(fromString, toString) {
@@ -174,7 +175,6 @@ def replaceToken(fromString, toString) {
     new File(descriptorFileName).write(updatedContent, 'UTF-8')
 }
 
-apply from: 'gradle/cli.gradle'
 apply from: 'gradle/test.gradle'
 apply from: 'gradle/misc.gradle'
 apply from: 'gradle/release.gradle'

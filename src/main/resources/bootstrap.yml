@@ -13,7 +13,7 @@ graphite.host: localhost
 stubrunner:
   use-microservice-definitions: true
   stubs:
-    repository.root: "http://dl.bintray.com/mdavidek1/micro"
+    repository.root: "http://dl.bintray.com/mdavidek1/rango"
     group: cz.mikealdo
     module: stub-runner-examples
 
