@@ -41,6 +41,11 @@ def getDateInFormat() {
     return formattedDate
 }
 
+def getDateInShortFormat(date) {
+    def formattedDate = date.format('yyyyMMdd')
+    return formattedDate
+}
+
 group = mavenProjectGroupId
 version = project.hasProperty('currentVersion') ? project.getProperty('currentVersion') : buildNrLoc
 date = date
@@ -169,7 +174,7 @@ bintray {
 
 task replaceInBintrayDescriptor() {
     replaceToken("\\{version\\}", project.version)
-    replaceToken("\\{date\\}", date)
+    replaceToken("\\{date\\}", getDateInShortFormat(date))
 }
 
 def replaceToken(fromString, toString) {

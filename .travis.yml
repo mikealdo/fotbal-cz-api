@@ -15,7 +15,7 @@ before_script:
 - echo $JAVA_OPTS
 - export JAVA_OPTS=-Xmx512m
 script:
-- "./gradlew clean build -x test --stacktrace -Dstubrunner.skip-local-repo=true --info"
+- "./gradlew clean build docker -x test --stacktrace -Dstubrunner.skip-local-repo=true --info"
 cache:
   directories:
   - "$HOME/.m2"
@@ -32,7 +32,6 @@ after_success:
 #  - "./gradlew test jacocoTestReport coveralls -Pcoverage"
   - ls -l build/docker
   - ls -l build/libs
-  - ./gradlew build docker -x test --info
   - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
   - export REPO=mikealdo/api-test
   - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
