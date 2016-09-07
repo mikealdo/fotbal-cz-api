@@ -30,6 +30,7 @@ env:
   - COMMIT=${TRAVIS_COMMIT::8}
 after_success:
 #  - "./gradlew test jacocoTestReport coveralls -Pcoverage"
+  - ./gradlew docker -x test
   - echo $DOCKER_EMAIL
   - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
   - export REPO=mikealdo/api-test
