@@ -5,8 +5,8 @@ task docker(type: Docker) {
     dependsOn 'build'
     dryRun true
     setEnvironment('CONFIG_FOLDER', '/properties')
-    addFile("propertiesAAA", "/properties")
-    addFile("${libsDir}/${project.name}-${buildNrLoc}.jar", "/${project.name}/${project.name}.jar")
+    addFile("properties", "/properties")
+    addFile("build/docker/${project.name}-${buildNrLoc}.jar", "/${project.name}/${project.name}.jar")
     exposePort(8095)
     entryPoint(['java', '-jar', "/${project.name}/${project.name}.jar"])
 }
