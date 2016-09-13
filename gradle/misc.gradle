@@ -9,7 +9,7 @@ task docker(type: Docker) {
     setEnvironment('spring.profiles.active', 'dev')
     setEnvironment('ENCRYPT_KEY', 'secretEncryptKey')
     addFile("properties", "/properties")
-    addFile("../libs/${project.name}-${buildNrLoc}.jar", "/${project.name}/${project.name}.jar")
+    addFile("${project.libsDir}/${project.name}-${buildNrLoc}.jar", "/${project.name}/${project.name}.jar")
     exposePort(8095)
     entryPoint(['java', '-jar', "/${project.name}/${project.name}.jar"])
 }
