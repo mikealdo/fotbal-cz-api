@@ -44,8 +44,8 @@ class ResultsController {
     @RequestMapping(
             value = '{competitionHash}',
             method = GET,
-            consumes = FOTBAL_CZ_API_JSON_VERSION_1,
-            produces = FOTBAL_CZ_API_JSON_VERSION_1)
+            consumes = "application/vnd.fotbal-cz-api.v1+json",
+            produces = "application/vnd.fotbal-cz-api.v1+json")
     @ApiOperation(value = "Sync operation to retrieve all results for given competition",
             notes = "This will asynchronously call results-storage to persist current state to not contact fotbal.cz each time.")
     Callable<String> retrieveResultsForCompetitions(@PathVariable @NotNull String competitionHash, @RequestParam(required = false) Integer round) {
@@ -55,7 +55,7 @@ class ResultsController {
             def league = new LeagueWithDetails(new League(competitionDetails.getCompetitionName())).enhanceByDetails(competitionDetails);
 
             def json = builder.buildLeagueJson(competitionHash, league, settings)
-//            propagationWorker.collectAndPropagate(competitionHash, json) // TODO call results-storage
+            propagationWorker.collectAndPropagate(competitionHash, json) // TODO call results-storage
             return json
         }
     }

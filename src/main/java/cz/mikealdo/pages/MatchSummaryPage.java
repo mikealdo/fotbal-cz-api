@@ -21,7 +21,7 @@ public class MatchSummaryPage extends FotbalCzHTMLPage {
     MatchResult createResultWithDetails(Document summaryDOMDocument) {
 		MatchResult matchResult = new MatchResult(retrieveSimpleResult(summaryDOMDocument));
 		matchResult = updateMatchResultWithPenalties(matchResult, summaryDOMDocument);
-		matchResult.setSpectators(Long.valueOf(getSpanWithTextContent(summaryDOMDocument, "Diváků:").parent().ownText().trim()));
+		matchResult.setSpectators(retrieveSpectators(summaryDOMDocument));
 		matchResult.setReferees(retrieveReferees(summaryDOMDocument));
 		matchResult.setHomeLineUp(retrieveHomeLineUp(summaryDOMDocument));
 		matchResult.setVisitorLineUp(retrieveVisitorLineUp(summaryDOMDocument));
@@ -30,7 +30,15 @@ public class MatchSummaryPage extends FotbalCzHTMLPage {
 		return matchResult;
 	}
 
-	private String retrieveSimpleResult(Document summaryDOMDocument) {
+    private Long retrieveSpectators(Document summaryDOMDocument) {
+        String spectatorsText = getSpanWithTextContent(summaryDOMDocument, "Diváků:").parent().ownText().trim();
+        if (spectatorsText.isEmpty()) {
+            return 0L;
+        }
+        return Long.valueOf(spectatorsText);
+    }
+
+    private String retrieveSimpleResult(Document summaryDOMDocument) {
 		return getSpanByClass(summaryDOMDocument, "vysledek-utkani").ownText();
 	}
 

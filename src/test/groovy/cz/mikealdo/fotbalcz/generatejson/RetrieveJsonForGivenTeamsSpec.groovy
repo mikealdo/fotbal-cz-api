@@ -20,12 +20,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
 /***
- * Neccessary to update ResultsStorageClientStubConfiguration with real CompetitionPage
+ * Necessary to update ResultsStorageClientStubConfiguration with real CompetitionPage
  */
 class RetrieveJsonForGivenTeamsSpec extends MicroserviceMvcWiremockSpec {
 
     static final String ROOT_PATH = '/api'
-    static final MediaType FOTBAL_CZ_API_MICROSERVICE_V1 = new MediaType('application', 'vnd.cz.mikealdo.fotbal-cz-api.v1+json')
+    static final MediaType FOTBAL_CZ_API_MICROSERVICE_V1 = new MediaType('application', 'vnd.fotbal-cz-api.v1+json')
     final List<String> hashes = new ArrayList<String>()
 
     @Autowired

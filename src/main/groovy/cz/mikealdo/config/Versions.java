@@ -5,7 +5,7 @@ public final class Versions {
         throw new UnsupportedOperationException("Can't instantiate a utility class");
     }
 
-    public static final String APP_NAME = "cz.mikealdo.fotbal-cz-api";
+    public static final String APP_NAME = "fotbal-cz-api";
     public static final String VND_PREFIX = "application/vnd";
     public static final String JSON_TYPE_SUFFIX = "+json";
 

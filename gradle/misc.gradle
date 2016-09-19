@@ -5,8 +5,8 @@ task docker(type: Docker) {
     dependsOn 'build'
     dryRun false
     setEnvironment('CONFIG_FOLDER', '/properties')
-    setEnvironment('APP_ENV', 'dev')
-    setEnvironment('spring.profiles.active', 'dev')
+    setEnvironment('APP_ENV', 'prod')
+    setEnvironment('spring.profiles.active', 'prod,springCloud')
     setEnvironment('ENCRYPT_KEY', 'secretEncryptKey')
     addFile("properties", "/properties")
     addFile("${project.libsDir}/${project.name}-${buildNrLoc}.jar", "/${project.name}/${project.name}.jar")

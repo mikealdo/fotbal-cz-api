@@ -4,11 +4,11 @@ ribbon.zookeeper.enabled: false
 spring.zipkin.enabled: false
 spring.autoconfigure.exclude: org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration
 
-graphite.host: localhost
+graphite.host: 192.168.99.100
 
-#spring:
-#  application:
-#    name: twitter-places-analyzer
+spring:
+  application:
+    name: fotbal-cz-api
 
 stubrunner:
   use-microservice-definitions: true

@@ -6,7 +6,7 @@ spring.autoconfigure.exclude: ''
 
 spring:
   application:
-    name: cz/mikealdo/fotbal-cz-api
+    name: fotbal-cz-api
 
 spring.cloud.zookeeper.discovery.root: /cz
 spring.cloud.zookeeper:
