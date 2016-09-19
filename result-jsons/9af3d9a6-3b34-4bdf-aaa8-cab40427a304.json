@@ -132,7 +132,7 @@
                                                 "pairingId": "1",
                                                 "pairingTeamName": "Mezno"
                                             },
-                                            
+                                             "result": "2:1", 
                                             "round": 3,
                                             "date": "2016-09-10 10:15"
                                         }
@@ -147,7 +147,7 @@
                                                 "pairingId": "3",
                                                 "pairingTeamName": "Nespeky/Čerčany"
                                             },
-                                            
+                                             "result": "0:5", 
                                             "round": 4,
                                             "date": "2016-09-17 09:30"
                                         }
@@ -162,7 +162,7 @@
                                                 "pairingId": "5",
                                                 "pairingTeamName": "Týnec nad Sázavou/Pecerady"
                                             },
-                                            
+                                             "result": "10:3", 
                                             "round": 4,
                                             "date": "2016-09-18 10:15"
                                         }

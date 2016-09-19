@@ -75,7 +75,7 @@
                                                 "pairingId": "9",
                                                 "pairingTeamName": "Blaník Načeradec/SK Načeradec"
                                             },
-                                            
+                                             "result": "4:1", 
                                             "round": 1,
                                             "date": "2016-09-10 10:15"
                                         }
@@ -90,7 +90,7 @@
                                                 "pairingId": "8",
                                                 "pairingTeamName": "Sedlec-Prčice"
                                             },
-                                            
+                                             "result": "10:0", 
                                             "round": 1,
                                             "date": "2016-09-11 11:00"
                                         }
@@ -105,7 +105,7 @@
                                                 "pairingId": "7",
                                                 "pairingTeamName": "Bystřice/Popovice"
                                             },
-                                            
+                                             "result": "0:9", 
                                             "round": 1,
                                             "date": "2016-09-10 11:00"
                                         }
@@ -120,7 +120,7 @@
                                                 "pairingId": "6",
                                                 "pairingTeamName": "Votice/Vrchotovy Janovice"
                                             },
-                                            
+                                             "result": "0:1", 
                                             "round": 1,
                                             "date": "2016-09-10 14:45"
                                         }
@@ -135,7 +135,7 @@
                                                 "pairingId": "2",
                                                 "pairingTeamName": "Senohraby"
                                             },
-                                            
+                                             "result": "3:0", 
                                             "round": 2,
                                             "date": "2016-09-17 10:15"
                                         }
@@ -150,7 +150,7 @@
                                                 "pairingId": "5",
                                                 "pairingTeamName": "Poříčí nad Sázavou"
                                             },
-                                            
+                                             "result": "4:5", 
                                             "round": 2,
                                             "date": "2016-09-17 09:30"
                                         }
@@ -165,7 +165,7 @@
                                                 "pairingId": "4",
                                                 "pairingTeamName": "Čechtice/Miřetice"
                                             },
-                                            
+                                             "result": "6:3", 
                                             "round": 2,
                                             "date": "2016-09-17 10:15"
                                         }
@@ -180,7 +180,7 @@
                                                 "pairingId": "3",
                                                 "pairingTeamName": "Vlašim B"
                                             },
-                                            
+                                             "result": "1:12", 
                                             "round": 2,
                                             "date": "2016-09-18 10:15"
                                         }
