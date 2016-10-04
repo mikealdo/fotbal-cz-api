@@ -198,7 +198,7 @@
                                                 "pairingId": "1",
                                                 "pairingTeamName": "Ostředek/Divišov"
                                             },
-                                            
+                                             "result": "6:0", 
                                             "round": 5,
                                             "date": "2016-09-25 10:15"
                                         }
@@ -213,7 +213,7 @@
                                                 "pairingId": "7",
                                                 "pairingTeamName": "Úročnice"
                                             },
-                                            
+                                             "result": "1:2", 
                                             "round": 5,
                                             "date": "2016-09-25 10:15"
                                         }
@@ -228,7 +228,7 @@
                                                 "pairingId": "6",
                                                 "pairingTeamName": "Bystřice/Maršovice"
                                             },
-                                            
+                                             "result": "6:0", 
                                             "round": 6,
                                             "date": "2016-10-01 10:15"
                                         }
@@ -243,7 +243,7 @@
                                                 "pairingId": "4",
                                                 "pairingTeamName": "Sedlec-Prčice"
                                             },
-                                            
+                                             "result": "3:0", 
                                             "round": 6,
                                             "date": "2016-10-02 10:15"
                                         }
@@ -453,9 +453,9 @@
                                                 "pairingId": "3",
                                                 "pairingTeamName": "Pravonín/Čechtice"
                                             },
-                                            
+                                             "result": "1:5", 
                                             "round": 13,
-                                            "date": "2016-09-28 17:00"
+                                            "date": "2016-09-28 16:30"
                                         }
                                         ,
                                     
@@ -468,9 +468,9 @@
                                                 "pairingId": "1",
                                                 "pairingTeamName": "Ostředek/Divišov"
                                             },
-                                            
+                                             "result": "3:5", 
                                             "round": 13,
-                                            "date": "2016-09-28 17:00"
+                                            "date": "2016-09-28 16:30"
                                         }
                                         ,
                                     

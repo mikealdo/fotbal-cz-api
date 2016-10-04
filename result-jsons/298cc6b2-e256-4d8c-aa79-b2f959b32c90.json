@@ -213,7 +213,7 @@
                                                 "pairingId": "5",
                                                 "pairingTeamName": "Pecerady"
                                             },
-                                            
+                                             "result": "8:8p", 
                                             "round": 2,
                                             "date": "2016-09-01 18:00"
                                         }
@@ -363,7 +363,7 @@
                                                 "pairingId": "4",
                                                 "pairingTeamName": "Sedlec-Prčice"
                                             },
-                                            
+                                             "result": "1:11", 
                                             "round": 4,
                                             "date": "2016-09-18 09:30"
                                         }
@@ -378,7 +378,7 @@
                                                 "pairingId": "3",
                                                 "pairingTeamName": "Krhanice"
                                             },
-                                            
+                                             "result": "19:1", 
                                             "round": 4,
                                             "date": "2016-09-17 10:15"
                                         }
@@ -393,7 +393,7 @@
                                                 "pairingId": "7",
                                                 "pairingTeamName": "Nespeky"
                                             },
-                                            
+                                             "result": "10:1", 
                                             "round": 4,
                                             "date": "2016-09-17 10:15"
                                         }
@@ -408,7 +408,7 @@
                                                 "pairingId": "6",
                                                 "pairingTeamName": "Pyšely"
                                             },
-                                            
+                                             "result": "2:4", 
                                             "round": 4,
                                             "date": "2016-09-18 09:30"
                                         }
@@ -423,7 +423,7 @@
                                                 "pairingId": "5",
                                                 "pairingTeamName": "Pecerady"
                                             },
-                                            
+                                             "result": "1:9", 
                                             "round": 4,
                                             "date": "2016-09-18 10:15"
                                         }
@@ -438,7 +438,7 @@
                                                 "pairingId": "8",
                                                 "pairingTeamName": "Soběhrdy"
                                             },
-                                            
+                                             "result": "2:12", 
                                             "round": 4,
                                             "date": "2016-09-17 09:30"
                                         }
@@ -453,7 +453,7 @@
                                                 "pairingId": "12",
                                                 "pairingTeamName": "Netvořice"
                                             },
-                                            
+                                             "result": "3:10", 
                                             "round": 5,
                                             "date": "2016-09-25 10:15"
                                         }
@@ -468,7 +468,7 @@
                                                 "pairingId": "2",
                                                 "pairingTeamName": "Olbramovice"
                                             },
-                                            
+                                             "result": "13:1", 
                                             "round": 5,
                                             "date": "2016-09-24 10:15"
                                         }
@@ -483,7 +483,7 @@
                                                 "pairingId": "1",
                                                 "pairingTeamName": "Ostředek"
                                             },
-                                            
+                                             "result": "12:2", 
                                             "round": 5,
                                             "date": "2016-09-24 10:15"
                                         }
@@ -513,7 +513,7 @@
                                                 "pairingId": "10",
                                                 "pairingTeamName": "Křečovice"
                                             },
-                                            
+                                             "result": "8:0", 
                                             "round": 5,
                                             "date": "2016-09-24 10:15"
                                         }
@@ -528,7 +528,7 @@
                                                 "pairingId": "9",
                                                 "pairingTeamName": "Benešov C"
                                             },
-                                            
+                                             "result": "5:1", 
                                             "round": 5,
                                             "date": "2016-09-24 09:30"
                                         }
@@ -543,7 +543,7 @@
                                                 "pairingId": "6",
                                                 "pairingTeamName": "Pyšely"
                                             },
-                                            
+                                             "result": "6:6p", 
                                             "round": 6,
                                             "date": "2016-10-02 09:30"
                                         }
@@ -558,7 +558,7 @@
                                                 "pairingId": "5",
                                                 "pairingTeamName": "Pecerady"
                                             },
-                                            
+                                             "result": "3:12", 
                                             "round": 6,
                                             "date": "2016-10-01 10:15"
                                         }
@@ -573,7 +573,7 @@
                                                 "pairingId": "4",
                                                 "pairingTeamName": "Sedlec-Prčice"
                                             },
-                                            
+                                             "result": "0:0p", 
                                             "round": 6,
                                             "date": "2016-10-02 10:15"
                                         }
@@ -588,7 +588,7 @@
                                                 "pairingId": "8",
                                                 "pairingTeamName": "Soběhrdy"
                                             },
-                                            
+                                             "result": "3:15", 
                                             "round": 6,
                                             "date": "2016-10-02 09:30"
                                         }
@@ -603,7 +603,7 @@
                                                 "pairingId": "7",
                                                 "pairingTeamName": "Nespeky"
                                             },
-                                            
+                                             "result": "7:6", 
                                             "round": 6,
                                             "date": "2016-10-02 10:15"
                                         }
@@ -618,7 +618,7 @@
                                                 "pairingId": "9",
                                                 "pairingTeamName": "Benešov C"
                                             },
-                                            
+                                             "result": "1:21", 
                                             "round": 6,
                                             "date": "2016-10-01 09:30"
                                         }
@@ -678,9 +678,9 @@
                                                 "pairingId": "1",
                                                 "pairingTeamName": "Ostředek"
                                             },
-                                            
+                                             "result": "8:3", 
                                             "round": 7,
-                                            "date": "2016-10-08 10:15"
+                                            "date": "2016-09-29 17:00"
                                         }
                                         ,
                                     
@@ -710,7 +710,7 @@
                                             },
                                             
                                             "round": 7,
-                                            "date": "2016-10-08 10:15"
+                                            "date": "2016-10-08 14:00"
                                         }
                                         ,
                                     

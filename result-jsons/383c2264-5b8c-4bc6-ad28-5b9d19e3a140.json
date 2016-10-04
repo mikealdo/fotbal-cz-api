@@ -525,7 +525,7 @@
                                                 "pairingId": "14",
                                                 "pairingTeamName": "Poříčí nad Sázavou B"
                                             },
-                                            
+                                             "result": "2:3", 
                                             "round": 5,
                                             "date": "2016-09-24 16:30"
                                         }
@@ -540,7 +540,7 @@
                                                 "pairingId": "2",
                                                 "pairingTeamName": "Týnec nad Sázavou B"
                                             },
-                                            
+                                             "result": "2:9", 
                                             "round": 5,
                                             "date": "2016-09-25 16:30"
                                         }
@@ -555,7 +555,7 @@
                                                 "pairingId": "1",
                                                 "pairingTeamName": "Nespeky B"
                                             },
-                                            
+                                             "result": "2:5", 
                                             "round": 5,
                                             "date": "2016-09-25 16:30"
                                         }
@@ -570,7 +570,7 @@
                                                 "pairingId": "13",
                                                 "pairingTeamName": "Votice B"
                                             },
-                                            
+                                             "result": "6:0", 
                                             "round": 5,
                                             "date": "2016-09-24 16:30"
                                         }
@@ -585,7 +585,7 @@
                                                 "pairingId": "12",
                                                 "pairingTeamName": "Čerčany"
                                             },
-                                            
+                                             "result": "5:4", 
                                             "round": 5,
                                             "date": "2016-09-24 16:30"
                                         }
@@ -600,7 +600,7 @@
                                                 "pairingId": "11",
                                                 "pairingTeamName": "Teplýšovice B"
                                             },
-                                            
+                                             "result": "1:3", 
                                             "round": 5,
                                             "date": "2016-09-24 16:30"
                                         }
@@ -615,7 +615,7 @@
                                                 "pairingId": "10",
                                                 "pairingTeamName": "Úročnice A"
                                             },
-                                            
+                                             "result": "4:2", 
                                             "round": 5,
                                             "date": "2016-09-25 16:30"
                                         }
@@ -630,7 +630,7 @@
                                                 "pairingId": "6",
                                                 "pairingTeamName": "Pyšely"
                                             },
-                                            
+                                             "result": "4:2", 
                                             "round": 6,
                                             "date": "2016-10-02 14:00"
                                         }
@@ -645,7 +645,7 @@
                                                 "pairingId": "5",
                                                 "pairingTeamName": "SK Načeradec"
                                             },
-                                            
+                                             "result": "14:1", 
                                             "round": 6,
                                             "date": "2016-10-02 16:30"
                                         }
@@ -660,7 +660,7 @@
                                                 "pairingId": "4",
                                                 "pairingTeamName": "Sedlec-Prčice B"
                                             },
-                                            
+                                             "result": "5:0", 
                                             "round": 6,
                                             "date": "2016-10-01 16:30"
                                         }
@@ -690,7 +690,7 @@
                                                 "pairingId": "8",
                                                 "pairingTeamName": "Jírovice"
                                             },
-                                            
+                                             "result": "3:0", 
                                             "round": 6,
                                             "date": "2016-10-01 16:30"
                                         }
@@ -705,7 +705,7 @@
                                                 "pairingId": "7",
                                                 "pairingTeamName": "Lešany"
                                             },
-                                            
+                                             "result": "3:4", 
                                             "round": 6,
                                             "date": "2016-10-01 16:30"
                                         }
@@ -720,7 +720,7 @@
                                                 "pairingId": "10",
                                                 "pairingTeamName": "Úročnice A"
                                             },
-                                            
+                                             "result": "1:2", 
                                             "round": 6,
                                             "date": "2016-10-01 16:30"
                                         }
