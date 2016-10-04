@@ -15,7 +15,7 @@ before_script:
 - echo $JAVA_OPTS
 - export JAVA_OPTS=-Xmx512m
 script:
-- "./gradlew clean build docker -x test --stacktrace -Dstubrunner.skip-local-repo=true --info"
+- "./gradlew clean guiTest build docker --stacktrace -Dstubrunner.skip-local-repo=true --info"
 cache:
   directories:
   - "$HOME/.m2"
