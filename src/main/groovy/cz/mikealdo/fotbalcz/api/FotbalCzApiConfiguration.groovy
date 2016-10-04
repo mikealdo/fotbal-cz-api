@@ -1,5 +1,6 @@
 package cz.mikealdo.fotbalcz.api
 
+import com.ofg.infrastructure.web.resttemplate.fluent.ServiceRestClient
 import cz.mikealdo.fotbalcz.api.metrics.ExtractorMetricsConfiguration
 import cz.mikealdo.fotbalcz.results.ResultsStorageClient
 import cz.mikealdo.pages.CompetitionPage
@@ -17,8 +18,8 @@ class FotbalCzApiConfiguration {
     }
 
     @Bean
-    ResultsStorageClient resultsStorageClient() {
-        return new ResultsStorageClient()
+    ResultsStorageClient resultsStorageClient(ServiceRestClient serviceRestClient) {
+        return new ResultsStorageClient(serviceRestClient)
     }
 
     @Bean

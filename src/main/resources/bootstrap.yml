@@ -5,6 +5,7 @@ spring.zipkin.enabled: false
 spring.autoconfigure.exclude: org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration
 
 graphite.host: 192.168.99.100
+graphite.port: 8125
 
 spring:
   application:

@@ -1,2 +1,2 @@
-{graphite.host: 'http://192.168.99.100:8081', metrics.path.app: fotbal-cz-api, stubrunner.stubs.repository.root: 'http://dl.bintray.com/mdavidek1/rango',
+{graphite.host: '192.168.99.100', metrics.path.app: fotbal-cz-api, stubrunner.stubs.repository.root: 'http://dl.bintray.com/mdavidek1/rango',
   stubrunner.use-microservice-definitions: true}

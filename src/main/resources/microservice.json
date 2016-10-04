@@ -1,5 +1,13 @@
 {
     "cz": {
-        "this": "cz/mikealdo/fotbal-cz-api"
+        "this": "cz/mikealdo/fotbal-cz-api",
+        "dependencies": {
+            "results-storage": {
+              "path": "cz/mikealdo/results-storage",
+              "headers": {
+                "Content-Type": "application/vnd.cz.mikealdo.results-storage.v1+json"
+              }
+            }
+        }
     }
 }

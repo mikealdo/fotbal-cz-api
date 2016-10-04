@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration
 class ExtractorMetricsConfiguration {
 
     @Bean
-    MatchProbabilityMetrics matchProbabilityMetrics(MetricRegistry metricRegistry) {
-        return new MatchProbabilityMetrics(metricRegistry)
+    ResultsMetrics matchProbabilityMetrics(MetricRegistry metricRegistry) {
+        return new ResultsMetrics(metricRegistry)
     }
 }

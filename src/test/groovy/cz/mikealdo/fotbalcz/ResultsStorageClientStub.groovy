@@ -9,8 +9,8 @@ import java.util.concurrent.atomic.AtomicReference
 @CompileStatic
 class ResultsStorageClientStub extends ResultsStorageClient {
 
-    AtomicReference<String> savedResultHash = new AtomicReference<>()
-    AtomicReference<String> savedJson = new AtomicReference<>()
+    AtomicReference<String> savedResultHash = new AtomicReference<>("")
+    AtomicReference<String> savedJson = new AtomicReference<>("")
 
     ResultsStorageClientStub(ServiceRestClient serviceRestClient) {
         super(serviceRestClient)
@@ -20,6 +20,10 @@ class ResultsStorageClientStub extends ResultsStorageClient {
     void saveResultsToStorage(String resultHash, String json) {
         savedResultHash.set(resultHash)
         savedJson.set(json)
-        super.saveResultsToStorage(resultHash, json)
+    }
+
+    @Override
+    String retrieveResults(String resultHash) {
+        return savedJson.get() == null ? "" : savedJson.get();
     }
 }

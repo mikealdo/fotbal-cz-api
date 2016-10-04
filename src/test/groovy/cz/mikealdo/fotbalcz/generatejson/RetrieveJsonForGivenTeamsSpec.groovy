@@ -2,13 +2,13 @@ package cz.mikealdo.fotbalcz.generatejson
 
 import cz.mikealdo.base.MicroserviceMvcWiremockSpec
 import cz.mikealdo.fotbalcz.ResultsStorageClientStub
+import cz.mikealdo.fotbalcz.ResultsStorageClientStubWithFotbalCzConfiguration
 import cz.mikealdo.pages.CompetitionPage
 import org.hamcrest.CoreMatchers
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.MediaType
-import org.springframework.test.web.servlet.MvcResult
-import spock.lang.Ignore
+import org.springframework.test.context.ContextConfiguration
 
 import static com.jayway.awaitility.Awaitility.await
 import static java.util.concurrent.TimeUnit.SECONDS
@@ -22,6 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /***
  * Necessary to update ResultsStorageClientStubConfiguration with real CompetitionPage
  */
+@ContextConfiguration(classes = [ResultsStorageClientStubWithFotbalCzConfiguration.class])
 class RetrieveJsonForGivenTeamsSpec extends MicroserviceMvcWiremockSpec {
 
     static final String ROOT_PATH = '/api'

@@ -17,8 +17,14 @@ class FotbalCzLeaguePropagatingWorker implements PropagationWorker {
     }
 
     @Override
-    void collectAndPropagate(String competitionHash, String json) {
+    void saveResultsToCache(String competitionHash, String json) {
         client.saveResultsToStorage(competitionHash, json)
-        log.debug("Sent json [$json] to results-storage")
+        log.info("Sent json [$json] to results-storage")
+    }
+
+    @Override
+    String retrieveResults(String competitionHash) {
+        log.info("Retrieve results from results-storage")
+        return client.retrieveResults(competitionHash)
     }
 }
