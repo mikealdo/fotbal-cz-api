@@ -660,7 +660,7 @@
                                                 "pairingId": "4",
                                                 "pairingTeamName": "TJ Sokol Teplýšovice"
                                             },
-                                            
+                                             "result": "1:7", 
                                             "round": 6,
                                             "date": "2016-10-02 16:30"
                                         }
@@ -675,7 +675,7 @@
                                                 "pairingId": "9",
                                                 "pairingTeamName": "TJ Jiskra Zruč nad Sázavou"
                                             },
-                                            
+                                             "result": "2:4", 
                                             "round": 6,
                                             "date": "2016-10-02 16:30"
                                         }
@@ -735,7 +735,7 @@
                                                 "pairingId": "14",
                                                 "pairingTeamName": "Sokol Maršovice"
                                             },
-                                            
+                                             "result": "4:2", 
                                             "round": 7,
                                             "date": "2016-10-08 16:00"
                                         }
@@ -750,7 +750,7 @@
                                                 "pairingId": "3",
                                                 "pairingTeamName": "TJ Sokol Kondrac"
                                             },
-                                            
+                                             "result": "4:1", 
                                             "round": 7,
                                             "date": "2016-10-08 10:15"
                                         }
@@ -765,7 +765,7 @@
                                                 "pairingId": "2",
                                                 "pairingTeamName": "FK FERCOM Týnec nad Sázavou"
                                             },
-                                            
+                                             "result": "0:1", 
                                             "round": 7,
                                             "date": "2016-10-08 16:00"
                                         }
@@ -780,7 +780,7 @@
                                                 "pairingId": "1",
                                                 "pairingTeamName": "FC Jílové"
                                             },
-                                            
+                                             "result": "2:3p", 
                                             "round": 7,
                                             "date": "2016-10-09 16:00"
                                         }
@@ -795,7 +795,7 @@
                                                 "pairingId": "13",
                                                 "pairingTeamName": "FK Uhlířské Janovice"
                                             },
-                                            
+                                             "result": "3:2", 
                                             "round": 7,
                                             "date": "2016-10-09 16:00"
                                         }
@@ -810,7 +810,7 @@
                                                 "pairingId": "12",
                                                 "pairingTeamName": "Spartak Průhonice"
                                             },
-                                            
+                                             "result": "0:3", 
                                             "round": 7,
                                             "date": "2016-10-08 16:00"
                                         }
@@ -825,7 +825,7 @@
                                                 "pairingId": "11",
                                                 "pairingTeamName": "TJ SOKOL Sedlec-Prčice"
                                             },
-                                            
+                                             "result": "0:1", 
                                             "round": 7,
                                             "date": "2016-10-09 16:00"
                                         }
@@ -840,7 +840,7 @@
                                                 "pairingId": "8",
                                                 "pairingTeamName": "TJ Sokol Miřetice"
                                             },
-                                            
+                                             "result": "2:0", 
                                             "round": 8,
                                             "date": "2016-10-15 16:00"
                                         }
@@ -855,7 +855,7 @@
                                                 "pairingId": "7",
                                                 "pairingTeamName": "AFK Kácov"
                                             },
-                                            
+                                             "result": "2:1", 
                                             "round": 8,
                                             "date": "2016-10-15 16:00"
                                         }
@@ -870,7 +870,7 @@
                                                 "pairingId": "6",
                                                 "pairingTeamName": "TJ Sokol NEVEKLOV"
                                             },
-                                            
+                                             "result": "0:3", 
                                             "round": 8,
                                             "date": "2016-10-16 16:00"
                                         }
@@ -885,7 +885,7 @@
                                                 "pairingId": "5",
                                                 "pairingTeamName": "TJ Sokol Vyšehořovice"
                                             },
-                                            
+                                             "result": "2:0", 
                                             "round": 8,
                                             "date": "2016-10-15 16:00"
                                         }
@@ -900,7 +900,7 @@
                                                 "pairingId": "10",
                                                 "pairingTeamName": "TJ Sokol Jankov"
                                             },
-                                            
+                                             "result": "6:2", 
                                             "round": 8,
                                             "date": "2016-10-15 16:00"
                                         }
@@ -915,7 +915,7 @@
                                                 "pairingId": "9",
                                                 "pairingTeamName": "TJ Jiskra Zruč nad Sázavou"
                                             },
-                                            
+                                             "result": "4:1", 
                                             "round": 8,
                                             "date": "2016-10-16 16:00"
                                         }
@@ -930,7 +930,7 @@
                                                 "pairingId": "11",
                                                 "pairingTeamName": "TJ SOKOL Sedlec-Prčice"
                                             },
-                                            
+                                             "result": "3:0", 
                                             "round": 8,
                                             "date": "2016-10-16 16:00"
                                         }

@@ -675,7 +675,7 @@
                                                 "pairingId": "9",
                                                 "pairingTeamName": "Bystřice"
                                             },
-                                            
+                                             "result": "4:2", 
                                             "round": 6,
                                             "date": "2016-10-02 16:30"
                                         }
@@ -735,7 +735,7 @@
                                                 "pairingId": "14",
                                                 "pairingTeamName": "Poříčí nad Sázavou B"
                                             },
-                                            
+                                             "result": "4:3", 
                                             "round": 7,
                                             "date": "2016-10-09 16:00"
                                         }
@@ -750,7 +750,7 @@
                                                 "pairingId": "3",
                                                 "pairingTeamName": "Krhanice"
                                             },
-                                            
+                                             "result": "0:5", 
                                             "round": 7,
                                             "date": "2016-10-09 16:00"
                                         }
@@ -765,7 +765,7 @@
                                                 "pairingId": "2",
                                                 "pairingTeamName": "Týnec nad Sázavou B"
                                             },
-                                            
+                                             "result": "3:2", 
                                             "round": 7,
                                             "date": "2016-10-08 16:00"
                                         }
@@ -780,7 +780,7 @@
                                                 "pairingId": "1",
                                                 "pairingTeamName": "Nespeky B"
                                             },
-                                            
+                                             "result": "1:1p", 
                                             "round": 7,
                                             "date": "2016-10-08 16:00"
                                         }
@@ -795,7 +795,7 @@
                                                 "pairingId": "13",
                                                 "pairingTeamName": "Votice B"
                                             },
-                                            
+                                             "result": "3:1", 
                                             "round": 7,
                                             "date": "2016-10-08 16:00"
                                         }
@@ -810,7 +810,7 @@
                                                 "pairingId": "12",
                                                 "pairingTeamName": "Čerčany"
                                             },
-                                            
+                                             "result": "3:1", 
                                             "round": 7,
                                             "date": "2016-10-09 16:00"
                                         }
@@ -825,7 +825,7 @@
                                                 "pairingId": "11",
                                                 "pairingTeamName": "Teplýšovice B"
                                             },
-                                            
+                                             "result": "2:4", 
                                             "round": 7,
                                             "date": "2016-10-08 16:00"
                                         }
@@ -840,7 +840,7 @@
                                                 "pairingId": "8",
                                                 "pairingTeamName": "Jírovice"
                                             },
-                                            
+                                             "result": "1:3", 
                                             "round": 8,
                                             "date": "2016-10-16 14:00"
                                         }
@@ -855,7 +855,7 @@
                                                 "pairingId": "7",
                                                 "pairingTeamName": "Lešany"
                                             },
-                                            
+                                             "result": "2:3", 
                                             "round": 8,
                                             "date": "2016-10-16 16:00"
                                         }
@@ -870,7 +870,7 @@
                                                 "pairingId": "6",
                                                 "pairingTeamName": "Pyšely"
                                             },
-                                            
+                                             "result": "2:2p", 
                                             "round": 8,
                                             "date": "2016-10-15 16:00"
                                         }
@@ -885,7 +885,7 @@
                                                 "pairingId": "5",
                                                 "pairingTeamName": "SK Načeradec"
                                             },
-                                            
+                                             "result": "5:1", 
                                             "round": 8,
                                             "date": "2016-10-16 16:00"
                                         }
@@ -900,7 +900,7 @@
                                                 "pairingId": "10",
                                                 "pairingTeamName": "Úročnice A"
                                             },
-                                            
+                                             "result": "0:2", 
                                             "round": 8,
                                             "date": "2016-10-15 16:00"
                                         }
@@ -915,7 +915,7 @@
                                                 "pairingId": "9",
                                                 "pairingTeamName": "Bystřice"
                                             },
-                                            
+                                             "result": "4:1", 
                                             "round": 8,
                                             "date": "2016-10-15 16:00"
                                         }
@@ -930,7 +930,7 @@
                                                 "pairingId": "11",
                                                 "pairingTeamName": "Teplýšovice B"
                                             },
-                                            
+                                             "result": "6:0", 
                                             "round": 8,
                                             "date": "2016-10-15 16:00"
                                         }

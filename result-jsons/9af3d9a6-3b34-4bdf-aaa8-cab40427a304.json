@@ -222,7 +222,7 @@
                                                 "pairingId": "1",
                                                 "pairingTeamName": "Mezno"
                                             },
-                                            
+                                             "result": "9:1", 
                                             "round": 6,
                                             "date": "2016-10-04 17:00"
                                         }
@@ -237,7 +237,7 @@
                                                 "pairingId": "1",
                                                 "pairingTeamName": "Mezno"
                                             },
-                                            
+                                             "result": "1:4", 
                                             "round": 7,
                                             "date": "2016-10-08 09:30"
                                         }
@@ -252,7 +252,7 @@
                                                 "pairingId": "5",
                                                 "pairingTeamName": "Týnec nad Sázavou/Pecerady"
                                             },
-                                            
+                                             "result": "4:0", 
                                             "round": 7,
                                             "date": "2016-10-08 10:15"
                                         }
@@ -267,7 +267,7 @@
                                                 "pairingId": "3",
                                                 "pairingTeamName": "Nespeky/Čerčany"
                                             },
-                                            
+                                             "result": "2:5", 
                                             "round": 8,
                                             "date": "2016-10-15 10:15"
                                         }
@@ -282,7 +282,7 @@
                                                 "pairingId": "2",
                                                 "pairingTeamName": "Trhový Štěpánov"
                                             },
-                                            
+                                             "result": "6:1", 
                                             "round": 8,
                                             "date": "2016-10-15 10:15"
                                         }
