@@ -18,4 +18,4 @@ stubrunner:
   stubs:
     repository.root: "http://dl.bintray.com/mdavidek1/rango"
     group: cz.mikealdo
-    module: stub-runner-examples
+    module: results-storage

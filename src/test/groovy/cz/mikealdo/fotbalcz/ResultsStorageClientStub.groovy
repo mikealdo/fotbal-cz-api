@@ -9,8 +9,8 @@ import java.util.concurrent.atomic.AtomicReference
 @CompileStatic
 class ResultsStorageClientStub extends ResultsStorageClient {
 
-    AtomicReference<String> savedResultHash = new AtomicReference<>("")
-    AtomicReference<String> savedJson = new AtomicReference<>("")
+    AtomicReference<String> savedResultHash = new AtomicReference<>()
+    AtomicReference<String> savedJson = new AtomicReference<>()
 
     ResultsStorageClientStub(ServiceRestClient serviceRestClient) {
         super(serviceRestClient)

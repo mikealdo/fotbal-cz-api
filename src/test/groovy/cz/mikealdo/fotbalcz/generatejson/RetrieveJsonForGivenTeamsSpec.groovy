@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.MediaType
 import org.springframework.test.context.ContextConfiguration
 
+import java.util.concurrent.atomic.AtomicReference
+
 import static com.jayway.awaitility.Awaitility.await
 import static java.util.concurrent.TimeUnit.SECONDS
 import static org.hamcrest.core.IsNot.not
@@ -19,9 +21,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
-/***
- * Necessary to update ResultsStorageClientStubConfiguration with real CompetitionPage
- */
 @ContextConfiguration(classes = [ResultsStorageClientStubWithFotbalCzConfiguration.class])
 class RetrieveJsonForGivenTeamsSpec extends MicroserviceMvcWiremockSpec {
 
@@ -36,31 +35,77 @@ class RetrieveJsonForGivenTeamsSpec extends MicroserviceMvcWiremockSpec {
     @Value('${acceptance-tests.timeout:50}')
     Integer acceptanceTestTimeout
 
-    def "should find competition results"() {
+    def "A"() {
         given:
-            hashes.add('3da83071-b450-4852-b349-201990550e50') // A
-            hashes.add('383c2264-5b8c-4bc6-ad28-5b9d19e3a140') // B
-            hashes.add('30756af4-4430-465a-b16f-a86ad324fc08') // dorost
-            hashes.add('9af3d9a6-3b34-4bdf-aaa8-cab40427a304') // starsi
-            hashes.add('c51b6839-c026-4d21-bc03-a06d07353de8') // mladsi
-            hashes.add('298cc6b2-e256-4d8c-aa79-b2f959b32c90') // pripravka
+            def hash = "3da83071-b450-4852-b349-201990550e50"
         when:
-            for (String hash : hashes) {
-                mockMvc.perform(get("$ROOT_PATH/$hash")
-                        .contentType(FOTBAL_CZ_API_MICROSERVICE_V1))
-                        .andDo(print())
-                        .andExpect(status().isOk())
-                        .andExpect(header().string("correlationId", not(isEmptyString())))
-                        .andReturn()
-
-                await().atMost(25, SECONDS).untilAtomic(resultsStorageClientStub.savedJson, CoreMatchers.<String> notNullValue())
-
-                def file = new File('result-jsons/' + hash + '.json')
-                file.write(resultsStorageClientStub.savedJson.get())
-                resultsStorageClientStub.savedJson.set(null);
-            }
+            retrieveAndSaveResultsFor(hash)
         then:
             println "Success"
+    }
+
+    def "B"() {
+        given:
+        def hash = "383c2264-5b8c-4bc6-ad28-5b9d19e3a140"
+        when:
+        retrieveAndSaveResultsFor(hash)
+        then:
+        println "Success"
+    }
+
+    def "Dorost"() {
+        given:
+        def hash = "30756af4-4430-465a-b16f-a86ad324fc08"
+        when:
+        retrieveAndSaveResultsFor(hash)
+        then:
+        println "Success"
+    }
+
+    def "Starsi zaci"() {
+        given:
+        def hash = "9af3d9a6-3b34-4bdf-aaa8-cab40427a304"
+        when:
+        retrieveAndSaveResultsFor(hash)
+        then:
+        println "Success"
+    }
+
+    def "Mladsi zaci"() {
+        given:
+        def hash = "c51b6839-c026-4d21-bc03-a06d07353de8"
+        when:
+        retrieveAndSaveResultsFor(hash)
+        then:
+        println "Success"
+    }
+
+    def "Pripravka"() {
+        given:
+        def hash = "298cc6b2-e256-4d8c-aa79-b2f959b32c90"
+        when:
+        retrieveAndSaveResultsFor(hash)
+        then:
+        println "Success"
+    }
+
+    private void retrieveAndSaveResultsFor(String hash) {
+        mockMvc.perform(get("$ROOT_PATH/$hash")
+                .contentType(FOTBAL_CZ_API_MICROSERVICE_V1))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(header().string("correlationId", not(isEmptyString())))
+                .andReturn()
+
+        await().atMost(25, SECONDS).untilAtomic(resultsStorageClientStub.savedJson, CoreMatchers.<String> notNullValue())
+
+        def file = new File('result-jsons/' + hash + '.json')
+        file.createNewFile();
+        FileWriter writer = new FileWriter(file);
+        writer.write(resultsStorageClientStub.savedJson.get());
+        writer.close();
+        resultsStorageClientStub.savedJson = new AtomicReference<>()
+        resultsStorageClientStub.savedResultHash = new AtomicReference<>()
     }
 
 }

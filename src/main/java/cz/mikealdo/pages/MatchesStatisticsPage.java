@@ -107,11 +107,12 @@ public class MatchesStatisticsPage extends FotbalCzHTMLPage {
                 match.setDate(parseDateTime(cells.get(0).text()));
                 match.setHomeTeam(new PairedTeam(resolvePairingId(cells.get(1).text()), resolveTeamName(cells.get(1))));
                 match.setVisitorTeam(new PairedTeam(resolvePairingId(cells.get(2).text()), resolveTeamName(cells.get(2))));
-                if (cells.get(6).child(0).hasClass("uzavren")) {
+                Element cellWithPageLinkToMatchSummary = cells.get(6).child(0);
+                if (hasMatchDetailsSpecified(cellWithPageLinkToMatchSummary)) {
                     String simpleResultText = cells.get(3).text();
                     MatchResult simpleResult = new MatchResult(simpleResultText);
                     if (simpleResult.isResultEntered()) {
-                        Optional<MatchResult> detailedMatchResult = retrieveDetailedMatchResult(cells.get(6).child(0));
+                        Optional<MatchResult> detailedMatchResult = retrieveDetailedMatchResult(cellWithPageLinkToMatchSummary);
                         if (detailedMatchResult.isPresent()) {
                             MatchResult matchResult = detailedMatchResult.get();
                             if (matchResult.isResultEntered()) {
@@ -141,6 +142,10 @@ public class MatchesStatisticsPage extends FotbalCzHTMLPage {
         });
         return sorted.collect(Collectors.toList());
 	}
+
+    private boolean hasMatchDetailsSpecified(Element cellWithPageLinkToMatchSummary) {
+        return cellWithPageLinkToMatchSummary.hasClass("uzavren") || cellWithPageLinkToMatchSummary.hasClass("neuzavren");
+    }
 
     private String resolveTeamName(Element element) {
         return element.text().replaceAll(" \\(.*\\)$", "");
