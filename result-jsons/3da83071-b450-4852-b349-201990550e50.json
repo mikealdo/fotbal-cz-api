@@ -945,7 +945,7 @@
                                                 "pairingId": "7",
                                                 "pairingTeamName": "AFK Kácov"
                                             },
-                                            
+                                             "result": "0:3", 
                                             "round": 9,
                                             "date": "2016-10-22 15:00"
                                         }
@@ -960,7 +960,7 @@
                                                 "pairingId": "14",
                                                 "pairingTeamName": "Sokol Maršovice"
                                             },
-                                            
+                                             "result": "3:2", 
                                             "round": 9,
                                             "date": "2016-10-22 10:15"
                                         }
@@ -975,7 +975,7 @@
                                                 "pairingId": "4",
                                                 "pairingTeamName": "TJ Sokol Teplýšovice"
                                             },
-                                            
+                                             "result": "0:5", 
                                             "round": 9,
                                             "date": "2016-10-22 15:30"
                                         }
@@ -990,7 +990,7 @@
                                                 "pairingId": "2",
                                                 "pairingTeamName": "FK FERCOM Týnec nad Sázavou"
                                             },
-                                            
+                                             "result": "1:0", 
                                             "round": 9,
                                             "date": "2016-10-23 15:30"
                                         }
@@ -1005,7 +1005,7 @@
                                                 "pairingId": "1",
                                                 "pairingTeamName": "FC Jílové"
                                             },
-                                            
+                                             "result": "0:4", 
                                             "round": 9,
                                             "date": "2016-10-22 15:30"
                                         }
@@ -1020,7 +1020,7 @@
                                                 "pairingId": "13",
                                                 "pairingTeamName": "FK Uhlířské Janovice"
                                             },
-                                            
+                                             "result": "3:2p", 
                                             "round": 9,
                                             "date": "2016-10-23 15:30"
                                         }
@@ -1035,7 +1035,7 @@
                                                 "pairingId": "12",
                                                 "pairingTeamName": "Spartak Průhonice"
                                             },
-                                            
+                                             "result": "2:1p", 
                                             "round": 9,
                                             "date": "2016-10-23 15:30"
                                         }

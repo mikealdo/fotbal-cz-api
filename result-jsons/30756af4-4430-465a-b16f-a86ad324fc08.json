@@ -318,7 +318,7 @@
                                                 "pairingId": "7",
                                                 "pairingTeamName": "Úročnice"
                                             },
-                                            
+                                             "result": "1:1p", 
                                             "round": 9,
                                             "date": "2016-10-23 10:15"
                                         }
@@ -333,7 +333,7 @@
                                                 "pairingId": "6",
                                                 "pairingTeamName": "Bystřice/Maršovice"
                                             },
-                                            
+                                             "result": "6:1", 
                                             "round": 9,
                                             "date": "2016-10-22 10:00"
                                         }

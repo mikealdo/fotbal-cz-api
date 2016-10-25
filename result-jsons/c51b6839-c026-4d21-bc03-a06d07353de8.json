@@ -435,7 +435,7 @@
                                                 "pairingId": "3",
                                                 "pairingTeamName": "Vlašim B"
                                             },
-                                            
+                                             "result": "2:1", 
                                             "round": 7,
                                             "date": "2016-10-22 13:15"
                                         }
@@ -450,7 +450,7 @@
                                                 "pairingId": "2",
                                                 "pairingTeamName": "Senohraby"
                                             },
-                                            
+                                             "result": "2:1", 
                                             "round": 7,
                                             "date": "2016-10-22 10:15"
                                         }
@@ -465,7 +465,7 @@
                                                 "pairingId": "1",
                                                 "pairingTeamName": "Týnec nad Sázavou/Pecerady"
                                             },
-                                            
+                                             "result": "2:1", 
                                             "round": 7,
                                             "date": "2016-10-22 09:30"
                                         }
@@ -480,7 +480,7 @@
                                                 "pairingId": "9",
                                                 "pairingTeamName": "Blaník Načeradec/SK Načeradec"
                                             },
-                                            
+                                             "result": "3:1", 
                                             "round": 7,
                                             "date": "2016-10-22 12:15"
                                         }
